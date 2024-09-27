@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ChatBotWebApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChatBotWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ChatBotWebApp.props",
+      "PackagePath": "build\\ChatBotWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ChatBotWebApp.props",
+      "PackagePath": "buildMultiTargeting\\ChatBotWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ChatBotWebApp.props",
+      "PackagePath": "buildTransitive\\ChatBotWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
