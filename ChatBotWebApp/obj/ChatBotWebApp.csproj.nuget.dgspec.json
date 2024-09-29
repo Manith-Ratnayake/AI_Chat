@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\ChatBotWebApp.csproj": {}
+    "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\ChatBotWebApp.csproj": {
+    "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\ChatBotWebApp.csproj",
+        "projectUniqueName": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
         "projectName": "ChatBotWebApp",
-        "projectPath": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\ChatBotWebApp.csproj",
+        "projectPath": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
         "packagesPath": "C:\\Users\\Manith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\obj\\",
+        "outputPath": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

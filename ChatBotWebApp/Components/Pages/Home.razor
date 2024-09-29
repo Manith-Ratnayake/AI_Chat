@@ -1,7 +1,104 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
-<PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div>
+    <h3>Flintec</h3>
+</div>
 
-Welcome to your new app.
+<div class="ChatContainer">
+
+   
+     <div class="ChatMessageWindow">
+	
+ 	    @if (userMessages.Count > 0)
+ 	    {
+ 		    @foreach (string message in userMessages)
+ 		    {
+ 			    <p>@message</p>
+             
+ 		    }
+ 	    }
+
+    
+     </div>
+	
+
+     <div class="UserInputBar">
+ 	    <input type="text" @bind="userMessage"  placeholder="Type here"/>
+ 	    <button @onclick="ChatMessageSubmit">Send Me</button>
+     </div>
+
+     <div class="ConditionText">
+        <p> </p>
+     </div>
+
+
+
+
+ </div>
+
+
+
+
+@code {
+
+    private string? userMessage;
+    List<string> userMessages = new();
+    List<string> suggestionQuestions = new();
+
+    List<string> country = new();
+    List<string> Language = ["English", "French", "Spanish", "Italian", "Hindi", "Dutch", "German", "Korean", "Sinhala", "Vietnamese"];
+
+
+
+    public void ChatMessageSubmit()
+    {
+        if (!string.IsNullOrEmpty(userMessage))
+        {
+            userMessages.Add(userMessage);
+            this.userMessage = "454545454";
+        }
+
+    }
+
+
+    public void SuggestionQuestionRequest()
+    {
+        
+    }
+
+
+
+ }
+
+
+
+<style>
+
+
+
+.ChatMessageWindow {
+    background-color: pink;
+    max-height: 620px; /* Set a fixed maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+}
+
+.UserInputBar {
+    position: fixed; /* Keep it fixed at the bottom */
+    bottom: 0; /* Align it to the bottom */
+    left: 50%; /* Start at the middle of the viewport */
+    transform: translateX(-50%); /* Shift it left by half its width to center */
+    display: flex; /* Keep it flexible */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    z-index: 100;
+    margin-bottom: 2%;
+    width: 100%; /* Optional: Ensure it takes full width of the viewport */
+}
+
+
+
+</style>
+

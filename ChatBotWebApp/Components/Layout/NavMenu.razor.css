@@ -103,3 +103,39 @@
         overflow-y: auto;
     }
 }
+
+
+
+.ChatIcon {
+    height: 10%;
+    width: 10%;
+    filter: grayscale(100%) brightness(0%) invert(1);
+}
+
+
+
+.ChatIconDiv {
+    position: relative; /* For absolute positioning of tooltip */
+    display: inline-block; /* Keeps the image and tooltip together */
+}
+
+.ChatIconDivText {
+/*    visibility: hidden;  Hidden by default */
+    width: 60px; /* Width of the tooltip */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    /*padding: 5px; /* Padding inside the tooltip */
+    /*position: absolute; /* Position it relative to the tooltip container */
+    /*z-index: 1; /* Ensure it appears above other elements */
+    /*bottom: 100%; /* Position above the image */
+    /*left: 50%; /* Center it */
+    /*margin-left: -30px; /* Offset to center */
+    transition: opacity 0.3s; /* Smooth transition effect */
+}
+
+/*.ChatIconDiv:hover .ChatIconDivText {
+    visibility: visible;*/ /* Show the tooltip on hover */
+    /*opacity: 1;*/ /* Make it fully visible */
+/*}*/

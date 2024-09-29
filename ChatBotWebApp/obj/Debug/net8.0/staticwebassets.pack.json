@@ -1,24 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css",
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\ChatBotWebApp.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\app.css",
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBotWebApp\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\chatIcon.png",
+      "PackagePath": "staticwebassets\\chatIcon.png"
+    },
+    {
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
+      "PackagePath": "staticwebassets\\flintec_logo.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChatBotWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
