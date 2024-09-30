@@ -2,12 +2,13 @@
 @rendermode InteractiveServer
 
 
+
+
 <div>
     <h3>Flintec</h3>
 </div>
 
 <div class="ChatContainer">
-
    
      <div class="ChatMessageWindow">
 	
@@ -15,20 +16,31 @@
  	    {
  		    @foreach (string message in userMessages)
  		    {
- 			    <p>@message</p>
-             
+
+
+                <p class="displayChatMessage">@message</p>
+
+
+                <div class="messageContainer">
+                    <div class="chatIconContainer">
+                        <img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />
+                    </div>
+                    <p class="displayReplyMessage">@answer</p>
+                </div>
+                 
  		    }
  	    }
 
     
      </div>
-	
 
-     <div class="UserInputBar">
- 	    <input type="text" @bind="userMessage"  placeholder="Type here"/>
- 	    <button @onclick="ChatMessageSubmit">Send Me</button>
-     </div>
 
+    <div class="inputBar">
+        <input type="text" id="messageInput" class="inputField" placeholder="Type your message here..." />
+        <button id="sendButton" class="sendButton">Send</button>
+    </div>
+
+    
      <div class="ConditionText">
         <p> </p>
      </div>
@@ -43,7 +55,17 @@
 
 @code {
 
+
     private string? userMessage;
+    private string? answer = @"
+        Lorem Ipsum is simply dummy text of the printing and typesetting 
+        industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+        PageMaker including versions of Lorem Ipsum.";
+
     List<string> userMessages = new();
     List<string> suggestionQuestions = new();
 
@@ -65,40 +87,16 @@
 
     public void SuggestionQuestionRequest()
     {
-        
+
     }
 
 
 
- }
 
 
+    public void ReplyMessage()
+    {
+        
+    }
 
-<style>
-
-
-
-.ChatMessageWindow {
-    background-color: pink;
-    max-height: 620px; /* Set a fixed maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
 }
-
-.UserInputBar {
-    position: fixed; /* Keep it fixed at the bottom */
-    bottom: 0; /* Align it to the bottom */
-    left: 50%; /* Start at the middle of the viewport */
-    transform: translateX(-50%); /* Shift it left by half its width to center */
-    display: flex; /* Keep it flexible */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    z-index: 100;
-    margin-bottom: 2%;
-    width: 100%; /* Optional: Ensure it takes full width of the viewport */
-}
-
-
-
-</style>
-

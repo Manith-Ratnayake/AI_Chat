@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Uwet2Semz5tkGdU6UULo6kF5wI+mLXX7lcRUdfDuFmI=",
+  "Hash": "addfbJxn3kQ27jlAGJq2LTtJDIWfoAuv2pOCGDXVlr0=",
   "Source": "ChatBotWebApp",
   "BasePath": "_content/ChatBotWebApp",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot\\chatIcon.png"
     },
     {
+      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\chatIcon2.png",
+      "SourceId": "ChatBotWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "BasePath": "_content/ChatBotWebApp",
+      "RelativePath": "chatIcon2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\chatIcon2.png"
+    },
+    {
       "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
@@ -148,6 +167,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\flintec_logo.png"
+    },
+    {
+      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\settings.png",
+      "SourceId": "ChatBotWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "BasePath": "_content/ChatBotWebApp",
+      "RelativePath": "settings.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\settings.png"
+    },
+    {
+      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\sideBar.png",
+      "SourceId": "ChatBotWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "BasePath": "_content/ChatBotWebApp",
+      "RelativePath": "sideBar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sideBar.png"
     }
   ]
 }

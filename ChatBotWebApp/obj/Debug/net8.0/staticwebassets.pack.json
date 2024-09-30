@@ -21,8 +21,20 @@
       "PackagePath": "staticwebassets\\chatIcon.png"
     },
     {
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\chatIcon2.png",
+      "PackagePath": "staticwebassets\\chatIcon2.png"
+    },
+    {
       "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
       "PackagePath": "staticwebassets\\flintec_logo.png"
+    },
+    {
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\settings.png",
+      "PackagePath": "staticwebassets\\settings.png"
+    },
+    {
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\sideBar.png",
+      "PackagePath": "staticwebassets\\sideBar.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChatBotWebApp.Microsoft.AspNetCore.StaticWebAssets.props",

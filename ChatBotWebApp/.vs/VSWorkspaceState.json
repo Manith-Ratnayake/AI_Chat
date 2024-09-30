@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Components",
+    "\\Components\\Layout",
+    "\\Components\\Pages",
+    "\\obj",
+    "\\Properties",
+    "\\wwwroot"
+  ],
+  "SelectedNode": "\\Components\\Pages\\Home.razor",
+  "PreviewInSolutionExplorer": false
+}
