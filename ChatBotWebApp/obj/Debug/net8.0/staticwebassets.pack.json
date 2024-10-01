@@ -17,16 +17,12 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\chatIcon.png",
-      "PackagePath": "staticwebassets\\chatIcon.png"
-    },
-    {
-      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\chatIcon2.png",
-      "PackagePath": "staticwebassets\\chatIcon2.png"
-    },
-    {
       "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
       "PackagePath": "staticwebassets\\flintec_logo.png"
+    },
+    {
+      "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\newChat.png",
+      "PackagePath": "staticwebassets\\newChat.png"
     },
     {
       "Id": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\settings.png",

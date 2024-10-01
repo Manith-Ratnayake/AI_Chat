@@ -1,60 +1,29 @@
-﻿<div class="top-row ps-3 navbar navbar-pink">
+﻿@rendermode InteractiveServer
 
 
-    <div class="ChatIconDiv">
-        <img src="sideBar.png" class="ChatIcon" />
-        <img src="chatIcon2.png" class="ChatIcon" />
-     </div>
-
-
-
-
-    <div class="text-white position-fixed bottom-0 w-100">
-        <h5>Settings</h5>
+<div class="sideBar">
+    <div class="sideBarTop">
+        <img src="sideBar.png" class="sideBarIcon" @onclick="ToggleSideBar" />
+        <img src="newChat.png" class="newChatIcon" />
     </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    @if (isSideBar)
+    {
+        <div class="sideBarContent">
+            <p>Hi Why Not work</p>
+        </div>
+    }
+    
 
 </div>
 
+@code {
+    private bool isSideBar = false; 
 
-
-
-<!--
-
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-  <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-      <nav class="flex-column">
-          <div class="nav-item px-3">
-              <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                  <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-              </NavLink>
-          </div>
-      </nav>
-    -->
-    <!--
-    <img src="settings.png" alt="Settings" class="width:20px" />
-    -->
-
-
-
-
-<style>
-
-
-
-</style>
+    public void ToggleSideBar()
+    {
+        isSideBar = !isSideBar; 
+    }
+}

@@ -1,17 +1,16 @@
 ﻿.ChatContainer {
-    background-color: green;
-    margin-right: 0; /* Ensures no extra margin on the right side */
+    background-color: blue;
+    margin-right: 0;
 }
 
-
 .ChatMessageWindow {
-    background-color: pink;
-    max-height: 320px; /* Set a fixed maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
-    margin-left: auto; /* Push the container to the right */
-    margin-right: 0px; /* Ensures no extra margin on the right side */
-    width: 100%; /* Optional: Fills up the available space up to the max-width */
+    background-color: yellow;
+    max-height: 320px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    margin-left: auto; 
+    margin-right: 0px; 
+    width: 100%; /
     padding-right: 30px;
     z-index: 1;
     padding-right: 30px;
@@ -19,41 +18,41 @@
 
 
 .messageContainer {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    align-items: center; 
     background-color:blue;
 }
 
 .chatIcon {
-    height: 20px; /* Adjust the height as needed */
-    width: 20px; /* Adjust the width as needed */
+    height: 20px; 
+    width: 20px; 
 }
 
 .chatIconContainer {
-    width: 35px; /* Adjust size for circle */
-    height: 35px; /* Adjust size for circle */
-    border: 1px solid white; /* Circle border color */
-    border-radius: 50%; /* Make it circular */
-    display: flex; /* Center the image */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    margin-left: 50px; /* Keep margin on the left */
-    margin-bottom: 100px; /* Adjust bottom margin if needed */
+    width: 35px; 
+    height: 35px; 
+    border: 1px solid white; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-left: 50px; 
+    margin-bottom: 100px; 
 }
 
 
 
 .UserInputBar {
-    position: fixed; /* Keep it fixed at the bottom */
-    bottom: 0; /* Align it to the bottom */
-    left: 50%; /* Start at the middle of the viewport */
-    transform: translateX(-50%); /* Shift it left by half its width to center */
-    display: flex; /* Keep it flexible */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
     z-index: 100;
     margin-bottom: 2%;
-    width: 100%; /* Optional: Ensure it takes full width of the viewport */
+    width: 100%; 
 
 }
 
@@ -71,164 +70,76 @@
 
 
 
-
-
-
-
 .displayChatMessage {
-    display: block; /* Ensures each message is on a new line */
+    display: block; 
     color: white;
     background-color: grey;
     padding: 10px 20px 10px 20px;
     margin-bottom: 20px;
-    margin-left: auto; /* Pushes the message to the right */
-    margin-right: 50px; /* Adds space from the right edge */
-    width: fit-content; /* Adjusts the width to fit the content */
-    max-width: 50%; /* Ensure messages don't go beyond the center */
-    word-wrap: break-word; /* Ensures long words or text don't overflow */
-    border-radius: 25px; /* Optional: adds rounded corners to the message box */
+    margin-left: auto; 
+    margin-right: 50px; 
+    width: fit-content; 
+    max-width: 50%;
+    word-wrap: break-word; 
+    border-radius: 25px; 
 }
-
-
-
-
-
-
-
 
 
 
 .displayReplyMessage {
     display: block;
     color: white;
-    /*background-color: grey;*/
     padding: 10px;
     margin-bottom: 20px;
     margin-right: 10px;
-    text-align: left; /* Ensure the text inside is left-aligned */
-    margin-left: auto; /* Pushes the message to the right */
+    text-align: left; 
+    margin-left: auto; 
     margin-right: 140px;
-    margin-left: auto; /* Centers the message horizontally */
-    width: fit-content; /* Adjusts the width to fit the content */
-    max-width: 80%; /* Limits the width to 80% of the parent container */
-    word-wrap: break-word; /* Ensures long words or text don't overflow */
-    text-align: center; /* Centers the text inside the message */
-    border-radius: 7px; /* Optional: adds rounded corners to the message box */
+    margin-left: auto; 
+    width: fit-content; 
+    max-width: 80%; 
+    word-wrap: break-word; 
+    text-align: center; 
+    border-radius: 7px; 
 }
 
-/*
-
-    Send Button
-
-*/
-
-
-
-
-/*.inputBar {
-    display: flex;*/ /* Aligns the input field and button in a row */
-    /*background-color: white;*/ /* Light background color for the input area */
-    /*border: 1px solid #ccc;*/ /* Border for the input area */
-    /*border-radius: 20px;*/ /* Rounded corners */
-    /*padding: 10px;*/ /* Padding inside the input area */
-    /*margin-top: 20px;*/ /* Space above the input bar */
-    /*position: fixed;*/ /* Position fixed at the bottom */
-    /*bottom: 10px;*/ /* Distance from the bottom */
-    /*left: 10px;*/ /* Distance from the left */
-    /*right: 10px;*/ /* Distance from the right */
-    /*align-items: center;*/ /* Center the items vertically */
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/ /* Optional shadow for depth */
-
-
-
-
-
-
-
-
-
-/*}
-
-.inputField {
-    flex-grow: 1;*/ /* Takes up available space */
-    /*border: none;*/ /* No border */
-    /*border-radius: 20px;*/ /* Rounded corners */
-    /*padding: 10px;*/ /* Padding inside the input */
-    /*font-size: 16px;*/ /* Font size */
-    /*outline: none;*/ /* Removes the outline on focus */
-/*}
-
-    .inputField::placeholder {
-        color: grey;*/ /* Placeholder color */
-    /*}
-
-.sendButton {
-    background-color:deeppink;*/ /* Green background */
-    /*color: white;*/ /* White text */
-    /*border: none;*/ /* No border */
-    /*border-radius: 20px;*/ /* Rounded corners */
-    /*padding: 10px 15px;*/ /* Padding inside the button */
-    /*cursor: pointer;*/ /* Pointer cursor on hover */
-    /*margin-left: 10px;*/ /* Space between the input and button */
-    /*transition: background-color 0.3s;*/ /* Smooth background color transition */
-/*}
-
-    .sendButton:hover {
-        background-color: #45a049;*/ /* Darker green on hover */
-    /*}*/
-
-
 .inputBar {
-    /*display: flex;*/ /* Aligns the input field and button in a row */
-    /*background-color: white;*/ /* Light background color for the input area */
-    /*border: 1px solid #ccc;*/ /* Border for the input area */
-    /*border-radius: 25px;*/ /* Rounded corners */
-    /*padding: 10px;*/ /* Padding inside the input area */
-    /*position: fixed;*/ /* Fixed position */
-    /*bottom: 0;*/ /* Align to the bottom */
-    /*left: 50%;*/ /* Start at the middle of the viewport */
-    /*transform: translateX(-50%);*/ /* Shift it left by half to center */
-    /*width: 90%;*/ /* Optional: Adjust the width to be close to full viewport */
-    /*z-index: 100;*/ /* Ensure it's on top */
-    /*align-items: center;*/ /* Center the items vertically */
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/ /* Optional shadow for depth */
+    
 
-    position: fixed; /* Keep it fixed at the bottom */
-    bottom: 0; /* Align it to the bottom */
-    left: 50%; /* Start at the middle of the viewport */   
-    transform: translateX(-50%); /* Shift it left by half its width to center */
-    display: flex; /* Keep it flexible */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    position: fixed; 
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
  
     margin-bottom: 2%;
 }
 
 .inputField {
-    flex-grow: 1; /* Takes up available space */
-    border: none; /* No border */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px; /* Padding inside the input */
-    font-size: 16px; /* Font size */
-    outline: none; /* Removes the outline on focus */
+    flex-grow: 1; 
+    border: none; 
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px; 
+    outline: none; 
     border-color:grey;
 }
 
 .inputField::placeholder {
-    color: grey; /* Placeholder color */
-}
+    color: grey; 
 
 .sendButton {
-    background-color: deeppink; /* Background color */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px 15px; /* Padding inside the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-left: 10px; /* Space between the input and button */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    background-color: deeppink; 
+    color: white; 
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+    transition: background-color 0.3s;
 }
 
 .sendButton:hover {
-    background-color: hotpink; /* Darker green on hover */
-}
+    background-color: hotpink;
