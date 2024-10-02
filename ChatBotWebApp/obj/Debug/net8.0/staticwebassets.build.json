@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ta1fse8zqJ6HcffUeHSSr08PHJp0E5sFKXOSjTSla/A=",
+  "Hash": "tl+91rEDl4mtQRmB5qzIVC8Exb4HhnXX4PCouwBqp5A=",
   "Source": "ChatBotWebApp",
   "BasePath": "_content/ChatBotWebApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ChatBotWebApp\\wwwroot",
       "Source": "ChatBotWebApp",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatBotWebApp.styles.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatBotWebApp.styles.css",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "ChatBotWebApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatBotWebApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ChatBotWebApp.styles.css"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "ChatBotWebApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChatBotWebApp.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\app.css",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\flintec_logo.png",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "flintec_logo.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\flintec_logo.png"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\newChat.png",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\newChat.png",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "newChat.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\newChat.png"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\settings.png",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\settings.png",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "settings.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\settings.png"
     },
     {
-      "Identity": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\sideBar.png",
+      "Identity": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\sideBar.png",
       "SourceId": "ChatBotWebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\wwwroot\\",
       "BasePath": "_content/ChatBotWebApp",
       "RelativePath": "sideBar.png",
       "AssetKind": "All",

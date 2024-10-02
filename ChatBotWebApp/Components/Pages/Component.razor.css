@@ -1,0 +1,21 @@
+﻿.suggestionsContainer {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin: 10px; 
+}
+
+.suggestionBlock {
+    width: calc(25% - 10px); 
+    background-color: lightblue; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 10px;
+    box-sizing: border-box; 
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+.suggestionBlock:hover {
+    background-color:darkblue;
+}

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
       "projectName": "ChatBotWebApp",
-      "projectPath": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
+      "projectPath": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\ChatBotWebApp.csproj",
       "packagesPath": "C:\\Users\\Manith\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\",
+      "outputPath": "C:\\Users\\Manith\\Desktop\\New folder (3)\\Flintec_CompanyPolicy_ChatBot_Website\\ChatBotWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

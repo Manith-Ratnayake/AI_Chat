@@ -60,3 +60,4 @@ C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\Cha
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ChatBotWebApp.pdb
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ChatBotWebApp.genruntimeconfig.cache
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ref\ChatBotWebApp.dll
+C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Component.razor.rz.scp.css

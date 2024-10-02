@@ -1,8 +1,6 @@
 ﻿@page "/"
 @rendermode InteractiveServer
-
-
-
+@inherits Component
 
 <div>
     <h3>Flintec</h3>
@@ -10,35 +8,30 @@
 
 <div class="ChatContainer">
    
-     <div class="ChatMessageWindow">
-	
- 	    @if (userQuestions.Count > 0)
- 	    {
-
+    <div class="ChatMessageWindow">
+        @if (userQuestions.Count > 0)
+        {
             @foreach (string userQuestion in userQuestions)
- 		    {
-
+            {
                 <p class="displayChatMessage">@userQuestion</p>
 
-                @if (1==1)
-                {
-                    <div class="messageContainer">
-                        <div class="chatIconContainer">
-                            <img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />
-                        </div>
-                        <p class="displayReplyMessage">@userAnswer</p>
+                <div class="messageContainer">
+                    <div class="chatIconContainer">
+                        <img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />
                     </div>
-                } 
- 		    }
- 	    }
-
-    
-     </div>
-
+                    <p class="displayReplyMessage">@userAnswer</p>
+                </div>
+            }
+        }
+        else
+        {
+            <Component OnSuggestionSelected="SuggestionSelected" />
+        }
+    </div>
 
     <div class="inputArea">
         <div class="inputWrapper">
-            <input type="text" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeydown="EnterKey" />
+            <textarea type="text"  id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeydown="EnterKey" />
             <button class="sendButton" @onclick="ChatMessageSubmit">Send</button>
         </div>
 
@@ -46,64 +39,34 @@
             <p class="contactText">Contact the company for more details</p>
         </div>
     </div>
-
-
-
-
- </div>
-
-
-
+</div>
 
 @code {
+    [Parameter]
+    public string? userQuestion { get; set; }
 
-
-    private string? userQuestion = "3435232322";
-    private string? userAnswer = @"
-        Lorem Ipsum is simply dummy text of the printing and typesetting 
-        industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-        PageMaker including versions of Lorem Ipsum.";
+    private string? userAnswer = @" has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+        took a galley of type and";
 
     List<string> userQuestions = new();
-    List<string> suggestionQuestions = new();
-
-    List<string> country = new();
-    List<string> Language = ["English", "French", "Spanish", "Italian", "Hindi", "Dutch", "German", "Korean", "Sinhala", "Vietnamese"];
-
-
 
     public void ChatMessageSubmit()
     {
         if (!string.IsNullOrEmpty(userQuestion))
         {
             userQuestions.Add(userQuestion);
-            this.userQuestion = "454545454";
+            userQuestion = @"
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and .
+";
         }
-
     }
 
-
-    public void SuggestionQuestionRequest()
+    public void SuggestionSelected(string suggestion)
     {
-
+        userQuestion = suggestion; // Set userQuestion from selected suggestion
     }
-
-
-
-
-
-    public void ReplyMessage()
-    {
-
-    }
-
-
-
-
 
     public void EnterKey(KeyboardEventArgs e)
     {
@@ -112,6 +75,7 @@
             ChatMessageSubmit();
         }
     }
+
 
 
 
