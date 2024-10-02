@@ -12,21 +12,23 @@
    
      <div class="ChatMessageWindow">
 	
- 	    @if (userMessages.Count > 0)
+ 	    @if (userQuestions.Count > 0)
  	    {
- 		    @foreach (string message in userMessages)
+
+            @foreach (string userQuestion in userQuestions)
  		    {
 
-                <p class="displayChatMessage">@message</p>
+                <p class="displayChatMessage">@userQuestion</p>
 
-
-                <div class="messageContainer">
-                    <div class="chatIconContainer">
-                        <img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />
+                @if (1==1)
+                {
+                    <div class="messageContainer">
+                        <div class="chatIconContainer">
+                            <img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />
+                        </div>
+                        <p class="displayReplyMessage">@userAnswer</p>
                     </div>
-                    <p class="displayReplyMessage">@answer</p>
-                </div>
-                 
+                } 
  		    }
  	    }
 
@@ -34,13 +36,17 @@
      </div>
 
 
-    <div class="inputBar">
-        <input type="text" id="messageInput" class="InputField" placeholder="Type your message here..." />
-        <button id="sendButton" class="SendMessageButton">Send</button>
+    <div class="inputArea">
+        <div class="inputWrapper">
+            <input type="text" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeydown="EnterKey" />
+            <button class="sendButton" @onclick="ChatMessageSubmit">Send</button>
+        </div>
+
+        <div class="contactTextContainer">
+            <p class="contactText">Contact the company for more details</p>
+        </div>
     </div>
 
-    
-    hi
 
 
 
@@ -52,8 +58,8 @@
 @code {
 
 
-    private string? userMessage;
-    private string? answer = @"
+    private string? userQuestion = "3435232322";
+    private string? userAnswer = @"
         Lorem Ipsum is simply dummy text of the printing and typesetting 
         industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -62,7 +68,7 @@
         containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
         PageMaker including versions of Lorem Ipsum.";
 
-    List<string> userMessages = new();
+    List<string> userQuestions = new();
     List<string> suggestionQuestions = new();
 
     List<string> country = new();
@@ -72,10 +78,10 @@
 
     public void ChatMessageSubmit()
     {
-        if (!string.IsNullOrEmpty(userMessage))
+        if (!string.IsNullOrEmpty(userQuestion))
         {
-            userMessages.Add(userMessage);
-            this.userMessage = "454545454";
+            userQuestions.Add(userQuestion);
+            this.userQuestion = "454545454";
         }
 
     }
@@ -92,7 +98,21 @@
 
     public void ReplyMessage()
     {
-        
+
     }
+
+
+
+
+
+    public void EnterKey(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            ChatMessageSubmit();
+        }
+    }
+
+
 
 }

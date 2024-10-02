@@ -55,19 +55,24 @@ body[b-xi5qal14c2], html[b-xi5qal14c2] {
 }
 
 /* _content/ChatBotWebApp/Components/Pages/Home.razor.rz.scp.css */
+body[b-ym0tm32304] {
+
+}
+
 .ChatContainer[b-ym0tm32304] {
     background-color: blue;
     margin-right: 0;
+    padding-bottom:20%;
 }
 
 .ChatMessageWindow[b-ym0tm32304] {
-    background-color: yellow;
-    max-height: 320px; 
+    background-color: brown;
+    max-height: 620px; 
     overflow-y: auto; 
     border: 1px solid #ccc; 
     margin-left: auto; 
     margin-right: 0px; 
-    width: 100%; /
+    width: 100%; 
     padding-right: 30px;
     z-index: 1;
     padding-right: 30px;
@@ -77,9 +82,9 @@ body[b-xi5qal14c2], html[b-xi5qal14c2] {
 .messageContainer[b-ym0tm32304] {
     display: flex; 
     align-items: center; 
-    background-color:blue;
+    background-color:green;
 }
-
+    
 .chatIcon[b-ym0tm32304] {
     height: 20px; 
     width: 20px; 
@@ -160,43 +165,64 @@ body[b-xi5qal14c2], html[b-xi5qal14c2] {
     border-radius: 7px; 
 }
 
-.inputBar[b-ym0tm32304] {
-    
 
-    position: fixed; 
-    bottom: 0; 
-    left: 50%;
-    transform: translateX(-50%); 
-    display: flex; 
+.inputArea[b-ym0tm32304] {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
     align-items: center; 
-    justify-content: center; 
- 
-    margin-bottom: 2%;
-}
-
-.inputField[b-ym0tm32304] {
-    flex-grow: 1; 
-    border: none; 
-    border-radius: 20px;
     padding: 10px;
-    font-size: 16px; 
-    outline: none; 
-    border-color:grey;
+    background-color: palevioletred;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.inputField[b-ym0tm32304]::placeholder {
-    color: grey; 
 
-.sendButton {
-    background-color: deeppink; 
-    color: white; 
-    border: none; 
+.inputWrapper[b-ym0tm32304] {
+    position: relative;
+    width: 75%;
+    height: 40px; 
+    margin-right:0 auto;
+}
+
+.inputBar[b-ym0tm32304] {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.sendButton[b-ym0tm32304] {
+    position: absolute;
+    right: 5px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
     border-radius: 20px; 
-    padding: 10px 15px; 
-    cursor: pointer; 
-    margin-left: 10px; 
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .sendButton:hover[b-ym0tm32304] {
-    background-color: hotpink;
+    background-color: #45a049; 
+}
+
+.contactTextContainer[b-ym0tm32304] {
+    text-align: center; 
+}
+
+.contactText[b-ym0tm32304] {
+    font-size: 14px; 
+    color: white;
+    margin-bottom:0px;
+}
