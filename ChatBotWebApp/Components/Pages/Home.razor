@@ -1,6 +1,8 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 @inherits Component
+@inject IJSRuntime JS
+
 
 <div>
     <h3>Flintec</h3>
@@ -9,10 +11,14 @@
 <div class="ChatContainer">
    
     <div class="ChatMessageWindow">
+
+
+
         @if (userQuestions.Count > 0)
         {
             @foreach (string userQuestion in userQuestions)
             {
+     
                 <p class="displayChatMessage">@userQuestion</p>
 
                 <div class="messageContainer">
@@ -23,11 +29,16 @@
                 </div>
             }
         }
+        
+        
         else
         {
             <Component OnSuggestionSelected="SuggestionSelected" />
+           
         }
     </div>
+
+       
 
     <div class="inputArea">
         <div class="inputWrapper">
@@ -41,42 +52,3 @@
     </div>
 </div>
 
-@code {
-    [Parameter]
-    public string? userQuestion { get; set; }
-
-    private string? userAnswer = @" has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-        took a galley of type and";
-
-    List<string> userQuestions = new();
-
-    public void ChatMessageSubmit()
-    {
-        if (!string.IsNullOrEmpty(userQuestion))
-        {
-            userQuestions.Add(userQuestion);
-            userQuestion = @"
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and .
-";
-        }
-    }
-
-    public void SuggestionSelected(string suggestion)
-    {
-        userQuestion = suggestion; // Set userQuestion from selected suggestion
-    }
-
-    public void EnterKey(KeyboardEventArgs e)
-    {
-        if (e.Key == "Enter")
-        {
-            ChatMessageSubmit();
-        }
-    }
-
-
-
-
-}

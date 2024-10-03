@@ -1,10 +1,14 @@
 ﻿@rendermode InteractiveServer
+@inject IJSRuntime JS
+ 
 
 
 <div class="sideBar">
+
+
     <div class="sideBarTop">
         <img src="sideBar.png" class="sideBarIcon" @onclick="ToggleSideBar" />
-        <img src="newChat.png" class="newChatIcon" />
+        <img src="newChat.png" class="newChatIcon"  @onclick="NewChat"/>
     </div>
 
 
@@ -13,20 +17,39 @@
     {
 
         <div class="sideBarPane">
-            <p>MyPane</p>
-            Hi
-        </div>
+
+            @if (chatHeader.Count > 0)
+            {
+                @foreach (var tab in chatHeader)
+                {
+                    <div>@tab</div>
+                }
+
+            }
+
+
+            else
+            {
+                <h3>Nothing in here </h3>
+
+            }
+
+         </div>
+
+   
 
     }
-    
+  
     
 </div>
 
-@code {
-    private bool isSideBar = false; 
 
-    public void ToggleSideBar()
+
+<script>
+    window.getLocalStorageKeys = function()
     {
-        isSideBar = !isSideBar; 
-    }
+    return Object.keys(localStorage); 
 }
+</script >
+
+
