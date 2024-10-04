@@ -17,6 +17,7 @@ namespace ChatBotWebApp.Components.Pages
         public bool login = false;
         string formattedDate;
 
+
         private string? userAnswer = @" Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lor Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printertook a galley of type and";
 
         Dictionary<int, List<string>> chatLog = new();
@@ -87,6 +88,7 @@ namespace ChatBotWebApp.Components.Pages
 
 
 
+     
 
 
     }

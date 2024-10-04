@@ -1,10 +1,14 @@
+using Blazored.LocalStorage;
 using ChatBotWebApp.Components;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddBlazoredLocalStorage();
+
 
 var app = builder.Build();
 

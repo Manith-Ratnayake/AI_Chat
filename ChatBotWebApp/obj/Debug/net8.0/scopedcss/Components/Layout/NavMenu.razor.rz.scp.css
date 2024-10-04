@@ -42,3 +42,20 @@ body[b-xi5qal14c2], html[b-xi5qal14c2] {
     width: 20px;
 }
 
+
+
+.SettingsPopUp[b-xi5qal14c2] {
+    width:100px;
+    height:100px;
+}
+
+
+.ChatLogName[b-xi5qal14c2] {
+    padding:10px 0px 10px 0px;
+   
+
+}
+
+.ChatLogName:hover[b-xi5qal14c2]{
+    background-color:aquamarine;
+}

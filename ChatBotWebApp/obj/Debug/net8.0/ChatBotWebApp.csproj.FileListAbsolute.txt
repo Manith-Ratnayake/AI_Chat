@@ -61,3 +61,6 @@ C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\Cha
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ChatBotWebApp.genruntimeconfig.cache
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ref\ChatBotWebApp.dll
 C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Component.razor.rz.scp.css
+C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ChatBotWebApp.csproj.AssemblyReference.cache
+C:\Users\Manith\Desktop\New folder (3)\Flintec_CompanyPolicy_ChatBot_Website\ChatBotWebApp\obj\Debug\net8.0\ChatBotW.56325607.Up2Date

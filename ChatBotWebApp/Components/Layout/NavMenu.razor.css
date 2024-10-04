@@ -42,3 +42,20 @@ body, html {
     width: 20px;
 }
 
+
+
+.SettingsPopUp {
+    width:100px;
+    height:100px;
+}
+
+
+.ChatLogName {
+    padding:10px 0px 10px 0px;
+   
+
+}
+
+.ChatLogName:hover{
+    background-color:aquamarine;
+}
