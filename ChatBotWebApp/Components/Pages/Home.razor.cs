@@ -22,7 +22,7 @@ namespace ChatBotWebApp.Components.Pages
 
         Dictionary<int, List<string>> chatLog = new();
 
-        List<string> userQuestions = new();
+         //public List<string> userQuestions { get; set; } = new List<string>();
 
 
 
@@ -30,7 +30,7 @@ namespace ChatBotWebApp.Components.Pages
         public async Task ChatMessageSubmit()
         {
 
-            if (userQuestions.Count == 0)
+            if (userquestionComponent.userQuestions.Count == 0)
             {
                 DateTime currentDateTime = DateTime.Now;
                 formattedDate = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss");
@@ -40,66 +40,59 @@ namespace ChatBotWebApp.Components.Pages
             if (!string.IsNullOrEmpty(userQuestion))
             {
 
-                userQuestions.Add(userQuestion);
+                userquestionComponent.userQuestions.Add(userQuestion);
                 await SaveToLocalStorage();
                 userQuestion = "";
                 
             }
+
+            StateHasChanged();
         }
-
-
 
         public void UserAnswerGenerator()
         {
 
         }
         
-
-       
-
-
-        public void EnterKey(KeyboardEventArgs e)
+        public async Task EnterKey(KeyboardEventArgs e)
         {
             if (e.Key == "Enter")
             {
-                ChatMessageSubmit();
+                await ChatMessageSubmit();
             }
         }
 
 
         private async Task SaveToLocalStorage()
         {
-            await JS.InvokeVoidAsync("localStorage.setItem", formattedDate, userQuestions);
+            await JS.InvokeVoidAsync("localStorage.setItem", formattedDate, userquestionComponent.userQuestions);
         }
 
-
-
-
-
-
-
-        
 
         public void SuggestionSelected(string suggestion)
         {
-            userQuestion = suggestion;
+            userquestionComponent.userQuestions = new List<string> { suggestion };
+            StateHasChanged();
         }
 
 
+        protected override void OnInitialized()
+        {
+            StateHasChanged();
+            Console.WriteLine(userquestionComponent.userQuestions.Count());
+
+        }
+
+        public void Dispose()
+        {
+            StateHasChanged();
+            Console.WriteLine(userquestionComponent.userQuestions.Count());
+        }
 
 
-     
 
 
     }
 
-
-
-
-
-
-
-
-
- }
+}
 

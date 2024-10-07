@@ -1,4 +1,7 @@
-﻿<div class="suggestionsContainer">
+﻿@inject UserQuestions userquestionComponent;
+
+
+<div class="suggestionsContainer">
     @foreach (string suggestion in suggestedQuestions)
     {
         <div class="suggestionBlock" @onclick="() => SelectSuggestion(suggestion)">

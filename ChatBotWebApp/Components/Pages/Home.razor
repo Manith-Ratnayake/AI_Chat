@@ -3,6 +3,7 @@
 @inherits Component
 @inject IJSRuntime JS
 @inject ILocalStorageService localStorage
+@inject UserQuestions userquestionComponent
 
 
 
@@ -18,12 +19,18 @@
 
 
 
-        @if (userQuestions.Count > 0)
+        @if (userquestionComponent.userQuestions.Count > 0 )
+            
+
         {
-            @foreach (string userQuestion in userQuestions)
+            
+
+            @foreach (string userQuestionStored in userquestionComponent.userQuestions)
             {
-     
-                <p class="displayChatMessage">@userQuestion</p>
+
+
+
+                <p class="displayChatMessage">@userQuestionStored</p>
 
                 <div class="messageContainer">
                     <div class="chatIconContainer">
@@ -33,16 +40,16 @@
                 </div>
             }
         }
-        
-        
+
+
         else
         {
+
             <Component OnSuggestionSelected="SuggestionSelected" />
-           
         }
     </div>
 
-       
+
 
     <div class="inputArea">
         <div class="inputWrapper">
