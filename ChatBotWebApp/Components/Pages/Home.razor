@@ -4,7 +4,8 @@
 @inject IJSRuntime JS
 @inject ILocalStorageService localStorage
 @inject UserQuestions userquestionComponent
-
+@using ChatBotWebApp.Components.Layout;
+@inject NavMenu navMenu;
 
 
 <div>
@@ -19,13 +20,13 @@
 
 
 
-        @if (userquestionComponent.userQuestions.Count > 0 )
+        @if (userQuestions2.Any())
             
 
         {
-            
 
-            @foreach (string userQuestionStored in userquestionComponent.userQuestions)
+
+            @foreach (string userQuestionStored in userQuestions2)
             {
 
 
@@ -46,6 +47,7 @@
         {
 
             <Component OnSuggestionSelected="SuggestionSelected" />
+            <p>@userQuestions2.Count()</p>
         }
     </div>
 

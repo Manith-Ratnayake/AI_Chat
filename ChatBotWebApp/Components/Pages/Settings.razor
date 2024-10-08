@@ -1,4 +1,4 @@
-﻿<div class="modal-overlay" @onclick="ClosePopup" style="@modalStyle">
+﻿<div class="modal-overlay" @onclick="CloseSettings" style="@modalStyle">
     <div class="modal-content" @onclick:stopPropagation="true">
         <h2>Settings</h2>
 
@@ -42,7 +42,7 @@
             <option value="Vietnamese">Vietnamese</option>
         </select>
 
-        <button @onclick="ClosePopup">Close</button>
+        <button @onclick="CloseSettings">Close</button>
     </div>
 </div>
 
@@ -51,14 +51,29 @@
     private string selectedCountry;
     private string selectedLanguage;
 
+    // [Parameter] public EventCallback OnClose { get; set; }
+
+    // private async Task ClosePopup()
+    // {
+    //     modalStyle = "display:none;";
+    //     if (OnClose.HasDelegate)
+    //     {
+    //         await OnClose.InvokeAsync();
+    //     }
+    // }
+
+
+
+
     [Parameter] public EventCallback OnClose { get; set; }
 
-    private async Task ClosePopup()
+    private async Task CloseSettings()
     {
-        modalStyle = "display:none;";
-        if (OnClose.HasDelegate)
-        {
-            await OnClose.InvokeAsync();
-        }
+        await OnClose.InvokeAsync();
     }
+
+
+
+
+
 }

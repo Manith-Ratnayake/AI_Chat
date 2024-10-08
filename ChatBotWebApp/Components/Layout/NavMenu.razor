@@ -3,7 +3,8 @@
 @inject ILocalStorageService localStorage
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 @inject UserQuestions userquestionComponent
-
+@using ChatBotWebApp.Components.Pages;
+@inject Home homePage;
 
 <div class="sideBar">
 
@@ -46,7 +47,7 @@
 
          </div>
 
-        <div class="SettingsPopUp" @onclick="SettingsPopUp">Settings</div>
+        <div class="SettingsPopUp" @onclick="ToggleSettings">Settings</div>
 
    
 

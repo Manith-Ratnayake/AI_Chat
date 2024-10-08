@@ -15,6 +15,9 @@ namespace ChatBotWebApp.Components.Layout
         private Dictionary<string, List<string>> chatStoredDataOnBrowser = new();
 
 
+        public List<string> userQuestions3 { get; set; } = new List<string>();
+
+
         public async Task ToggleSideBar()
         {
             isSideBar = !isSideBar;
@@ -45,7 +48,8 @@ namespace ChatBotWebApp.Components.Layout
 
         public void NewChat()
         {
-
+            userQuestions3.Clear();
+            Console.WriteLine("Clear the list.........>>>>");
         }
 
 
@@ -54,7 +58,7 @@ namespace ChatBotWebApp.Components.Layout
         public void SettingsPopUp()
         {
 
-
+          
 
         }
 
@@ -65,17 +69,30 @@ namespace ChatBotWebApp.Components.Layout
             var value = await localStorage.GetItemAsStringAsync(date);
             Console.WriteLine($"Retrieved value from localStorage: {value}");
 
-            userquestionComponent.ClearQuestions();
-            StateHasChanged();
+            userQuestions3.Clear();
 
 
             if (!string.IsNullOrEmpty(value))
             {
                 List <string> questions = value.Split(',').ToList();
-                userquestionComponent.AddQuestion(questions);
-                userquestionComponent.userQuestions = questions;
-                Console.WriteLine($"User Questions: {string.Join(", ", userquestionComponent.userQuestions)}");
-                Console.WriteLine($"{userquestionComponent.userQuestions.Count()}");
+                Console.WriteLine(">>> ");
+                userQuestions3 = questions;
+                foreach (var q in userQuestions3)
+                {
+                    Console.WriteLine(q);
+                }
+
+
+                if (homePage != null)  // Ensure homePage is not null
+                {
+                    Console.WriteLine("homePage NOT NULL.");
+
+                    homePage.selectedOldAsync(userQuestions3);
+                }
+                else
+                {
+                    Console.WriteLine("homePage is null.");
+                }
 
             }
 
@@ -83,6 +100,17 @@ namespace ChatBotWebApp.Components.Layout
         }
 
 
+        private bool showSettings = false;
+
+        private void ToggleSettings()
+        {
+            showSettings = !showSettings; // Toggle visibility
+        }
+
+        private void CloseSettings()
+        {
+            showSettings = false; // Close Settings when clicked elsewhere
+        }
 
 
     }

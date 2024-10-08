@@ -1,5 +1,7 @@
 using Blazored.LocalStorage;
 using ChatBotWebApp.Components;
+using ChatBotWebApp.Components.Layout;
+using ChatBotWebApp.Components.Pages;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddSingleton<UserQuestions>();
+builder.Services.AddSingleton<Home>();
+builder.Services.AddSingleton<NavMenu>();
 
 
 var app = builder.Build();
