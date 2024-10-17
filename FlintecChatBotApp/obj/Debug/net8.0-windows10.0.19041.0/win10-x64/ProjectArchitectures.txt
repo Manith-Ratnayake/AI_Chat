@@ -1,0 +1,1 @@
+C:\Users\Manith\Desktop\FlintecChatBotApp\FlintecChatBotApp.csproj;x64

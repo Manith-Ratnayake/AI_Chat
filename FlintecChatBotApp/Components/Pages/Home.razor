@@ -1,0 +1,70 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@using FlintecChatBotApp.Components.Models;
+
+<div>
+    <h3>Flintec</h3>
+</div>
+
+
+
+
+<div class="ChatContainer">
+   
+    <div class="ChatMessageWindow">
+
+
+        @if (conversation.tabConversationsCount > 0)
+        {
+            <p>@conversation.tabConversations.Count</p>
+
+
+            @foreach (string message in conversation.tabConversations)
+            {
+
+                <p class="displayChatMessage">@message</p>
+
+                <div class="messageContainer">
+                    <div class="chatIconContainer">
+                        <!--<img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />-->
+                    </div>
+                    <p class="displayReplyMessage">@message</p>
+                   
+                </div>
+            }
+        }
+
+
+        else
+        {
+
+            <p>@conversation.tabConversations.Count()</p>
+
+        }
+    </div>
+
+
+<div class="inputArea">
+    <div class="inputWrapper">
+        <textarea type="text"  id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeyup="EnterKeyPressed" />
+            <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
+    </div>
+
+    <div class="contactTextContainer">
+        <p class="contactText">Contact the company for more details</p>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<button @onclick="ChangeTab" >Change the tab</button>
+
+
+@foreach(var message in appInstance.GetAllTabIds())
+{
+    <p>message</p>
+}
+
