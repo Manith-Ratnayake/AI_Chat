@@ -16,10 +16,10 @@
 
         @if (conversation.tabConversationsCount > 0)
         {
-            <p>@conversation.tabConversations.Count</p>
+            <p>@conversation.tabConversationsCount</p>
 
 
-            @foreach (string message in conversation.tabConversations)
+            @foreach (string message in conversation.GetTabMessage())
             {
 
                 <p class="displayChatMessage">@message</p>
@@ -28,7 +28,7 @@
                     <div class="chatIconContainer">
                         <!--<img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />-->
                     </div>
-                    <p class="displayReplyMessage">@message</p>
+                    <!--<p class="displayReplyMessage">@message</p>-->
                    
                 </div>
             }
@@ -38,7 +38,7 @@
         else
         {
 
-            <p>@conversation.tabConversations.Count()</p>
+            <p>@conversation.tabConversationsCount</p>
 
         }
     </div>
@@ -46,7 +46,7 @@
 
 <div class="inputArea">
     <div class="inputWrapper">
-        <textarea type="text"  id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeyup="EnterKeyPressed" />
+            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
             <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
     </div>
 
@@ -60,11 +60,14 @@
 
 
 
-<button @onclick="ChangeTab" >Change the tab</button>
+<button @onclick="CreateConversationTab">New tab</button>
 
 
-@foreach(var message in appInstance.GetAllTabIds())
+@foreach (var conversationOnApp in appInstance.appConversation)
 {
-    <p>message</p>
+    <div>
+        <button @onclick="() => GetConversationTab(conversationOnApp.Key)">@conversationOnApp</button>
+        <button @onclick="() => DeleteConversationTab(conversationOnApp.Key)">Delete</button>
+    </div>
 }
 

@@ -9,35 +9,79 @@ namespace FlintecChatBotApp.Components.Models
 
     public class ChatApp
     {
-        public List<Conversation> tabList { get; set; } = new List<Conversation>();
-        private int currentTabId = 1; 
+
+        public Dictionary<int, Conversation> appConversation { get; set; } 
+        public int currentTabId = 1; 
 
 
-        public void AddConversationTab()
+
+        public ChatApp() 
         {
-            Conversation newTab = new Conversation(currentTabId);
-            tabList.Add(newTab);
-            currentTabId++;
+            this.appConversation = new Dictionary<int, Conversation>();
+           
         }
 
 
 
-        public List<int> GetAllTabIds()
+
+        public void CreateConversation(Conversation conversation)
         {
-            return tabList.Select(tab => tab.tabId).ToList();
+             
+           appConversation.Add(currentTabId, conversation);
+           currentTabId++;
         }
 
 
 
-        public Conversation GetTabConversation(int tabId)
+
+        public Conversation GetConversation(int requestedConversationId)
         {
-            var conversation = tabList.FirstOrDefault(tab => tab.tabId == tabId);
-            if (conversation == null)
+              return appConversation[requestedConversationId];   
+        }
+
+
+
+
+        public ChatApp GetAllConversation()
+        {
+            return this;
+        }
+
+
+
+        public void UpdateConversation(int conversationId, string newMessage)
+        {
+            if (appConversation.TryGetValue(conversationId, out var conversation))
             {
-                throw new KeyNotFoundException("Invalid tab ID.");
+                conversation.AddTabMessage(newMessage); 
             }
-            return conversation;
+            else
+            {
+                Console.WriteLine("Conversation ID not found.");
+            }
         }
+
+
+
+        public void DeleteConversation(int conversationId)
+        {
+            if (appConversation.ContainsKey(conversationId))
+            {
+                appConversation.Remove(conversationId);
+                Console.WriteLine($"Conversation with key {conversationId} has been removed.");
+            }
+            else
+            {
+                Console.WriteLine($"No conversation found with key {conversationId}.");
+            }
+        }
+
+
+        public override string ToString()
+        {
+            return string.Join(", ", appConversation); // Joins the messages with a comma
+        }
+
 
 
     }

@@ -10,28 +10,35 @@ namespace FlintecChatBotApp.Components.Models
     public class Conversation
     {
 
-        public int tabId;
-        public string? timeChatStarted;
-        public List<string> tabConversations { get; set; } = [];
-        public int tabConversationsCount = 0; 
+       
+        public List<string> Messages { get; set; }
+        public int tabConversationsCount = 0;
 
 
-        public Conversation(int tabId)
+        public Conversation()
         {
-            this.tabId = tabId; 
+            this.Messages = new List<string>(); 
 
         }
 
 
-        public void AddMessage(string message)
+        public void AddTabMessage(string message)
         {
-            tabConversations.Add(message);
+            Messages.Add(message);
             tabConversationsCount++;
         }
 
       
+        public List<string> GetTabMessage()
+        {
+            return Messages;
+        }
 
 
+        public override string ToString()
+        {
+            return string.Join(", ", Messages); // Joins the messages with a comma
+        }
 
     }
 }

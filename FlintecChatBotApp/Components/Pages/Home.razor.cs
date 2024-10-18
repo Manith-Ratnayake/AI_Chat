@@ -16,15 +16,12 @@ namespace FlintecChatBotApp.Components.Pages
         string userQuestionAnswered;
 
 
-        ChatApp appInstance = new ChatApp();
-        Conversation conversation = new Conversation(23);
-
+        public ChatApp appInstance = new ChatApp();
+        public Conversation conversation = new ();
 
 
         protected override void OnInitialized()
         {
-            appInstance.AddConversationTab();
-            conversation = appInstance.GetTabConversation(1); 
 
         }
 
@@ -48,11 +45,14 @@ namespace FlintecChatBotApp.Components.Pages
 
       
 
-        public void MessagesSaveOnTab()
-        {
-            conversation.AddMessage(userQuestion);
-            conversation.AddMessage(userQuestionAnswered);
-        }
+            public void MessagesSaveOnTab()
+            {
+                conversation.AddTabMessage(userQuestion);
+                //conversation.AddTabMessage(userQuestionAnswered);
+                Console.WriteLine(conversation.ToString());
+                JSRuntime.InvokeVoidAsync("console.log", "Added List is  : " + conversation);
+
+            }
 
 
         public void EnterKeyPressed(KeyboardEventArgs e)
@@ -60,14 +60,10 @@ namespace FlintecChatBotApp.Components.Pages
             if (e.Key == "Enter")
             {
 
-                JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
+                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
                  UserSubmitQuestion();
             }
         }
-
-
-
-
 
 
 
@@ -81,6 +77,8 @@ namespace FlintecChatBotApp.Components.Pages
         "Let me assist you with that.",
         "I'm not sure, let me find out."
     };
+
+
 
     public void GenerateAnswer()
     {

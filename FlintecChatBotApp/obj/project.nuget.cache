@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TMNleCqGwwQ=",
+  "dgSpecHash": "mSvUVdzMtUY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
+  "projectFilePath": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Manith\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Manith\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",

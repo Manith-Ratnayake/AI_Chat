@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.flintecchatbotapp</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>
     </WindowsSdkPath>
-    <LayoutDir>C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>00560C5D8CE5137BA568712E35B92C673058FFF784FA32E47F1609BCEEC379E3</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.flintecchatbotapp_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.flintecchatbotapp_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -27,284 +27,284 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-10-17T10:38:12.838</Modified>
+      <Modified>2024-10-18T08:56:52.564</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <Modified>2024-10-17T08:05:59.499</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.runtimeconfig.json">
       <PackagePath>FlintecChatBotApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-10-17T04:59:15.677</Modified>
+      <Modified>2024-10-17T17:32:31.611</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.dll">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.dll">
       <PackagePath>FlintecChatBotApp.dll</PackagePath>
-      <Modified>2024-10-17T10:38:12.569</Modified>
+      <Modified>2024-10-18T08:56:52.350</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FlintecChatBotApp.exe</PackagePath>
-      <Modified>2024-10-17T10:38:12.579</Modified>
+      <Modified>2024-10-18T08:56:52.356</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2024-10-17T04:58:36.640</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\wwwroot\css\app.css">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
       <Modified>2024-10-17T04:58:36.648</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\wwwroot\css\bootstrap\bootstrap.min.css">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
       <Modified>2024-10-17T04:58:36.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\wwwroot\css\bootstrap\bootstrap.min.css.map">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
       <Modified>2024-10-17T04:58:36.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\wwwroot\favicon.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
       <Modified>2024-10-17T04:58:36.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\wwwroot\index.html">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2024-10-17T04:58:36.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
       <Modified>2024-10-17T04:58:46.913</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
       <Modified>2024-10-17T04:58:46.929</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
       <Modified>2024-10-17T04:58:46.951</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
       <Modified>2024-10-17T04:58:46.988</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
       <Modified>2024-10-17T04:58:47.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2024-10-17T04:58:36.638</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.342</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.342</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.342</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.342</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.341</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.346</Modified>
+      <Modified>2024-10-17T17:32:08.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.345</Modified>
+      <Modified>2024-10-17T17:32:08.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.344</Modified>
+      <Modified>2024-10-17T17:32:08.575</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.343</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.342</Modified>
+      <Modified>2024-10-17T17:32:08.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-10-17T04:58:48.347</Modified>
+      <Modified>2024-10-17T17:32:08.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.deps.json">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.deps.json">
       <PackagePath>FlintecChatBotApp.deps.json</PackagePath>
-      <Modified>2024-10-17T08:05:59.275</Modified>
+      <Modified>2024-10-17T17:32:31.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -666,15 +666,15 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2024-08-05T20:48:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\FlintecChatBotApp.styles.css">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\FlintecChatBotApp.styles.css">
       <PackagePath>wwwroot\FlintecChatBotApp.styles.css</PackagePath>
       <Modified>2024-10-17T05:03:56.103</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\FlintecChatBotApp.bundle.scp.css">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\FlintecChatBotApp.bundle.scp.css">
       <PackagePath>wwwroot\FlintecChatBotApp.bundle.scp.css</PackagePath>
       <Modified>2024-10-17T05:03:56.104</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\FlintecChatBotApp\Components\Layout\MainLayout.razor.css">
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\ChatBot_Website\FlintecChatBotApp\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
       <Modified>2024-10-17T05:03:55.479</Modified>
     </AppxPackagedFile>

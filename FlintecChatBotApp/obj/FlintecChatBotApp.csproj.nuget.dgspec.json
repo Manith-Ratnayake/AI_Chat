@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\FlintecChatBotApp.csproj": {}
+    "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\FlintecChatBotApp.csproj": {
+    "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
+        "projectUniqueName": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
         "projectName": "FlintecChatBotApp",
-        "projectPath": "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
+        "projectPath": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
         "packagesPath": "C:\\Users\\Manith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Manith\\Desktop\\FlintecChatBotApp\\obj\\",
+        "outputPath": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
