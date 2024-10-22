@@ -1,4 +1,5 @@
-﻿using Microsoft.JSInterop;
+﻿using FlintecChatBotApp.Components.Models;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,54 +11,41 @@ namespace FlintecChatBotApp.Components.Pages
     partial class Home
     {
 
-        public bool hasId = false;
-       
+        //public void CreateConversationTab()
+        //{
+        //    userConversation = new Conversation();
+        //    userAccount.CreateConversation(userConversation);
+           
+
+        //}
+
+
+        //public void UpdateConversationTab()
+        //{
+        //    userConversation.userQuestionAnswer = "//////////";
+        //    JSRuntime.InvokeVoidAsync("console.log", "******222**** : " + userConversation.userQuestion);
+
+        //    userAccount.UpdateConversation(userConversation.userQuestion);
+        //    userAccount.UpdateConversation(userConversation.userQuestionAnswer);
+        //    JSRuntime.InvokeVoidAsync("console.log", "************ : " + userConversation.userQuestion);
+
+
+        //}
 
 
 
-        public void CreateConversationTab()
-        {
-
-            if (conversation.Messages.Count != 0)
-            {
-
-                if (hasId == false)
-                {
-                    appInstance.CreateConversation(conversation);
-
-                }
+        //public async Task GetConversationTab(int conversationId)
+        //{
+        //    await JSRuntime.InvokeVoidAsync("console.log", "requested id" + conversationId);
+        //    userConversation = userAccount.GetConversation(conversationId);
+        //}
 
 
-                conversation = new();
-
-            }
-
-
-            else
-            {
-                conversation = new();
-            }
-
-        }
-
-
-
-
-
-        public async Task GetConversationTab(int conversationId)
-        {
-            await JSRuntime.InvokeVoidAsync("console.log", "requested id" + conversationId);
-            CreateConversationTab();
-            this.conversation = appInstance.GetConversation(conversationId);
-            hasId = true;
-        }
-
-
-        public async Task DeleteConversationTab(int conversationId)
-        {
-            await JSRuntime.InvokeVoidAsync("console.log", "requested delete" + conversationId);
-            appInstance.DeleteConversation(conversationId);
-        }
+        //public async Task DeleteConversationTab(int conversationId)
+        //{
+        //    await JSRuntime.InvokeVoidAsync("console.log", "requested delete" + conversationId);
+        //    userAccount.DeleteConversation(conversationId);
+        //}
 
 
     }

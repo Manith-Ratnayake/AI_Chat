@@ -6,61 +6,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FlintecChatBotApp.Components.Models;
+
+
 namespace FlintecChatBotApp.Components.Pages
 {
     partial class Home
     {
-        public string? randomAnswer;
-        public string? userQuestion;
-        string timeChatStarted;
-        string userQuestionAnswered;
+        public string? randomAnswer;  
+        Conversation userConversation = new();
 
 
-        public ChatApp appInstance = new ChatApp();
-        public Conversation conversation = new ();
-
-
-        protected override void OnInitialized()
-        {
-
-        }
 
 
         public void UserSubmitQuestion()
         {
-            JSRuntime.InvokeVoidAsync("console.log", "UserSubmitQuestion method triggered");
-            JSRuntime.InvokeVoidAsync("console.log", "UserQuestion : " + userQuestion);
-
-
-
-            if (userQuestion != string.Empty)
+           
+            if (!string.IsNullOrEmpty(userConversation.userQuestion))
             {
 
                 GenerateAnswer();
-                MessagesSaveOnTab();
-                userQuestion = string.Empty;
+
+                userConversation.messages.Add(userConversation.userQuestion);
+                userConversation.messages.Add(userConversation.userQuestionAnswer);
+
+
+                userConversation.userQuestion       = string.Empty;
+                userConversation.userQuestionAnswer = string.Empty;
+
             }
 
         }
 
-      
 
-            public void MessagesSaveOnTab()
-            {
-                conversation.AddTabMessage(userQuestion);
-                //conversation.AddTabMessage(userQuestionAnswered);
-                Console.WriteLine(conversation.ToString());
-                JSRuntime.InvokeVoidAsync("console.log", "Added List is  : " + conversation);
-
-            }
-
+        public void CreateNewConversation()
+        {
+            userConversation.CreateNewConversation(userConversation.messages);
+        }
 
         public void EnterKeyPressed(KeyboardEventArgs e)
         {
             if (e.Key == "Enter")
             {
 
-                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
+                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userConversation.userQuestion}");
                  UserSubmitQuestion();
             }
         }
@@ -85,7 +73,7 @@ namespace FlintecChatBotApp.Components.Pages
         var random = new Random();
         int index = random.Next(PossibleReplies.Count);
         JSRuntime.InvokeVoidAsync("console.log", PossibleReplies[index] + "--------RETURN");
-        userQuestionAnswered =  PossibleReplies[index];
+            userConversation.userQuestionAnswer =  PossibleReplies[index];
     }
 
 

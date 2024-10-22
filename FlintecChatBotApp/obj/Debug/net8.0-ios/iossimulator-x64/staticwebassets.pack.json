@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-ios\\iossimulator-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "PackagePath": "staticwebassets\\FlintecChatBotApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.FlintecChatBotApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.build.FlintecChatBotApp.props",
+      "PackagePath": "build\\FlintecChatBotApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildMultiTargeting.FlintecChatBotApp.props",
+      "PackagePath": "buildMultiTargeting\\FlintecChatBotApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildTransitive.FlintecChatBotApp.props",
+      "PackagePath": "buildTransitive\\FlintecChatBotApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

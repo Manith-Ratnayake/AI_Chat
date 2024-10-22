@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Microsoft.JSInterop;
+using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,38 +11,54 @@ namespace FlintecChatBotApp.Components.Models
     public class Conversation
     {
 
+        public Dictionary<int, Conversation> conversations = new();
+        public List<string> messages = new();
+        
+        public int pointingTab = 1;
+        public int totalTabs = 1;
+
+        public string userQuestion;
+        public string userQuestionAnswer;
+
        
-        public List<string> Messages { get; set; }
-        public int tabConversationsCount = 0;
-
-
-        public Conversation()
+        public List<string> GetConversation(int tabNumber)
         {
-            this.Messages = new List<string>(); 
-
+            return conversations[tabNumber].messages;
         }
 
 
-        public void AddTabMessage(string message)
+        public void DeleteConversation(int tabNumber)
         {
-            Messages.Add(message);
-            tabConversationsCount++;
-        }
-
-      
-        public List<string> GetTabMessage()
-        {
-            return Messages;
+            conversations.Remove(tabNumber);
         }
 
 
-        public override string ToString()
+        public void CreateNewConversation(List<Conversation> userConversation)
         {
-            return string.Join(", ", Messages); // Joins the messages with a comma
+            conversations.Add(totalTabs, userConversation);
+            var messages = new List<string>();
+            totalTabs++;
         }
+
+
+
+
+
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

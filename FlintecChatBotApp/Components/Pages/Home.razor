@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject IJSRuntime JSRuntime
 @using FlintecChatBotApp.Components.Models;
+@using System.Linq;
 
 <div>
     <h3>Flintec</h3>
@@ -9,28 +10,22 @@
 
 
 
-<div class="ChatContainer">
-   
-    <div class="ChatMessageWindow">
+<div>
 
 
-        @if (conversation.tabConversationsCount > 0)
+    <div>
+
+
+        @if (userConversation.messages.Count > 0)
         {
-            <p>@conversation.tabConversationsCount</p>
+            <p>No: @userConversation.messages.Count</p>
 
 
-            @foreach (string message in conversation.GetTabMessage())
+
+            @foreach (var item in userConversation.messages.Select((message, index) => new { message, index }))
             {
-
-                <p class="displayChatMessage">@message</p>
-
-                <div class="messageContainer">
-                    <div class="chatIconContainer">
-                        <!--<img src="flintec_logo.png" class="chatIcon" alt="Flintec Logo" />-->
-                    </div>
-                    <!--<p class="displayReplyMessage">@message</p>-->
-                   
-                </div>
+                <p>@item.message</p>
+                <button onclick="userAccountConversation.EditMessage(@item.index)">Edit</button>
             }
         }
 
@@ -38,15 +33,14 @@
         else
         {
 
-            <p>@conversation.tabConversationsCount</p>
-
+            <p>@userConversation.messages.Count()</p>
         }
     </div>
 
 
 <div class="inputArea">
     <div class="inputWrapper">
-            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
+            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userConversation.userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
             <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
     </div>
 
@@ -60,14 +54,20 @@
 
 
 
-<button @onclick="CreateConversationTab">New tab</button>
+<button @onclick="() => CreateNewConversation()">New tab</button>
 
 
-@foreach (var conversationOnApp in appInstance.appConversation)
+<p>Pointer = @userConversation.pointingTab</p>
+<p>No of Tabs = @userConversation.totalTabs</p>
+
+
+@foreach (var singleConversation in userConversation.conversations)
 {
     <div>
-        <button @onclick="() => GetConversationTab(conversationOnApp.Key)">@conversationOnApp</button>
-        <button @onclick="() => DeleteConversationTab(conversationOnApp.Key)">Delete</button>
+        <button @onclick="() => userConversation.GetConversation(singleConversation.Key)">@singleConversation</button>
+        <button @onclick="() => userConversation.DeleteConversation(singleConversation.Key)">Delete</button>
     </div>
 }
+
+
 
