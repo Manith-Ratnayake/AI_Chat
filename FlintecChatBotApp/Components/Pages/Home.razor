@@ -8,11 +8,7 @@
 </div>
 
 
-
-
 <div>
-
-
     <div>
 
 
@@ -40,7 +36,7 @@
 
 <div class="inputArea">
     <div class="inputWrapper">
-            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userConversation.userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
+            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
             <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
     </div>
 
@@ -57,16 +53,23 @@
 <button @onclick="() => CreateNewConversation()">New tab</button>
 
 
-<p>Pointer = @userConversation.pointingTab</p>
-<p>No of Tabs = @userConversation.totalTabs</p>
 
 
-@foreach (var singleConversation in userConversation.conversations)
+@foreach (var dict in userConversation.conversations.Select((message, listindex) => new { message, listindex }))
 {
     <div>
-        <button @onclick="() => userConversation.GetConversation(singleConversation.Key)">@singleConversation</button>
-        <button @onclick="() => userConversation.DeleteConversation(singleConversation.Key)">Delete</button>
+        <button @onclick="() => GetConversation(dict.listindex)">Get</button>
+        <button @onclick="() => userConversation.DeleteConversation(dict.listindex)">Delete</button>
+          <!-- <span>Conversation {dict.listindex}</span> --> 
     </div>
+}
+
+<h1>////</h1>
+
+@foreach(var i in userConversation.conversations)
+{
+    <p>@i</p>
+    <p>@userConversation.messages.ToString()</p>
 }
 
 

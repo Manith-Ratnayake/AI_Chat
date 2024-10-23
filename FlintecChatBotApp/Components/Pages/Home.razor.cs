@@ -15,40 +15,64 @@ namespace FlintecChatBotApp.Components.Pages
         public string? randomAnswer;  
         Conversation userConversation = new();
 
-
-
+        public string userQuestion;
+        public string userQuestionAnswer;
 
         public void UserSubmitQuestion()
         {
            
-            if (!string.IsNullOrEmpty(userConversation.userQuestion))
+            if (!string.IsNullOrEmpty(userQuestion))
             {
 
                 GenerateAnswer();
 
-                userConversation.messages.Add(userConversation.userQuestion);
-                userConversation.messages.Add(userConversation.userQuestionAnswer);
+                userConversation.messages.Add(userQuestion);
+                userConversation.messages.Add(userQuestionAnswer);
+                JSRuntime.InvokeVoidAsync("console.log", $"Count : {userConversation.messages.Count()}");
 
 
-                userConversation.userQuestion       = string.Empty;
-                userConversation.userQuestionAnswer = string.Empty;
+                if (userConversation.messages.Count == 2)
+                {
+                    JSRuntime.InvokeVoidAsync("console.log", $"Added This Message to The LIST");
+
+                    userConversation.CreateNewConversation(userConversation);
+                }
+
+
+                userQuestion       = string.Empty;
+                userQuestionAnswer = string.Empty;
 
             }
-
         }
 
 
         public void CreateNewConversation()
         {
-            userConversation.CreateNewConversation(userConversation.messages);
+            userConversation.CreateNewConversation(userConversation);
+
+            userConversation.CreateNewConversation(new Conversation());
+            userConversation.messages.Clear();
+
+
         }
+
+
+        public void GetConversation(int tabNumber)
+        {
+            JSRuntime.InvokeVoidAsync("console.log", $"{tabNumber}");
+            
+        }
+
+
+
+
 
         public void EnterKeyPressed(KeyboardEventArgs e)
         {
             if (e.Key == "Enter")
             {
 
-                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userConversation.userQuestion}");
+                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
                  UserSubmitQuestion();
             }
         }
@@ -56,15 +80,9 @@ namespace FlintecChatBotApp.Components.Pages
 
 
         public List<string> PossibleReplies = new List<string>
-    {
-        "Sure, I can help with that.",
-        "Let me check on that for you.",
-        "I'll get back to you shortly.",
-        "Can you provide more details?",
-        "That sounds interesting!",
-        "Let me assist you with that.",
-        "I'm not sure, let me find out."
-    };
+        {
+            "*******"
+        };
 
 
 
@@ -72,8 +90,7 @@ namespace FlintecChatBotApp.Components.Pages
     {
         var random = new Random();
         int index = random.Next(PossibleReplies.Count);
-        JSRuntime.InvokeVoidAsync("console.log", PossibleReplies[index] + "--------RETURN");
-            userConversation.userQuestionAnswer =  PossibleReplies[index];
+            userQuestionAnswer =  PossibleReplies[index];
     }
 
 
