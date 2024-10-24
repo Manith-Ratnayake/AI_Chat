@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Components.Web;
-using Microsoft.JSInterop;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.JSInterop;
 using FlintecChatBotApp.Components.Models;
 
 
@@ -12,11 +6,15 @@ namespace FlintecChatBotApp.Components.Pages
 {
     partial class Home
     {
+
         public string? randomAnswer;  
         Conversation userConversation = new();
+        public List<string>? messages = [];
 
-        public string userQuestion;
-        public string userQuestionAnswer;
+        public bool isChnagedAfterCreation = false;
+
+        public string userQuestion = "";
+        public string? userAnswer;
 
         public void UserSubmitQuestion()
         {
@@ -26,21 +24,32 @@ namespace FlintecChatBotApp.Components.Pages
 
                 GenerateAnswer();
 
-                userConversation.messages.Add(userQuestion);
-                userConversation.messages.Add(userQuestionAnswer);
-                JSRuntime.InvokeVoidAsync("console.log", $"Count : {userConversation.messages.Count()}");
+                JSRuntime.InvokeVoidAsync("console.log", $"Count : {messages.Count()}");
 
 
-                if (userConversation.messages.Count == 2)
+                messages.Add(userQuestion);
+                messages.Add(userAnswer);
+
+                if (messages.Count == 2)
                 {
-                    JSRuntime.InvokeVoidAsync("console.log", $"Added This Message to The LIST");
 
-                    userConversation.CreateNewConversation(userConversation);
+                    
+                    JSRuntime.InvokeVoidAsync("console.log", $"Added This Message to The LIST");
+                    userConversation.CreateNewConversation();
+
+
+                }
+
+                if (isChnagedAfterCreation == false)
+                {
+
+                    UpdateConversation();
                 }
 
 
-                userQuestion       = string.Empty;
-                userQuestionAnswer = string.Empty;
+
+                userQuestion = string.Empty;
+                userAnswer    = string.Empty;
 
             }
         }
@@ -48,50 +57,26 @@ namespace FlintecChatBotApp.Components.Pages
 
         public void CreateNewConversation()
         {
-            userConversation.CreateNewConversation(userConversation);
-
-            userConversation.CreateNewConversation(new Conversation());
-            userConversation.messages.Clear();
+            messages = [];
 
 
+        }
+
+
+        public void UpdateConversation()
+        {
+            userConversation.UpdateConversation(userQuestion, userAnswer);
         }
 
 
         public void GetConversation(int tabNumber)
         {
+            isChnagedAfterCreation = true;
             JSRuntime.InvokeVoidAsync("console.log", $"{tabNumber}");
-            
+            messages = userConversation.GetConversation(tabNumber);
+            JSRuntime.InvokeVoidAsync("console.log", $"Getting Tab : {messages}");
+
         }
-
-
-
-
-
-        public void EnterKeyPressed(KeyboardEventArgs e)
-        {
-            if (e.Key == "Enter")
-            {
-
-                 JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
-                 UserSubmitQuestion();
-            }
-        }
-
-
-
-        public List<string> PossibleReplies = new List<string>
-        {
-            "*******"
-        };
-
-
-
-    public void GenerateAnswer()
-    {
-        var random = new Random();
-        int index = random.Next(PossibleReplies.Count);
-            userQuestionAnswer =  PossibleReplies[index];
-    }
 
 
 
@@ -105,3 +90,8 @@ namespace FlintecChatBotApp.Components.Pages
 
     }
 }
+
+
+//userConversation.CreateNewConversation(new Conversation());
+//userConversation.messages.Clear();
+

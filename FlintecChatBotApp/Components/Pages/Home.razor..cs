@@ -1,4 +1,5 @@
 ﻿using FlintecChatBotApp.Components.Models;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
@@ -11,22 +12,82 @@ namespace FlintecChatBotApp.Components.Pages
     partial class Home
     {
 
+
+
+
+        public void EnterKeyPressed(KeyboardEventArgs e)
+        {
+            if (e.Key == "Enter")
+            {
+
+                JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
+                UserSubmitQuestion();
+            }
+        }
+
+
+
+        public List<string> PossibleReplies = new List<string>
+        {
+            "*******"
+        };
+
+
+
+        public void GenerateAnswer()
+        {
+            var random = new Random();
+            int index = random.Next(PossibleReplies.Count);
+            userAnswer = PossibleReplies[index];
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //public void CreateConversationTab()
         //{
         //    userConversation = new Conversation();
         //    userAccount.CreateConversation(userConversation);
-           
+
 
         //}
 
 
         //public void UpdateConversationTab()
         //{
-        //    userConversation.userQuestionAnswer = "//////////";
+        //    userConversation.userAnswer = "//////////";
         //    JSRuntime.InvokeVoidAsync("console.log", "******222**** : " + userConversation.userQuestion);
 
         //    userAccount.UpdateConversation(userConversation.userQuestion);
-        //    userAccount.UpdateConversation(userConversation.userQuestionAnswer);
+        //    userAccount.UpdateConversation(userConversation.userAnswer);
         //    JSRuntime.InvokeVoidAsync("console.log", "************ : " + userConversation.userQuestion);
 
 

@@ -12,13 +12,13 @@
     <div>
 
 
-        @if (userConversation.messages.Count > 0)
+        @if (messages.Count > 0)
         {
-            <p>No: @userConversation.messages.Count</p>
+            <p>No: @messages.Count</p>
 
 
 
-            @foreach (var item in userConversation.messages.Select((message, index) => new { message, index }))
+            @foreach (var item in messages.Select((message, index) => new { message, index }))
             {
                 <p>@item.message</p>
                 <button onclick="userAccountConversation.EditMessage(@item.index)">Edit</button>
@@ -29,7 +29,7 @@
         else
         {
 
-            <p>@userConversation.messages.Count()</p>
+            <p>@messages.Count()</p>
         }
     </div>
 
@@ -66,10 +66,18 @@
 
 <h1>////</h1>
 
-@foreach(var i in userConversation.conversations)
+@foreach (var conversation in userConversation.conversations)
 {
-    <p>@i</p>
-    <p>@userConversation.messages.ToString()</p>
+    // Initialize an empty string for the messages
+    string messageLine = "";
+
+    foreach (var message in conversation)
+    {
+        messageLine += message + " "; // Concatenate each message with a space
+    }
+
+    // Display the concatenated messages
+    <p>@messageLine</p>
 }
 
 

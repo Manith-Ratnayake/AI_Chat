@@ -6,61 +6,110 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FlintecChatBotApp.Components.Models
 {
     public class Conversation
     {
 
-        public List<Conversation> conversations = new();
-        public List<string>? messages = new();
-        
-     
+        public List<List<string>> conversations = new();
+        public int pointingTab = 1;
 
-       
         public List<string> GetConversation(int tabNumber)
         {
-            return conversations[tabNumber].messages;
+            pointingTab = tabNumber;
+            return conversations[tabNumber];
         }
 
 
         public void DeleteConversation(int tabNumber)
         {
+            pointingTab = conversations.Count - 1;
             conversations.RemoveAt(tabNumber);
         }
 
-        public void CreateNewConversation(Conversation userMessages)
+        public void CreateNewConversation()
         {
-            conversations.Add(userMessages);
+            List<string> newConversation = new List<string>();
+            conversations.Add(newConversation);
+            pointingTab = conversations.Count() -1  ;
         }
 
 
-      
+        public void UpdateConversation(string userQuestion, string userQuestionAnswer)
+        {
+            conversations[pointingTab].Add(userQuestion);
+            conversations[pointingTab].Add(userQuestionAnswer);
+
+        }
 
 
 
         public override string ToString()
         {
-            if (messages == null || messages.Count == 0)
+            if (conversations == null || conversations.Count == 0 )
             {
-                return "No messages available";
+                return "No conversations available.";
             }
 
-            string combinedMessages = string.Join("", messages);
-            return combinedMessages.Length > 1000 ? combinedMessages.Substring(0, 1000) : combinedMessages;
+            string result = "";
+
+            // Loop througheach conversation
+            for (int i = 0; i < conversations.Count; i++)
+            {
+                result += $"Conversation {i }:\n";
+
+                //// Check if the conversation has messages
+                //if (conversations[i] == null || conversations[i].Count == 0)
+                //{
+                //    result += "  No messages.\n";
+                //}
+                //else
+                //{
+                //    // Add each message in the conversation
+                //    foreach (var message in conversations[i])
+                //    {
+                //        result += $"  - {message}\n";
+                //    }
+                //}
+
+                result += "\n"; // Add extra line break between conversations
+            }
+
+            return result;
+
         }
 
-        //public List<string> GetMessages()
-        //{
-        //    return messages;
-        //}
-
-
-        //public Dictionary<int, Conversation> GetConversations()
-        //{
-        //    return conversations;
-        //}
 
 
 
     }
 }
+
+
+
+//public List<string> GetMessages()
+//{
+//    return messages;
+//}
+
+
+//public Dictionary<int, Conversation> GetConversations()
+//{
+//    return conversations;
+//}
+
+//string combinedMessages = string.Join("", conversations);
+//return combinedMessages.Length > 1000 ? combinedMessages.Substring(0, 1000) : combinedMessages;
+
+
+//public List<string> GetMessages()
+//{
+//    return messages;
+//}
+
+
+//public Dictionary<int, Conversation> GetConversations()
+//{
+//    return conversations;
+//}
