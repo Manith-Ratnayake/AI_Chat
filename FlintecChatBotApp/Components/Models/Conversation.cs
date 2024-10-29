@@ -43,6 +43,12 @@ namespace FlintecChatBotApp.Components.Models
 
         }
 
+        public void EditMessage(int index)
+        {
+
+        }
+
+
 
 
         public override string ToString()
@@ -54,35 +60,15 @@ namespace FlintecChatBotApp.Components.Models
 
             string result = "";
 
-            // Loop througheach conversation
             for (int i = 0; i < conversations.Count; i++)
             {
                 result += $"Conversation {i }:\n";
-
-                //// Check if the conversation has messages
-                //if (conversations[i] == null || conversations[i].Count == 0)
-                //{
-                //    result += "  No messages.\n";
-                //}
-                //else
-                //{
-                //    // Add each message in the conversation
-                //    foreach (var message in conversations[i])
-                //    {
-                //        result += $"  - {message}\n";
-                //    }
-                //}
-
-                result += "\n"; // Add extra line break between conversations
+                result += "\n"; 
             }
 
             return result;
 
         }
-
-
-
-
     }
 }
 
@@ -113,3 +99,21 @@ namespace FlintecChatBotApp.Components.Models
 //{
 //    return conversations;
 //}
+
+
+/*
+ * 
+ * 
+ *  //// Check if the conversation has messages
+                //if (conversations[i] == null || conversations[i].Count == 0)
+                //{
+                //    result += "  No messages.\n";
+                //}
+                //else
+                //{
+                //    // Add each message in the conversation
+                //    foreach (var message in conversations[i])
+                //    {
+                //        result += $"  - {message}\n";
+                //    }
+                //}*/

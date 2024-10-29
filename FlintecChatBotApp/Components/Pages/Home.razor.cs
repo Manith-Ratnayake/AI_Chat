@@ -57,6 +57,7 @@ namespace FlintecChatBotApp.Components.Pages
 
         public void CreateNewConversation()
         {
+            isChnagedAfterCreation = false;
             messages = [];
 
 

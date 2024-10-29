@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
       "PackagePath": "staticwebassets\\FlintecChatBotApp.styles.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

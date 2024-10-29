@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Iff/7JBBk7Sl1/rtILCCmYeGpokFBHTxF7/uThZUmkU=",
+  "Hash": "iq/t118EOTfcVwgUVAsIk1xq4/06G5GH6ybFGNE9jn4=",
   "Source": "FlintecChatBotApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,17 +10,17 @@
     {
       "Name": "FlintecChatBotApp\\wwwroot",
       "Source": "FlintecChatBotApp",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "FlintecChatBotApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\FlintecChatBotApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "FlintecChatBotApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\FlintecChatBotApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\favicon.png",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
       "SourceId": "FlintecChatBotApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manith\\Desktop\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",

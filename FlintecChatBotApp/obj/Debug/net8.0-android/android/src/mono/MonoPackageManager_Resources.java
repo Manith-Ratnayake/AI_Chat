@@ -23,6 +23,8 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.FileProviders.Embedded.dll",
 		"Microsoft.Extensions.FileProviders.Physical.dll",
 		"Microsoft.Extensions.FileSystemGlobbing.dll",
+		"Microsoft.Extensions.Localization.dll",
+		"Microsoft.Extensions.Localization.Abstractions.dll",
 		"Microsoft.Extensions.Logging.dll",
 		"Microsoft.Extensions.Logging.Abstractions.dll",
 		"Microsoft.Extensions.Logging.Debug.dll",

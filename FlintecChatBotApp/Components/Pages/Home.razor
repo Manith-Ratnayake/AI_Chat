@@ -2,83 +2,174 @@
 @inject IJSRuntime JSRuntime
 @using FlintecChatBotApp.Components.Models;
 @using System.Linq;
+@inject IStringLocalizer<String> Localizer;
 
-<div>
-    <h3>Flintec</h3>
+
+
+
+<div class="Header">
+    <div class="ChatTabHeader">
+        <button @onclick="() => Slider()">Slider</button>
+        <button @onclick="() => CreateNewConversation()">New tab</button>
+    </div>
+
+    
+    <div class="ChatMessageWindowHeader">Flintec</div>
 </div>
 
 
-<div>
-    <div>
-
-
-        @if (messages.Count > 0)
-        {
-            <p>No: @messages.Count</p>
 
 
 
-            @foreach (var item in messages.Select((message, index) => new { message, index }))
+
+
+
+<div class="Chat">
+
+
+
+       @if (isSliderVisible){
+
+
+        <div class="ChatTabs">
+
+          @foreach (var conversation in userConversation.conversations)
+         {
+             string messageLine = "";
+
+             foreach (var message in conversation)
+             {
+                 messageLine += message + " ";
+             }
+
+             <p>@messageLine</p>
+     @*          <button @onclick="() => GetConversation(dict.listindex)">Get</button>
+              <button @onclick="() => userConversation.DeleteConversation(dict.listindex)">Delete</button> *@
+         
+             }
+
+
+            <button @onclick="ShowPopup">Open Popup</button>
+            <Settings IsVisible="isPopupVisible" IsVisibleChanged="OnPopupVisibilityChanged" />
+
+
+
+@* 
+           @foreach (var dict in userConversation.conversations.Select((message, listindex) => new { message, listindex }))
+           {
+               <div>
+                   <button @onclick="() => GetConversation(dict.listindex)">Get</button>
+                   <button @onclick="() => userConversation.DeleteConversation(dict.listindex)">Delete</button>
+                   <!-- <span>Conversation {dict.listindex}</span> -->
+               </div>
+           }  *@
+
+
+
+
+
+
+
+
+    </div>
+
+
+       }
+
+
+
+
+
+    <div class="ChatWindow" style="background-color:red">
+
+
+
+
+        <div class="DisplayMessageArea">
+   
+
+
+            @if (messages.Count > 0)
             {
-                <p>@item.message</p>
-                <button onclick="userAccountConversation.EditMessage(@item.index)">Edit</button>
+                <p>No: @messages.Count</p>
+
+
+                @foreach (var item in messages.Select((message, index) => new { message, index }))
+                {
+                    <p>@item.message</p>
+                    <button @onclick="() => userConversation.EditMessage(item.index)">Edit</button>
+
+ 
+                }
             }
-        }
 
 
-        else
-        {
+            else
+            {
 
-            <p>@messages.Count()</p>
-        }
+                <p>@messages.Count()</p>
+            }
+
+        </div>
+        
+
+
+         <div class="inputArea" style="background-color:green">
+            <div class="inputWrapper">
+                <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
+                <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
+            </div>
+
+            <div class="contactTextContainer">
+                <p class="contactText">@Localizer["For more details"]</p>
+            </div>
+        </div>
+
+
     </div>
 
 
-<div class="inputArea">
-    <div class="inputWrapper">
-            <textarea type="text" id="auto-resize-textarea" class="inputBar" @bind="userQuestion" placeholder="Type your message here..." @onkeypress="EnterKeyPressed" />
-            <button class="sendButton" @onclick="UserSubmitQuestion">Send</button>
-    </div>
 
-    <div class="contactTextContainer">
-        <p class="contactText">Contact the company for more details</p>
-    </div>
+
+
+
 </div>
 
 
-</div>
 
 
 
-<button @onclick="() => CreateNewConversation()">New tab</button>
+@code {
 
+    public bool isSliderVisible = true;
 
-
-
-@foreach (var dict in userConversation.conversations.Select((message, listindex) => new { message, listindex }))
-{
-    <div>
-        <button @onclick="() => GetConversation(dict.listindex)">Get</button>
-        <button @onclick="() => userConversation.DeleteConversation(dict.listindex)">Delete</button>
-          <!-- <span>Conversation {dict.listindex}</span> --> 
-    </div>
-}
-
-<h1>////</h1>
-
-@foreach (var conversation in userConversation.conversations)
-{
-    // Initialize an empty string for the messages
-    string messageLine = "";
-
-    foreach (var message in conversation)
+    public void Slider()
     {
-        messageLine += message + " "; // Concatenate each message with a space
+            if (isSliderVisible == true)
+                isSliderVisible = false;
+
+            else
+                isSliderVisible = true;
     }
 
-    // Display the concatenated messages
-    <p>@messageLine</p>
+
+
+
+    private bool isPopupVisible = false;
+
+    private void ShowPopup()
+    {
+        isPopupVisible = true;
+    }
+
+    private void OnPopupVisibilityChanged(bool value)
+    {
+        isPopupVisible = value;
+    }
+
+
+
+
+
+
 }
-
-
-

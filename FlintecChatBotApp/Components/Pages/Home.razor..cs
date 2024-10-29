@@ -43,7 +43,10 @@ namespace FlintecChatBotApp.Components.Pages
 
 
 
+        public void EditButtonClick(int index)
+        {
 
+        }
 
 
 
