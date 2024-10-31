@@ -1,5 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using FlintecChatBotApp.Components.Models;
+using Microsoft.JSInterop;
+using System.Globalization;
+
+
 
 namespace FlintecChatBotApp
 {
@@ -15,6 +19,8 @@ namespace FlintecChatBotApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
+   
+
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
@@ -22,7 +28,11 @@ namespace FlintecChatBotApp
     		builder.Logging.AddDebug();
             builder.Services.AddSingleton<Conversation>();
             builder.Services.AddLocalization();
+            builder.Services.AddLocalization(options => options.ResourcesPath = "Resources/Languages");
 
+            builder.Services.AddLocalization();
+
+            
 #endif
 
             return builder.Build();

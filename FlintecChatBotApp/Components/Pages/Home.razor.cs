@@ -1,5 +1,6 @@
 ﻿using Microsoft.JSInterop;
 using FlintecChatBotApp.Components.Models;
+using System.Globalization;
 
 
 namespace FlintecChatBotApp.Components.Pages
@@ -51,6 +52,7 @@ namespace FlintecChatBotApp.Components.Pages
                 userQuestion = string.Empty;
                 userAnswer    = string.Empty;
 
+                AnimateText();
             }
         }
 

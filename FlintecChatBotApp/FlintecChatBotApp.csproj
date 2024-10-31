@@ -66,17 +66,17 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Resources\Languages\Strings.Designer.cs">
+      <Compile Update="Resources\Languages\langu.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
-        <DependentUpon>Strings.resx</DependentUpon>
+        <DependentUpon>langu.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="Resources\Languages\Strings.resx">
+      <EmbeddedResource Update="Resources\Languages\langu.resx">
         <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+        <LastGenOutput>langu.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
