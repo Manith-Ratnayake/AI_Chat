@@ -79,7 +79,7 @@ namespace FlintecChatBotApp.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello2.
+        ///   Looks up a localized string similar to sd.
         /// </summary>
         internal static string Hi {
             get {

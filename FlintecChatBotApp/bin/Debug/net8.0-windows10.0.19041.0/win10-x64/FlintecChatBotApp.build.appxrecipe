@@ -40,6 +40,66 @@
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\australia.png">
+      <PackagePath>wwwroot\Countries\australia.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\austria.png">
+      <PackagePath>wwwroot\Countries\austria.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\brazil.png">
+      <PackagePath>wwwroot\Countries\brazil.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\canada.png">
+      <PackagePath>wwwroot\Countries\canada.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\colombia.png">
+      <PackagePath>wwwroot\Countries\colombia.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\france.png">
+      <PackagePath>wwwroot\Countries\france.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\germany.png">
+      <PackagePath>wwwroot\Countries\germany.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\india.png">
+      <PackagePath>wwwroot\Countries\india.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\italy.png">
+      <PackagePath>wwwroot\Countries\italy.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\mexico.png">
+      <PackagePath>wwwroot\Countries\mexico.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\netherlands.png">
+      <PackagePath>wwwroot\Countries\netherlands.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\new_zealand.png">
+      <PackagePath>wwwroot\Countries\new_zealand.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\singapore.png">
+      <PackagePath>wwwroot\Countries\singapore.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\south_korea.png">
+      <PackagePath>wwwroot\Countries\south_korea.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\spain.png">
+      <PackagePath>wwwroot\Countries\spain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\sri_lanka.png">
+      <PackagePath>wwwroot\Countries\sri_lanka.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\sweden.png">
+      <PackagePath>wwwroot\Countries\sweden.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\uk.png">
+      <PackagePath>wwwroot\Countries\uk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\usa.png">
+      <PackagePath>wwwroot\Countries\usa.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\vietnam.png">
+      <PackagePath>wwwroot\Countries\vietnam.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
     </AppxPackagedFile>
@@ -54,6 +114,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\new.png">
+      <PackagePath>wwwroot\WebIcons\new.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\sidebar.png">
+      <PackagePath>wwwroot\WebIcons\sidebar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\sidebar2.png">
+      <PackagePath>wwwroot\WebIcons\sidebar2.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>

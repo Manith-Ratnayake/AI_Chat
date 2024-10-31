@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-10-30T15:26:36.447</Modified>
+      <Modified>2024-10-31T15:29:23.861</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-10-30T09:43:38.187</Modified>
+      <Modified>2024-10-31T10:50:36.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.runtimeconfig.json">
       <PackagePath>FlintecChatBotApp.runtimeconfig.json</PackagePath>
@@ -44,19 +44,99 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.dll">
       <PackagePath>FlintecChatBotApp.dll</PackagePath>
-      <Modified>2024-10-30T15:26:35.738</Modified>
+      <Modified>2024-10-31T15:29:23.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FlintecChatBotApp.exe</PackagePath>
-      <Modified>2024-10-30T15:26:35.745</Modified>
+      <Modified>2024-10-31T15:29:23.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2024-10-17T04:58:36.640</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\australia.png">
+      <PackagePath>wwwroot\Countries\australia.png</PackagePath>
+      <Modified>2024-10-30T04:44:16.743</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\austria.png">
+      <PackagePath>wwwroot\Countries\austria.png</PackagePath>
+      <Modified>2024-10-30T04:48:47.324</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\brazil.png">
+      <PackagePath>wwwroot\Countries\brazil.png</PackagePath>
+      <Modified>2024-10-30T04:45:18.162</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\canada.png">
+      <PackagePath>wwwroot\Countries\canada.png</PackagePath>
+      <Modified>2024-10-30T04:47:27.807</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\colombia.png">
+      <PackagePath>wwwroot\Countries\colombia.png</PackagePath>
+      <Modified>2024-10-30T04:47:04.309</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\france.png">
+      <PackagePath>wwwroot\Countries\france.png</PackagePath>
+      <Modified>2024-10-30T04:45:41.774</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\germany.png">
+      <PackagePath>wwwroot\Countries\germany.png</PackagePath>
+      <Modified>2024-10-30T04:43:44.642</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\india.png">
+      <PackagePath>wwwroot\Countries\india.png</PackagePath>
+      <Modified>2024-10-30T04:42:57.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\italy.png">
+      <PackagePath>wwwroot\Countries\italy.png</PackagePath>
+      <Modified>2024-10-30T04:46:04.181</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\mexico.png">
+      <PackagePath>wwwroot\Countries\mexico.png</PackagePath>
+      <Modified>2024-10-30T04:53:32.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\netherlands.png">
+      <PackagePath>wwwroot\Countries\netherlands.png</PackagePath>
+      <Modified>2024-10-30T04:50:49.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\new_zealand.png">
+      <PackagePath>wwwroot\Countries\new_zealand.png</PackagePath>
+      <Modified>2024-10-30T04:49:17.286</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\singapore.png">
+      <PackagePath>wwwroot\Countries\singapore.png</PackagePath>
+      <Modified>2024-10-30T04:52:53.498</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\south_korea.png">
+      <PackagePath>wwwroot\Countries\south_korea.png</PackagePath>
+      <Modified>2024-10-30T04:46:29.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\spain.png">
+      <PackagePath>wwwroot\Countries\spain.png</PackagePath>
+      <Modified>2024-10-30T04:46:49.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\sri_lanka.png">
+      <PackagePath>wwwroot\Countries\sri_lanka.png</PackagePath>
+      <Modified>2024-10-30T04:55:08.926</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\sweden.png">
+      <PackagePath>wwwroot\Countries\sweden.png</PackagePath>
+      <Modified>2024-10-30T04:48:08.186</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\uk.png">
+      <PackagePath>wwwroot\Countries\uk.png</PackagePath>
+      <Modified>2024-10-30T04:44:59.371</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\usa.png">
+      <PackagePath>wwwroot\Countries\usa.png</PackagePath>
+      <Modified>2024-10-30T04:43:20.283</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\Countries\vietnam.png">
+      <PackagePath>wwwroot\Countries\vietnam.png</PackagePath>
+      <Modified>2024-10-30T04:54:00.785</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
-      <Modified>2024-10-30T06:07:40.217</Modified>
+      <Modified>2024-10-31T15:03:33.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
@@ -73,6 +153,18 @@
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2024-10-30T10:11:24.675</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\new.png">
+      <PackagePath>wwwroot\WebIcons\new.png</PackagePath>
+      <Modified>2024-10-31T10:48:06.575</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\sidebar.png">
+      <PackagePath>wwwroot\WebIcons\sidebar.png</PackagePath>
+      <Modified>2024-10-31T10:45:53.125</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\sidebar2.png">
+      <PackagePath>wwwroot\WebIcons\sidebar2.png</PackagePath>
+      <Modified>2024-10-31T10:46:23.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -308,7 +400,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\nl\FlintecChatBotApp.resources.dll">
       <PackagePath>nl\FlintecChatBotApp.resources.dll</PackagePath>
-      <Modified>2024-10-30T15:26:36.271</Modified>
+      <Modified>2024-10-31T15:29:23.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
