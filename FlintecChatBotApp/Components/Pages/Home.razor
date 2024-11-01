@@ -2,7 +2,11 @@
 @inject IJSRuntime JSRuntime
 @using FlintecChatBotApp.Components.Models;
 @using System.Linq;
-@inject IStringLocalizer<langu> Localizer;
+
+
+@using System.Globalization
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<MyStrings> Localizer
 
 
 
@@ -15,10 +19,7 @@
         @if (isBVisible)
         {
 
-            <img @onclick="bOff" src="WebIcons/sidebar.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
-            <img @onclick="() => CreateNewConversation()" src="WebIcons/new.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
-
-
+            <Icons OnCreateNewConversation="CreateNewConversation" OnbOff="bOff" IconMargin="margin-right: 100px;" />
 
             @foreach (var dict in userConversation.conversations.Select((conversation, listIndex) => new { conversation, listIndex }))
             {
@@ -46,8 +47,8 @@
             style="display: inline-flex; align-items: center;">
             @if (!isBVisible)
             {
-                <img @onclick="bOff" src="WebIcons/sidebar.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%); margin-right: 10px;" alt="SideBar" />
-                <img @onclick="() => CreateNewConversation()" src="WebIcons/new.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%); margin-right: 10px;" alt="New Chat" />
+                <Icons OnCreateNewConversation="CreateNewConversation" OnbOff="bOff" IconMargin="margin-right: 10px;"  />
+
             }
 
             <h4 class="ChatMessageWindowHeader" style="margin: 0;">Flintec</h4>
@@ -87,7 +88,7 @@
                               id="auto-resize-textarea"
                               class="inputBar"
                               @bind="userQuestion"
-                              placeholder="Type your message here..."
+                              placeholder="@Localizer["Message Flintec AI"]"
                               @onkeypress="EnterKeyPressed"
                               style="flex: 1; border: none; padding: 8px; resize: none;">
             </textarea>
@@ -261,3 +262,5 @@
     // For example, after appending new messages
     scrollToBottom();
 </script>
+
+ 

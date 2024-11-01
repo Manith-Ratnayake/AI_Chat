@@ -22,15 +22,13 @@ namespace FlintecChatBotApp
    
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddLocalization();
 
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
             builder.Services.AddSingleton<Conversation>();
-            builder.Services.AddLocalization();
-            builder.Services.AddLocalization(options => options.ResourcesPath = "Resources/Languages");
-
-            builder.Services.AddLocalization();
+           
 
             
 #endif

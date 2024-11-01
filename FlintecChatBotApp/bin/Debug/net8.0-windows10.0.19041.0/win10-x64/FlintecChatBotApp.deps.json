@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebView.Maui": "8.0.72",
           "Microsoft.Extensions.Localization": "8.0.10",
+          "Microsoft.Extensions.Localization.Abstractions": "8.0.10",
           "Microsoft.Extensions.Logging.Debug": "8.0.0",
           "Microsoft.Maui.Controls": "8.0.72",
           "Microsoft.Maui.Controls.Compatibility": "8.0.72",

@@ -1,4 +1,12 @@
-﻿@if (IsVisible)
+﻿@using FlintecChatBotApp.Resources.Languages
+@using Microsoft.Extensions.Localization
+@using System.Globalization
+@inject IStringLocalizer<MyStrings> Localizer
+
+
+
+
+@if (IsVisible)
 {
     <div class="overlay"></div> <!-- Background overlay -->
     <div class="popup-bar">
@@ -6,7 +14,25 @@
 
         <h4>Settings</h4>
 
+
         <button @onclick="HidePopup">&times;</button>
+
+
+
+        <h1>@Localizer["Hi"]</h1>
+        <h1>@Localizer["Hello"]</h1>
+        <h1>@Localizer["String2"]</h1>
+
+
+        <select class="form-control" @bind="Culture">
+            @foreach (var culture in cultures)
+            {
+                <option value="@culture">@culture</option>
+            }
+        </select>
+
+
+
 
 
         <select>
@@ -40,6 +66,69 @@
         await IsVisibleChanged.InvokeAsync(IsVisible);
     }
 }
+
+
+ @code {
+
+
+
+
+        CultureInfo[] cultures = new[]
+        {
+    new CultureInfo("en"),
+    new CultureInfo("nl")
+    };
+
+
+        CultureInfo Culture
+        {
+            get => CultureInfo.CurrentCulture;
+
+
+            set
+            {
+                if (CultureInfo.CurrentCulture != value)
+                {
+                    Thread.CurrentThread.CurrentCulture = value;
+                    Thread.CurrentThread.CurrentCulture = value;
+                    CultureInfo.DefaultThreadCurrentCulture = value;
+                    CultureInfo.DefaultThreadCurrentUICulture = value;
+                    Preferences.Set("language", value.Name);
+
+                }
+            }
+
+
+        }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 

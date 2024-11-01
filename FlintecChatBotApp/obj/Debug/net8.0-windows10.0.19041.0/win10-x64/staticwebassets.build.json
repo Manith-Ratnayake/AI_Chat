@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Dw3N43COdtfNWyvnZ9n8PUkL7fOgNARGw/L8ctO0U8s=",
+  "Hash": "l8VfxA52Iv3vVzsCbeBkKkC5TYl1R7cGj9DWrrkXXLk=",
   "Source": "FlintecChatBotApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -528,6 +528,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
+      "SourceId": "FlintecChatBotApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "WebIcons/flintec_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WebIcons\\flintec_logo.png"
     },
     {
       "Identity": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\new.png",

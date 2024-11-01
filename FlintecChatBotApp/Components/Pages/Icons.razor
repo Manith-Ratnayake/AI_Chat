@@ -1,0 +1,84 @@
+﻿<div class="icon-container">
+
+    <div class="icon-wrapper" style="@IconMargin">
+        <img class="newIcon" @onclick="() => OnbOff.InvokeAsync()" src="WebIcons/sidebar.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
+        <span class="tooltip-text">Open Sidebar</span>
+    </div>
+
+    <div class="icon-wrapper" style="@IconMargin">
+        <img class="newIcon" @onclick="() => OnCreateNewConversation.InvokeAsync()" src="WebIcons/new.png" style="height:30px; width:30px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
+        <span class="tooltip-text" style="left: 65px;">New chat</span>
+    </div>
+
+</div>
+
+<style>
+    .icon-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        position: relative;
+        margin-right: 10px; /* Space between the icons */
+        padding: 5px; /* Add some padding around the icon */
+        border-radius: 5px; /* Optional: rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .icon-wrapper:hover {
+            background-color: rgba(0, 0, 0, 0.2); /* Change this to your desired color */
+        }
+
+    .newIcon {
+        cursor: pointer;
+    }
+
+    .tooltip-text {
+        position: absolute;
+        font-size: 14px;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        visibility: hidden; /* Hide by default */
+        white-space: nowrap;
+        z-index: 9999; /* High z-index to ensure visibility */
+        top: 0px;
+        left: 40px; /* Adjust as needed */
+    }
+
+        .tooltip-text::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+    /* Show tooltip on hover */
+    .icon-wrapper:hover .tooltip-text {
+        visibility: visible; /* Show on hover */
+    }
+</style>
+
+
+
+
+
+
+@code {
+    [Parameter]
+    public EventCallback OnCreateNewConversation { get; set; }
+
+    [Parameter]
+    public EventCallback OnbOff { get; set; }
+
+
+    [Parameter]
+    public string IconMargin { get; set; } 
+}

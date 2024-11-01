@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\newchat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\newchat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\flintecchatbotapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:flintecchatbotapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\app.css",
-              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "wwwroot\\css\\app.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-31T11:32:56.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewChat.razor",
-              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\NewChat.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\NewChat.razor",
-              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\NewChat.razor",
-              "RelativeToolTip": "Components\\Pages\\NewChat.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T10:48:48.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Title": "Settings.razor",
+              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Settings.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Settings.razor",
+              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Settings.razor",
+              "RelativeToolTip": "Components\\Pages\\Settings.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T08:21:23.803Z",
+              "WhenOpened": "2024-11-01T17:10:23.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Home.css",
-              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.css",
-              "RelativeDocumentMoniker": "Components\\Pages\\Home.css",
-              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.css",
-              "RelativeToolTip": "Components\\Pages\\Home.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-31T08:21:21.436Z",
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-01T16:16:46.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FlintecChatBotApp",
+              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
+              "RelativeDocumentMoniker": "FlintecChatBotApp.csproj",
+              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\FlintecChatBotApp.csproj",
+              "RelativeToolTip": "FlintecChatBotApp.csproj",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T16:07:24.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAywAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-01T15:32:48.582Z",
               "EditorCaption": ""
             }
           ]
