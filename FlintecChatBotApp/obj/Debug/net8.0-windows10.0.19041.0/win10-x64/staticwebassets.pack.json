@@ -85,12 +85,28 @@
       "PackagePath": "staticwebassets\\Countries\\vietnam.png"
     },
     {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\7175385.png",
+      "PackagePath": "staticwebassets\\WebIcons\\7175385.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\archive.png",
+      "PackagePath": "staticwebassets\\WebIcons\\archive.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\delete.png",
+      "PackagePath": "staticwebassets\\WebIcons\\delete.png"
+    },
+    {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
       "PackagePath": "staticwebassets\\WebIcons\\flintec_logo.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\new.png",
       "PackagePath": "staticwebassets\\WebIcons\\new.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\share.png",
+      "PackagePath": "staticwebassets\\WebIcons\\share.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\sidebar.png",

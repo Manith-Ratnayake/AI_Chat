@@ -52,7 +52,7 @@ namespace FlintecChatBotApp.Components.Pages
                 userQuestion = string.Empty;
                 userAnswer    = string.Empty;
 
-                //AnimateText();
+                AnimateText();
             }
         }
 

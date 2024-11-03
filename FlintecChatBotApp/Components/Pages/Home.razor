@@ -12,8 +12,8 @@
 
 <div data-name="a" style="background-color:black; display: flex; height:100vh; ">
     <div data-name="b" 
-         style="background-color:gray; width:@(isBVisible ? "20%" : "0%"); height:100%; overflow:hidden; transition: width 0.3s ease;
-                position:relative;">
+         style="background-color:gray; width:@(isBVisible ? "20%" : "0%"); height:100%;  transition: width 0.3s ease;
+                position:relative; overflow:hidden">
 
 
         @if (isBVisible)
@@ -21,12 +21,38 @@
 
             <Icons OnCreateNewConversation="CreateNewConversation" OnbOff="bOff" IconMargin="margin-right: 100px;" />
 
+
+            <div style="overflow:scroll;  overflow-x: hidden; ">
+
             @foreach (var dict in userConversation.conversations.Select((conversation, listIndex) => new { conversation, listIndex }))
             {
-                <div>
-                    <p>@string.Join(" ", dict.conversation)</p>
+                <div class="hover-light">
+                    <p class="paragraph @(activeIndex == dict.listIndex || currentIndex == dict.listIndex ? "highlighted" : "")"
+                       @onclick="() => { SetActiveParagraph(dict.listIndex); GetConversation(dict.listIndex); }">
+                        @(string.Join(" ", dict.conversation).Length > 10
+                            ? string.Join(" ", dict.conversation).Substring(0, 10) + "..."
+                            : string.Join(" ", dict.conversation))
+                    </p>
+                    <div class="dots" @onclick="() => TogglePopup(dict.listIndex)">...</div>
                     <button @onclick="() => GetConversation(dict.listIndex)">Get</button>
                     <button @onclick="() => userConversation.DeleteConversation(dict.listIndex)">Delete</button>
+
+                    <!-- Popup -->
+                    @if (popupIndex == dict.listIndex)
+                    {
+                        <div class="popup">
+                            <p>Popup Content for Conversation @dict.listIndex</p>
+
+                                <button>Button with no action</button>
+                                <button >Button with no action</button>
+                                <button>Button with no action</button>
+                                <button>Button with no action</button>
+
+
+                            <button @onclick="() => DoSomething(dict.listIndex)">Action</button>
+                            <button @onclick="() => popupIndex = -1">Close</button>
+                        </div>
+                    }
                 </div>
             }
 
@@ -34,6 +60,9 @@
                 <button style="width: 100%;" @onclick="ShowSettingsPopup">
                     Settings
                 </button>
+            </div>
+
+
             </div>
  
             <Settings IsVisible="isSettingsPopupVisible" IsVisibleChanged="OnPopupVisibilityChanged" />
@@ -53,8 +82,11 @@
 
             <h4 class="ChatMessageWindowHeader" style="margin: 0;">Flintec</h4>
         </div>
+
+
         <div data-name="InnerChat" id="messages"
-             style="background-color: aquamarine; width: 800px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column;">
+             style="background-color:mediumaquamarine; width: 800px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column;
+                    justify-content:center; align-items:center">
 
             <div data-name="Messages" style="background-color: palegreen; flex: 1; overflow-y: auto;">
                 @if (messages.Count > 0)
@@ -78,32 +110,38 @@
                 }
                 else
                 {
-                    <p id="text">@messages.Count()</p>
+                    <div class="wrapper">
+                        <p id="text">How Can I help you </p>
+                    </div>
                 }
             </div>
 
-            <div data-name="InputArea" style="width: 100%;  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);">
-                <div data-name="inputWrapper" style="display: flex; align-items: center; background-color: white; border-radius: 5px; overflow: hidden;">
-                    <textarea type="text"
-                              id="auto-resize-textarea"
-                              class="inputBar"
-                              @bind="userQuestion"
-                              placeholder="@Localizer["Message Flintec AI"]"
-                              @onkeypress="EnterKeyPressed"
-                              style="flex: 1; border: none; padding: 8px; resize: none;">
-            </textarea>
+            <div data-name="inputWrapper"
+                style="display: flex; justify-content:center; align-items: center; background-color: blanchedalmond; border-radius: 5px; overflow: hidden;
+                    width: 100%;  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);">
 
-                    <button class="sendButton"
-                            style="padding: 8px 16px; background-color: #1b6ec2; color: #fff; border: none; cursor: pointer;
-                                    border-left: 1px solid #ddd; height: 100%; margin-right: 15px;"
-                            @onclick="UserSubmitQuestion">
-                        Send
-                    </button>
-                </div>
+                <textarea type="text"
+                            id="auto-resize-textarea"
+                            class="inputBar"
+                            @bind="userQuestion"
+                            placeholder="@Localizer["Message Flintec AI"]"
+                            @onkeypress="EnterKeyPressed"
+                            style="flex: 1; border: none; padding: 8px; resize: none;">
+                </textarea>
 
-                <div style="background-color:purple;text-align: center; padding-bottom:10px; color: white;">
-                    <p>@Localizer["For more details"]</p>
-                </div>
+                <button class="sendButton"
+                        style="padding: 0px 20px; background-color: #1b6ec2; color: #fff; border: none; cursor: pointer;
+                                border-left: 1px solid #ddd; height: 100%; margin-right: 15px; margin-bottom: 20px; margin-top:20px;"
+                        @onclick="UserSubmitQuestion">
+                    Send
+                </button>
+            </div>
+
+               
+   
+
+            <div style="background-color:purple;text-align: center; padding-bottom:10px; color: white;">
+                <p>@Localizer["For more details"]</p>
             </div>
 
         </div>
@@ -165,34 +203,34 @@
 
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
-    .wrapper {
-       /*   height: 100vh;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background-color: white;
-         margin: 0 5rem; */
-    }
+.wrapper {
+    /*   height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin: 0 5rem; */
+}
 
-    #text {
-        max-width: 800px;
-        text-align: left;
-        width: 100%;
-        color: black;
-        font-family: monospace;
-        font-size: 1.8rem;
-        -webkit-font-smoothing: antialiased;
-        margin-bottom: 8rem;
-    }
+#text {
+    max-width: 800px;
+    text-align: left;
+    width: 100%;
+    color: black;
+    font-family: monospace;
+    font-size: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 8rem;
+}
 
-        #text.typing span:last-child {
-            background-color: black;
-        }
+    #text.typing span:last-child {
+        background-color: black;
+    }
 </style>
 
 <script>
@@ -263,4 +301,86 @@
     scrollToBottom();
 </script>
 
- 
+
+
+<style>
+    .dots {
+        display: inline-block; /* Allows the dots to be inline with the paragraph */
+        cursor: pointer; /* Change cursor to indicate clickable */
+        margin-left: 5px; /* Space between paragraph and dots */
+    }
+
+    .popup {
+        position: absolute; /* Positioning the popup */
+        background-color: white; /* Background color for popup */
+        border: 1px solid #ccc; /* Optional border */
+        padding: 10px; /* Padding inside the popup */
+        z-index: 100; /* Ensure it appears above other elements */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for effect */
+    }
+
+
+
+
+    .paragraph {
+        position: relative; /* Allows for absolute positioning of the dots */
+    }
+
+        .paragraph::after {
+            content: '...'; /* The three dots */
+            position: absolute; /* Positioning the dots */
+            right: 0; /* Aligns the dots to the right */
+            top: 50%; /* Vertically centers the dots */
+            transform: translateY(-50%); /* Adjusts the dots for perfect vertical alignment */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        }
+
+        /* Show dots on hover or when highlighted */
+        .paragraph:hover::after,
+        .paragraph.highlighted::after {
+            opacity: 1; /* Show the dots */
+        }
+
+
+
+
+</style>
+
+
+
+@code {
+    private int popupIndex = -1; // Default value for no popup
+
+    private void TogglePopup(int index)
+    {
+        popupIndex = popupIndex == index ? -1 : index; // Toggle the popup
+    }
+
+    private void DoSomething(int index)
+    {
+        // Implement the action you want to take when clicking the action button in the popup
+        // For example: GetConversation(index);
+    }
+}
+
+ @code {
+    private int? activeIndex = null;
+    private int? currentIndex = null; // Add currentIndex variable
+
+    private void SetActiveParagraph(int index)
+    {
+        activeIndex = index;
+        currentIndex = index; // Set currentIndex when an item is clicked
+    }
+}
+
+
+<style>
+    .hover-light p:hover,
+    .paragraph.highlighted {
+        background-color: #d0e0ff; /* Same color for hover, active, and current */
+        transition: background-color 0.3s ease;
+    }
+
+</style>
