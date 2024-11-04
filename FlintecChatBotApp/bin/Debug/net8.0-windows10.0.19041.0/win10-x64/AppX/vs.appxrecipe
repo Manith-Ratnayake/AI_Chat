@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-03T15:50:08.226</Modified>
+      <Modified>2024-11-04T17:53:57.286</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-11-03T14:30:53.636</Modified>
+      <Modified>2024-11-04T17:43:40.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.runtimeconfig.json">
       <PackagePath>FlintecChatBotApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FlintecChatBotApp.dll">
       <PackagePath>FlintecChatBotApp.dll</PackagePath>
-      <Modified>2024-11-03T15:50:07.837</Modified>
+      <Modified>2024-11-04T17:53:56.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FlintecChatBotApp.exe</PackagePath>
-      <Modified>2024-11-03T15:50:07.842</Modified>
+      <Modified>2024-11-04T17:53:56.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -154,17 +154,21 @@
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2024-11-01T15:54:56.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\7175385.png">
-      <PackagePath>wwwroot\WebIcons\7175385.png</PackagePath>
-      <Modified>2024-11-03T14:25:19.141</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\archive.png">
       <PackagePath>wwwroot\WebIcons\archive.png</PackagePath>
       <Modified>2024-11-03T14:26:00.206</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\copy.png">
+      <PackagePath>wwwroot\WebIcons\copy.png</PackagePath>
+      <Modified>2024-11-04T17:32:17.680</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\delete.png">
       <PackagePath>wwwroot\WebIcons\delete.png</PackagePath>
       <Modified>2024-11-03T14:26:18.898</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\edit.png">
+      <PackagePath>wwwroot\WebIcons\edit.png</PackagePath>
+      <Modified>2024-11-03T14:25:19.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\flintec_logo.png">
       <PackagePath>wwwroot\WebIcons\flintec_logo.png</PackagePath>
@@ -173,6 +177,10 @@
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\new.png">
       <PackagePath>wwwroot\WebIcons\new.png</PackagePath>
       <Modified>2024-10-31T10:48:06.575</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\reload.png">
+      <PackagePath>wwwroot\WebIcons\reload.png</PackagePath>
+      <Modified>2024-11-04T17:34:05.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\share.png">
       <PackagePath>wwwroot\WebIcons\share.png</PackagePath>
@@ -185,6 +193,22 @@
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\sidebar2.png">
       <PackagePath>wwwroot\WebIcons\sidebar2.png</PackagePath>
       <Modified>2024-10-31T10:46:23.876</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\speaker.png">
+      <PackagePath>wwwroot\WebIcons\speaker.png</PackagePath>
+      <Modified>2024-11-04T17:31:49.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\thumbsdown.png">
+      <PackagePath>wwwroot\WebIcons\thumbsdown.png</PackagePath>
+      <Modified>2024-11-04T17:45:43.998</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\thumbsup.png">
+      <PackagePath>wwwroot\WebIcons\thumbsup.png</PackagePath>
+      <Modified>2024-11-04T17:29:37.496</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\thumbsup2.png">
+      <PackagePath>wwwroot\WebIcons\thumbsup2.png</PackagePath>
+      <Modified>2024-11-04T17:30:47.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -420,7 +444,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\nl\FlintecChatBotApp.resources.dll">
       <PackagePath>nl\FlintecChatBotApp.resources.dll</PackagePath>
-      <Modified>2024-11-03T15:50:08.089</Modified>
+      <Modified>2024-11-04T17:53:56.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

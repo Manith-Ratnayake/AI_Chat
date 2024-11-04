@@ -85,16 +85,20 @@
       "PackagePath": "staticwebassets\\Countries\\vietnam.png"
     },
     {
-      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\7175385.png",
-      "PackagePath": "staticwebassets\\WebIcons\\7175385.png"
-    },
-    {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\archive.png",
       "PackagePath": "staticwebassets\\WebIcons\\archive.png"
     },
     {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\copy.png",
+      "PackagePath": "staticwebassets\\WebIcons\\copy.png"
+    },
+    {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\delete.png",
       "PackagePath": "staticwebassets\\WebIcons\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\edit.png",
+      "PackagePath": "staticwebassets\\WebIcons\\edit.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\flintec_logo.png",
@@ -103,6 +107,10 @@
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\new.png",
       "PackagePath": "staticwebassets\\WebIcons\\new.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\reload.png",
+      "PackagePath": "staticwebassets\\WebIcons\\reload.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\share.png",
@@ -115,6 +123,22 @@
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\sidebar2.png",
       "PackagePath": "staticwebassets\\WebIcons\\sidebar2.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\speaker.png",
+      "PackagePath": "staticwebassets\\WebIcons\\speaker.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
+      "PackagePath": "staticwebassets\\WebIcons\\thumbsdown.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\thumbsup.png",
+      "PackagePath": "staticwebassets\\WebIcons\\thumbsup.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
+      "PackagePath": "staticwebassets\\WebIcons\\thumbsup2.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",

@@ -10,7 +10,7 @@
 
 
 
-<div data-name="a" style="background-color:black; display: flex; height:100vh; ">
+<div data-name="a" style="background-color:darkgray; display: flex; height:100vh; ">
     <div data-name="b" 
          style="background-color:gray; width:@(isBVisible ? "20%" : "0%"); height:100%;  transition: width 0.3s ease;
                 position:relative; overflow:hidden">
@@ -34,8 +34,6 @@
                             : string.Join(" ", dict.conversation))
                     </p>
                     <div class="dots" @onclick="() => TogglePopup(dict.listIndex)">...</div>
-                    <button @onclick="() => GetConversation(dict.listIndex)">Get</button>
-                    <button @onclick="() => userConversation.DeleteConversation(dict.listIndex)">Delete</button>
 
                     <!-- Popup -->
                     @if (popupIndex == dict.listIndex)
@@ -43,10 +41,10 @@
                         <div class="popup">
                             <p>Popup Content for Conversation @dict.listIndex</p>
 
-                                <button>Button with no action</button>
-                                <button >Button with no action</button>
-                                <button>Button with no action</button>
-                                <button>Button with no action</button>
+                                <button>Share</button>
+                                <button>Rename</button>
+                                <button>Archive</button>
+                                <button @onclick="() => userConversation.DeleteConversation(dict.listIndex)">Delete</button>
 
 
                             <button @onclick="() => DoSomething(dict.listIndex)">Action</button>
@@ -56,7 +54,7 @@
                 </div>
             }
 
-            <div style="position: absolute; bottom: 0; width: 100%; background-color: yellow;">
+            <div style="position: absolute; bottom: 0; width: 100%; background-color: darkgray;">
                 <button style="width: 100%;" @onclick="ShowSettingsPopup">
                     Settings
                 </button>
@@ -70,7 +68,7 @@
         }
     </div>
 
-    <div class="c" style="background-color:yellow; width:@(isBVisible ? "80%" : "100%"); height:100%; transition: width 0.3s ease;">
+    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "80%" : "100%"); height:100%; transition: width 0.3s ease;">
         
         <div data-name="Header" 
             style="display: inline-flex; align-items: center;">
@@ -84,74 +82,224 @@
         </div>
 
 
-        <div data-name="InnerChat" id="messages"
-             style="background-color:mediumaquamarine; width: 800px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column;
-                    justify-content:center; align-items:center">
+       @*  <div data-name="InnerChat" id="messages"
+             style="background-color:yellow; width: 800px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column;
+                    justify-content:center; align-items:center"> *@
 
-            <div data-name="Messages" style="background-color: palegreen; flex: 1; overflow-y: auto;">
+@*             <div data-name="Messages" style="background-color: orchid; flex: 1; overflow-y: auto; width:100%;  display: flex;">
+ *@
+               
                 @if (messages.Count > 0)
                 {
-                    <p>No: @messages.Count</p>
+
+                <div style="background-color:wheat; height:85%; overflow: auto;">
 
                     @foreach (var item in messages.Select((message, index) => new { message, index }))
                     {
-                        @if (item.index != messages.Count - 1)
-                        {
-                            <p>@item.message</p>
-                            <button @onclick="() => userConversation.EditMessage(item.index)">Edit</button>
-                        }
-                        else if (item.index == messages.Count - 1)
-                        {
-                            <div class="wrapper">
-                                <p id="text">@item.message</p>
+
+
+
+                            if (item.index == 0 || item.index % 2 == 0)
+                            {
+
+                        <div style="display: flex; align-items: center;">
+
+                            <img src="WebIcons/edit.png" style="width: 10px; height: 10px; cursor: pointer; margin-right: 8px;"
+                                 @onclick="() => userConversation.EditMessage(item.index)" />
+
+                            <p style="margin-left: auto; margin-right: 20%; max-width: 45%; word-wrap:
+                                     break-word; overflow-wrap: break-word; background-color: lightslategrey;
+                                     padding: 9px 15px; border-radius: 19px;">
+                                @item.message
+                            </p>
+
+                        </div>
+
+
+                      
+
+
+
+                            }
+
+
+                            else
+                            {
+
+
+
+                        <div style="display: flex; align-items: center; background-color:yellow;">
+
+
+                                <div style="border: 1px solid black; height: 35px; width: 35px; border-radius: 50%; display: flex;
+                                                justify-content: center; align-items: center;
+                                                background-color:darkolivegreen;">
+
+                                    <img src="WebIcons/flintec_logo.png" style="height: 22px; width: 22px;" />
+                                </div>
+
+
+
+                            <div style="margin-right: auto; margin-left: 17%; max-width: 63%; word-wrap: break-word; overflow-wrap: break-word;">
+                                    @if (item.index == messages.Count - 1)
+                                    {
+
+
+                                  
+
+                                        <div class="wrapper" style="background-color:cadetblue;">
+                                            <p id="text">@item.message</p>
+                                        </div>
+                                    }
+
+
+                                    else {  
+
+                                        <p>@item.message</p>
+                                    }
+
+                                </div>
+
+                                        <img src="WebIcons/speaker.png" style="width:20px; height:20px; color:black; margin:auto "/>
+                                        <img src="WebIcons/copy.png" style="width:20px; height:20px; color:black" />
+                                        <img src="WebIcons/thumbsup.png" style="width:20px; height:20px; color:black" />
+                                        <img src="WebIcons/thumbsdown.png" style="width:20px; height:20px; color:black" />
+                                        <img src="WebIcons/reload.png" style="width:20px; height:20px; color:black" />
+
+
+
                             </div>
                         }
+                               
+
                     }
+
+
+                  </div>
+                    
+
+
+            <div data-name="Userinput"
+                 style="background-color: green; overflow: hidden; width: 100%; margin: 0 auto; display:
+                            flex; justify-content: center; align-items: center;">
+
+                <div data-comment="This is for put send button inside text area"
+                     style="position: relative; flex: 1;">
+
+
+                    <textarea type="text"
+                              id="auto-resize-textarea"
+                              class="inputBar"
+                              @bind="userQuestion"
+                              placeholder="@Localizer["Message Flintec AI"]"
+                              @onkeypress="EnterKeyPressed"
+                              style="width: 100%; padding: 8px; resize: none; ">
+                             </textarea>
+
+
+                    <button class="sendButton"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); padding: 0 10px; background-color:
+                                    darkblue; color: #fff;  cursor: pointer; height: 36px; border-left: 1px solid #ddd;"
+                            @onclick="UserSubmitQuestion">
+                        Send
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+                     
+                     
                 }
                 else
                 {
-                    <div class="wrapper">
-                        <p id="text">How Can I help you </p>
+                     @* <div class="" style="background-color:tomato;  margin: 0 auto; width:100%; height:100%; display: flex; justify-content: center; align-items: center;">
+                             <div class="" style="background-color:tomato;  margin: 0 auto;">
+                                
+                                 <div>
+                                 <p id="text">How Can I hfghffhelp you </p>
+                                  <div>
+
+
+                            <div data-name="inputWrapper"
+                             style=" background-color: green; border-radius: 5px; overflow: hidden;
+                             width: 100%;  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);  margin: 0 auto;"> 
+
+                                    <textarea type="text"
+                                              id="auto-resize-textarea"
+                                              class="inputBar"
+                                              @bind="userQuestion"
+                                              placeholder="@Localizer["Message Flintec AI"]"
+                                              @onkeypress="EnterKeyPressed"
+                                              style="flex: 1; border: none; padding: 8px; resize: none;">
+                                     </textarea>
+
+                                    <button class="sendButton"
+                                            style="padding: 0px 20px; background-color: #1b6ec2; color: #fff; border: none; cursor: pointer;
+                                                 border-left: 1px solid #ddd; height: 100%; margin-right: 15px; margin-bottom: 20px; margin-top:20px;"
+                                            @onclick="UserSubmitQuestion">
+                                        Send
+                                    </button>
+                        </div>
+
+
+                        </div>
                     </div>
+
+
+                </div> *@
+
+
+
+            <div class="" style="background-color: tomato; height: 100%; display: flex; justify-content: center; align-items: center;">
+
+                <div>
+                    <p id="text">How Can I Help you</p>
+                </div>
+
+                <div data-name="InputArea"
+                     style="width: 100%; background-color: yellow; display: flex; margin-left: 10px;">
+
+                    <div data-comment="Send Button inside Text Area"
+                         style="display: flex; align-items: center; background-color: white; overflow: hidden; flex: 1;">
+
+                        <textarea type="text"
+                                  id="auto-resize-textarea"
+                                  class="inputBar"
+                                  @bind="userQuestion"
+                                  placeholder="@Localizer["Message Flintec AI"]"
+                                  @onkeypress="EnterKeyPressed"
+                                  style="flex: 1; border: none; padding: 8px; resize: none;">
+                         </textarea>
+
+                        <button class="sendButton"
+                                style="padding: 8px 16px; background-color: dimgray; color: #fff; cursor: pointer;
+                                       border-left: 1px solid #ddd; height: 100%;"
+                                @onclick="UserSubmitQuestion"> Send
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
                 }
+
             </div>
+        
+            
 
-            <div data-name="inputWrapper"
-                style="display: flex; justify-content:center; align-items: center; background-color: blanchedalmond; border-radius: 5px; overflow: hidden;
-                    width: 100%;  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);">
 
-                <textarea type="text"
-                            id="auto-resize-textarea"
-                            class="inputBar"
-                            @bind="userQuestion"
-                            placeholder="@Localizer["Message Flintec AI"]"
-                            @onkeypress="EnterKeyPressed"
-                            style="flex: 1; border: none; padding: 8px; resize: none;">
-                </textarea>
 
-                <button class="sendButton"
-                        style="padding: 0px 20px; background-color: #1b6ec2; color: #fff; border: none; cursor: pointer;
-                                border-left: 1px solid #ddd; height: 100%; margin-right: 15px; margin-bottom: 20px; margin-top:20px;"
-                        @onclick="UserSubmitQuestion">
-                    Send
-                </button>
-            </div>
-
-               
-   
-
-            <div style="background-color:purple;text-align: center; padding-bottom:10px; color: white;">
-                <p>@Localizer["For more details"]</p>
-            </div>
-
-        </div>
-       
-
-    </div>
 </div>
-
-
-
 
 @code {
     private bool isBVisible = true;
@@ -161,6 +309,28 @@
         isBVisible = !isBVisible;
     }
 }
+
+
+
+
+
+
+
+            @*  <div style="background-color:darkgray;text-align: center; padding-bottom:10px; color: white;">
+    <p>@Localizer["For more details"]</p>
+    </div>
+    *@
+
+
+            @* </div> *@
+            @*     </div> *@
+
+
+
+
+
+
+
 
 
 
@@ -324,6 +494,7 @@
 
     .paragraph {
         position: relative; /* Allows for absolute positioning of the dots */
+        background-color:dimgrey;
     }
 
         .paragraph::after {
@@ -384,3 +555,19 @@
     }
 
 </style>
+
+@code {
+
+// protected override async Task OnInitializedAsync()
+// {
+//     var response = await CoPilotService.SendRequestAsync();
+//     if (response.IsSuccessStatusCode)
+//     {
+//         Process response data
+//     }
+//     else
+//     {
+//         Handle error
+//     }
+// }
+}

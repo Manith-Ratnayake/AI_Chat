@@ -2,6 +2,7 @@
 using FlintecChatBotApp.Components.Models;
 using Microsoft.JSInterop;
 using System.Globalization;
+using FlintecChatBotApp.Components.Pages;
 
 
 
@@ -24,8 +25,9 @@ namespace FlintecChatBotApp
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddLocalization();
 
+
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
             builder.Services.AddSingleton<Conversation>();
            

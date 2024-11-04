@@ -18,11 +18,7 @@
         <button @onclick="HidePopup">&times;</button>
 
 
-
-        <h1>@Localizer["Hi"]</h1>
-        <h1>@Localizer["Hello"]</h1>
-        <h1>@Localizer["String2"]</h1>
-
+        <h5>Language</h5>
 
         <select class="form-control" @bind="Culture">
             @foreach (var culture in cultures)
@@ -32,25 +28,16 @@
         </select>
 
 
+        <h5>Country</h5>
 
-
-
-        <select>
-            <option value="">Select a language...</option>
-            <option value="en">English (de facto)</option>
-            <option value="fr">France: French</option>
-            <option value="en-uk">UK: English</option>
-            <option value="es">Spain: Spanish (Castilian)</option>
+        <select class="form-control" >
+            @foreach (var country in countries)
+            {
+                <option value="@country">@country</option>
+            }
         </select>
 
 
-        <select>
-            <option value="">Select a language...</option>
-            <option value="en">English (de facto)</option>
-            <option value="fr">France: French</option>
-            <option value="en-uk">UK: English</option>
-            <option value="es">Spain: Spanish (Castilian)</option>
-        </select>
 
 
     </div>
@@ -71,12 +58,18 @@
  @code {
 
 
-
-
         CultureInfo[] cultures = new[]
         {
-    new CultureInfo("en"),
-    new CultureInfo("nl")
+                 new CultureInfo("en"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl"),
+                 new CultureInfo("nl")
+
     };
 
 
@@ -100,6 +93,13 @@
 
 
         }
+
+
+
+
+        public List<string> countries = ["USA", "United Kingdom", "Australia", "Sri Lanka"];
+
+
 
 
 }
