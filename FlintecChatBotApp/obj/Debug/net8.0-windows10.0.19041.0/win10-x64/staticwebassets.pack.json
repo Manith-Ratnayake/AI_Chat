@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\WebIcons\\speaker.png"
     },
     {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\stop.png",
+      "PackagePath": "staticwebassets\\WebIcons\\stop.png"
+    },
+    {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\thumbsdown.png",
       "PackagePath": "staticwebassets\\WebIcons\\thumbsdown.png"
     },
@@ -139,6 +143,10 @@
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\thumbsup2.png",
       "PackagePath": "staticwebassets\\WebIcons\\thumbsup2.png"
+    },
+    {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\up_arrow.png",
+      "PackagePath": "staticwebassets\\WebIcons\\up_arrow.png"
     },
     {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\css\\app.css",

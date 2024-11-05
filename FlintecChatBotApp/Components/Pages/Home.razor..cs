@@ -17,15 +17,15 @@ namespace FlintecChatBotApp.Components.Pages
 
 
 
-        public void EnterKeyPressed(KeyboardEventArgs e)
-        {
-            if (e.Key == "Enter")
-            {
+        //public void EnterKeyPressed(KeyboardEventArgs e)
+        //{
+        //    if (e.Key == "Enter")
+        //    {
 
-                JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
-                UserSubmitQuestion();
-            }
-        }
+        //        JSRuntime.InvokeVoidAsync("console.log", $"Enter Pressed userQuestion: {userQuestion}");
+        //        UserSubmitQuestion();
+        //    }
+        //}
 
 
 
