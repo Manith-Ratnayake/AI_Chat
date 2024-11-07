@@ -19,20 +19,20 @@
       "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\slidebar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\copilotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\copilotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\icons.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\icons.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|c:\\users\\manith\\desktop\\sh11\\chatbot_website\\flintecchatbotapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7894C0C7-4F53-436A-BC69-471A356F27C0}|FlintecChatBotApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,13 +46,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Icons.razor",
               "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Icons.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Icons.razor",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Icons.razor",
               "RelativeToolTip": "Components\\Pages\\Icons.razor",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAYwFIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-03T09:29:40.244Z",
               "IsPinned": true
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -75,25 +75,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CoPilotService.cs",
               "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\CoPilotService.cs",
               "RelativeDocumentMoniker": "Components\\Pages\\CoPilotService.cs",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\CoPilotService.cs",
               "RelativeToolTip": "Components\\Pages\\CoPilotService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T05:29:22.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Home.razor.cs",
               "DocumentMoniker": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor.cs",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor.cs",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor.cs",
               "RelativeToolTip": "Components\\Pages\\Home.razor.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAkwBsAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T14:45:00.397Z"
             },
@@ -141,7 +141,7 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAlwEMCAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAADwvwwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-03T08:56:06.059Z",
               "EditorCaption": ""
