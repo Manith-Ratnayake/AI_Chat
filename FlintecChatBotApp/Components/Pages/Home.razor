@@ -3,27 +3,14 @@
 @using FlintecChatBotApp.Components.Models;
 @using System.Linq;
 @using Microsoft.JSInterop;
-
 @using System.Globalization
 @using Microsoft.Extensions.Localization
 @inject IStringLocalizer<MyStrings> Localizer
 
 
-@*
-     <p class="paragraph @(activeIndex == dict.listIndex || currentIndex == dict.listIndex ? "highlighted" : "")"
-                                 @onclick="() => { SetActiveParagraph(dict.listIndex); GetConversation(dict.listIndex); }"
-                                 style="margin: 0; flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; cursor: pointer;">
-                                  @(string.Join(" ", dict.conversation).Length > 10
-                                      ? string.Join(" ", dict.conversation).Substring(0, 10)
-                                      : string.Join(" ", dict.conversation))
-                              </p>
 
-*@
-
-
-
-
-<div data-name="a" style="background-color:darkgray; display: flex; height:100vh; ">
+<div data-name="a" 
+     style="background-color:darkgray; display: flex; height:100vh; ">
 
     <div data-name="b"
          style="background-color:gray; width:@(isBVisible ? "20%" : "0%"); height:100%;  transition: width 0.3s ease;
@@ -37,31 +24,45 @@
 
 
                 <div data-name="Tabs" 
-                     style="overflow-x: hidden;">
+                     style="align-items:center; ">
 
 
                     @foreach (var dict in userConversation.conversations.Select((conversation, listIndex) => new { conversation, listIndex }))
                     {
-                       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; margin-left:15px;">
 
 
-                        <p class="paragraph @(activeIndex == dict.listIndex || currentIndex == dict.listIndex ? "highlighted" : "")"
-                           @onclick="() => { SetActiveParagraph(dict.listIndex); GetConversation(dict.listIndex); }"
-                           style="margin: 0; flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; cursor: pointer;">
-                            @(string.Join(" ", dict.conversation).Length > 10
-                                ? string.Join(" ", dict.conversation).Substring(0, 10)
+                    <div style="display: flex; align-items: center; justify-content:center; margin-bottom: 15px; margin-left:15px;margin-right: 7px;"
+                         @onmouseenter="() => ToggleVisibilityTab(true)" 
+                         @onmouseleave="() => ToggleVisibilityTab(false)">
+
+
+                        <p style="margin: 0; text-align:center;"
+                            @onclick="() => GetConversation(dict.listIndex)">
+
+                            @(string.Join(" ", dict.conversation).Length > 20
+                                ? string.Join(" ", dict.conversation).Substring(0, 20)
                                 : string.Join(" ", dict.conversation))
                         </p>
-                        <span class="dots" @onclick="() => TogglePopup(dict.listIndex)" style="cursor: pointer;">
-                            ...
-                        </span>
+
+
+
+                        @if (isHoveredTab)
+                        {
+                            <span class="dots" @onclick="() => TogglePopup(dict.listIndex)" style="cursor: pointer;">
+                                ...
+                            </span>
+                        }
+                   
+                    
                     </div>
+
+
 
                     @if (popupIndex == dict.listIndex)
                     {
                         <div style="
                                      position: fixed;
-                                     z-index: 90000; /* Higher z-index to appear on top */
+                                     z-index: 90000; 
                                      display: flex;
                                      flex-direction: column;
                                      gap: 8px;
@@ -70,27 +71,37 @@
                                      border-radius: 4px;
                                      margin-left:15%;" id="popup233">
 
+
                             <div style="display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 4px;
                                         transition: background-color 0.1s; color:white;"
-                                 onmouseover="this.style.backgroundColor='#e0e0e0'"
-                                 onmouseout="this.style.backgroundColor='transparent'">
+                                        onmouseover="this.style.backgroundColor='#e0e0e0'"
+                                        onmouseout="this.style.backgroundColor='transparent'">
                                 <img src="WebIcons/share.png" style="width: 10px; height: 10px; filter: brightness(0) invert(1);" />
-                                <button style="border: none; background: none; cursor: pointer; color:white;">Share</button>
+                                <button style="border: none; background: none; cursor: pointer; color:white;"
+                                        @onclick="() => {}">
+                                    Share
+                                </button>
                             </div>
 
+
                             <div style="display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 4px; transition: background-color 0.1s;"
-                                 onmouseover="this.style.backgroundColor='#e0e0e0'"
-                                 onmouseout="this.style.backgroundColor='transparent'">
+                                         onmouseover="this.style.backgroundColor='#e0e0e0'"
+                                         onmouseout="this.style.backgroundColor='transparent'">
                                 <img src="WebIcons/edit.png" style="width: 20px; height: 20px;" />
-                                <button style="border: none; background: none; cursor: pointer;">Rename</button>
+                                <button style="border: none; background: none; cursor: pointer;"
+                                        @onclick="() => {}">
+                                        Rename</button>
                             </div>
 
+
                             <div style="display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 4px; transition: background-color 0.1s;"
-                                 onmouseover="this.style.backgroundColor='#e0e0e0'"
-                                 onmouseout="this.style.backgroundColor='transparent'">
+                                    onmouseover="this.style.backgroundColor='#e0e0e0'"
+                                    onmouseout="this.style.backgroundColor='transparent'">                             
                                 <img src="WebIcons/archive.png" style="width: 20px; height: 20px;" />
-                                <button style="border: none; background: none; cursor: pointer;">Archive</button>
+                                <button style="border: none; background: none; cursor: pointer;"
+                                         @onclick="() => {}">Archive</button>
                             </div>
+
 
                             <div style="display: flex; align-items: center; gap: 8px; padding: 5px; border-radius: 4px; transition: background-color 0.1s;"
                                  onmouseover="this.style.backgroundColor='#e0e0e0'"
@@ -104,13 +115,16 @@
                         </div>
                     }
                         
-                    }   
+                }
 
-                <div style="position: absolute; bottom: 0; width: 100%; background-color: darkgray;">
-                    <button style="width: 100%;" @onclick="ShowSettingsPopup">
+                <div style="position: absolute; bottom: 0; width: 100%; background-color: yellow; height: 70px;">
+                    <button style="width: calc(100% - 15px); height: calc(100% - 15px); margin: 8px;" @onclick="ShowSettingsPopup"
+                            onmouseover="this.style.backgroundColor='darkgrey'"
+                            onmouseout="this.style.backgroundColor='grey'">
                         Settings
                     </button>
                 </div>
+
 
 
             </div>
@@ -120,7 +134,8 @@
         }
     </div>
 
-    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "80%" : "100%"); height:100%; transition: width 0.3s ease;">
+    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "80%" : "100%"); height:100%; transition: width 0.3s ease;
+                            ">
 
         <div data-name="Header"
              style="display: inline-flex; align-items: center;">
@@ -138,48 +153,51 @@
         @if (messages.Count > 0)
         {
 
-            <div style="background-color:wheat; height:85%; overflow: auto;">
+             <div style="background-color:wheat; height:85%; overflow: auto; ">
 
                 @foreach (var item in messages.Select((message, index) => new { message, index }))
                 {
 
 
-
                     if (item.index == 0 || item.index % 2 == 0)
                     {
-                        <div data-name="UserMessages"
-                             style="display: flex; flex-direction: column; width: 100%; padding-right: 250px; position: relative;">
+                        <div class="UserMessages"
+                             style="background-color:coral; display:grid; grid-template-columns:1fr 700px 1fr">
 
-                            <!-- Flex container for message and edit icon -->
-                            <div style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
 
-                                <!-- Edit icon container, hidden by default and shown on hover -->
-                                <div class="edit-icon"
-                                     style="cursor: pointer; border-radius: 15px; margin-right: 8px; display: none;"
-                                     onmouseover="this.style.backgroundColor='grey'"
-                                     onmouseout="this.style.backgroundColor='transparent'"
-                                     @onclick="ToggleEditMoo">
-                                    <img src="WebIcons/edit.png" style="width: 10px; height: 10px; margin-right: 8px;" />
-                                </div>
 
-                                <!-- Message content -->
+                            <div style="background-color:red"></div>
+
+
+                            <div style="background-color:blue; display:flex; align-items:center;">
+
                                 @if (!isEditingMessage)
                                 {
-                                    <p style="max-width: 45%; word-wrap: break-word; overflow-wrap: break-word; background-color: lightslategrey;
-                                                  padding: 9px 15px; border-radius: 19px; margin: 0;">
-                                        @item.message
-                                    </p>
+                                    <div class="editMessage"
+                                         style="cursor: pointer; border-radius: 15px; opacity: 100; margin-right: 5px; margin-left:auto;"
+                                         onmouseover="this.style.backgroundColor='grey'"
+                                         onmouseout="this.style.backgroundColor='transparent'"
+                                         @onclick="ToggleEditMoo">
+                                        <img src="WebIcons/edit.png" style="width: 10px; height: 10px;" />
+                                    </div>
+
+                                    <div style=" margin-left:auto">
+                                        <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: lightslategrey;
+                                                    padding: 9px 15px; border-radius: 19px;">
+                                            @item.message
+                                        </p>
+                                    </div>
                                 }
+
+
                                 else if (isEditingMessage)
                                 {
-                                    <!-- Editing mode with buttons -->
                                     <div style="display: flex; flex-direction: column; align-items: flex-end; max-width: 750px; background-color: lightslategrey; padding: 9px 15px; border-radius: 19px; margin: 0; word-break: break-word; overflow-wrap: break-word;">
 
                                         <p style="margin: 0; word-wrap: break-word; overflow-wrap: break-word; width: 100%;">
                                             @item.message
                                         </p>
 
-                                        <!-- Buttons for editing mode below the message -->
                                         <div data-name="WhenEditCliked" style="display: flex; gap: 10px; margin-top: 10px;">
                                             <button @onclick="CancelEditMoo" style="padding: 5px 10px;">Cancel</button>
                                             <button @onclick="SubmitEditMoo" style="padding: 5px 10px;">Submit</button>
@@ -187,77 +205,84 @@
                                     </div>
                                 }
                             </div>
-                        </div>
+                            <div style="background-color:red"></div>
 
+                          
+                         </div> 
                     }
 
 
                     else
                     {
 
-                        <div data-name=" Chat Response" 
-                            style="background-color:yellow; position:relative">
+                        <div data-name=" Flintec Messages" 
+                             style="background-color:yellow; position:relative;
+                                    display:grid; grid-template-columns: 1fr 700px 1fr">
 
+                            <div style="background-color:olive;
+                                        position:relative">
+                                                            
+                                <div data-name="flintec_logo_div"
+                                     style="border: 1px solid black; height: 35px; width: 35px; border-radius: 50%; 
+                                            display: flex; justify-content: center; align-items: center;
+                                            background-color: aqua;position:absolute; right:0; margin-right:5px;">
+                                    <img src="WebIcons/flintec_logo.png" style="height: 22px; width: 22px;" />
+                                </div>
 
-                            <div data-name="flintec_logo_div"
-                                 style="border: 1px solid black; height: 35px; width: 35px; border-radius: 50%; 
-                                        display: flex; justify-content: center; align-items: center;
-                                        background-color: aqua; 
-                                        margin-left:100px; margin-top:5%">
-
-                                <img src="WebIcons/flintec_logo.png" style="height: 22px; width: 22px;" />
                             </div>
 
-
-
-                            <div data-name="Respone Message  div"
-                                  style="margin-right: auto; margin-left:170px; max-width: 800px; word-wrap: break-word;
-                                        overflow-wrap: break-word;">
+                            <div data-name="Respone Message div"
+                                  style="margin-left: auto;  word-wrap: break-word;
+                                        overflow-wrap: break-word; flex-grow:0;">
                                
                             
                             @if (item.index == messages.Count - 1)
                                 {
 
-                                    <div class="wrapper" style="background-color:cadetblue;">
-                                        <p id="text">@item.message</p>
-                                    </div>
+                                <div style="background-color:cadetblue;">
+                                          
+                                    <p style="">@item.message</p>
+                                    
+                                </div>
                                 }
 
 
                                 else
                                 {
-
-                                    <p>@item.message</p>
+                                <div style="background-color:cadetblue;">
+                                    <p class="">@item.message</p>
+                                </div>
                                 }
 
-                                <div>
+                                <div data-name="Flintec Message Options"
+                                     style="display: inline-flex; background-color:mediumvioletred; ">
 
-                                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
+                                        <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
                                              onmouseover="this.style.backgroundColor='lightgray'"
                                              onmouseout="this.style.backgroundColor='transparent'">
                                             <img src="WebIcons/speaker.png" style="width:20px; height:20px; color:black;" />
                                         </div>
 
-                                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
+                                        <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
                                              onmouseover="this.style.backgroundColor='lightgray'"
                                              onmouseout="this.style.backgroundColor='transparent'">
                                             <img src="WebIcons/copy.png"     @onclick="CopyTextToClipboard"
                                                  style="width:20px; height:20px; color:black;" />
                                         </div>
 
-                                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
+                                        <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
                                              onmouseover="this.style.backgroundColor='lightgray'"
                                              onmouseout="this.style.backgroundColor='transparent'">
                                             <img src="WebIcons/thumbsup.png" style="width:20px; height:20px; color:black;" />
                                         </div>
 
-                                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
+                                        <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
                                              onmouseover="this.style.backgroundColor='lightgray'"
                                              onmouseout="this.style.backgroundColor='transparent'">
                                             <img src="WebIcons/thumbsdown.png" style="width:20px; height:20px; color:black;" />
                                         </div>
 
-                                        <div style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
+                                        <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
                                              onmouseover="this.style.backgroundColor='lightgray'"
                                              onmouseout="this.style.backgroundColor='transparent'">
                                             <img src="WebIcons/reload.png" style="width:20px; height:20px; color:black;" />
@@ -267,27 +292,32 @@
 
                             </div>
 
-
+                            <div data-name="remaining space in right"
+                                 style="background-color:grey">
                             </div>
+
+
+
+                        </div>
                     }
-
-
                 }
+           </div>
 
 
-            </div>
 
+            <div data-name="InputArea" style="background-color: blue; width: 100%; 
+                                                display:flex; justify-content:center; z-index:100 ">
 
-           @*  <div data-name="InputArea" style="background-color: yellow; width: 100%; border-radius: 25px;">
                 <div class="wrapperTextArea"
-                     style="display: flex; align-items: center; background-color: yellow; overflow: hidden; flex: 1; position: relative; border-radius: 25px;">
+                     style="display: flex; align-items: center; background-color: yellow; overflow: hidden;
+                            flex: 1; position: relative; border-radius: 25px;
+                            max-width:780px;">
 
                     <textarea @bind="userQuestion"
-                              @oninput="ResizeTextArea"
                               placeholder="@Localizer["Message Flintec AI"]"
                               style="resize: none; background-color: yellowgreen; margin-left: 5%; width: 87%; margin-right: 5%; overflow: hidden; line-height: 1.5;"
                               rows="1">
-                                 </textarea>
+                    </textarea>
 
                     <div style="position: absolute; right: 10px; width: 36px; height: 36px; border-radius: 50%; background-color: @sendButtonColor;"
                          @onclick="UserSubmitQuestion">
@@ -295,7 +325,8 @@
                     </div>
                 </div>
             </div>
- *@
+
+             
 
         }
         else
@@ -311,13 +342,13 @@
                              style="display: flex; align-items: center; background-color: yellow; overflow: hidden; flex: 1; position: relative; border-radius: 25px;">
 
                             <textarea @bind="userQuestion"
-                                      @oninput="ResizeTextArea"
                                       placeholder="@Localizer["Message Flintec AI"]"
                                       style="resize: none; background-color: yellowgreen; margin-left: 5%; width: 87%; margin-right: 5%; overflow: hidden; line-height: 1.5;"
                                       rows="1">
                              </textarea>
 
-                            <div style="position: absolute; right: 10px; width: 36px; height: 36px; border-radius: 50%; background-color: @sendButtonColor;"
+                            <div class="SendButton"
+                                 style="position: absolute; right: 10px; width: 36px; height: 36px; border-radius: 50%; background-color: @sendButtonColor;"
                                  @onclick="UserSubmitQuestion">
                                 <img src="WebIcons/up_arrow.png" style="width: 20px; height: 20px;" alt="Submit" />
                             </div>
@@ -362,7 +393,13 @@
 
 
 
-
+<style>
+    /* Show the child .edit-icon when hovering over .parent-1 */
+    .UserMessages:hover .editMessage {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
 
 
 
@@ -379,7 +416,19 @@
 
 
 
+@code {
 
+    private bool isHoveredTab = false;
+
+    protected  async Task ToggleVisibilityTab(bool hover)
+    {
+        isHoveredTab = hover;
+        await JSRuntime.InvokeVoidAsync("console.log", "${isHoveredTab}");
+
+    }
+    
+
+}
 
 
 
@@ -416,6 +465,10 @@
 </style>
 
 
+
+
+
+
 <script>
     const textarea = document.querySelector("textarea");
     const maxHeight = 200; // Set your desired maximum height
@@ -432,6 +485,47 @@
             textarea.style.overflow = "hidden"; // Reset overflow to hidden if below maxHeight
         }
     });
+</script>
+
+
+
+
+
+
+
+<script>
+    const maxHeight = 59;
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+                if (node.tagName === "TEXTAREA") {
+                    addAutoResize(node);
+                }
+            });
+        });
+    });
+
+    // Start observing the body for added nodes
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    function addAutoResize(textarea) {
+        textarea.style.height = "59px"; // Set initial height
+        textarea.addEventListener("input", (e) => {
+            textarea.style.height = "59px"; // Reset height
+            const scHeight = e.target.scrollHeight; // Get new scroll height
+
+            textarea.style.height = `${Math.min(scHeight, maxHeight)}px`;
+
+            if (scHeight > maxHeight) {
+                textarea.style.overflow = "auto";
+            } else {
+                textarea.style.overflow = "hidden";
+            }
+        });
+    }
+
+
 </script>
 
 
@@ -580,6 +674,10 @@ function copyToClipboard(text) {
 
 
 <style>
+
+
+    // Animation
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -595,9 +693,9 @@ function copyToClipboard(text) {
     }
 
     #text {
-        max-width: 800px;
-        text-align: left;
-        width: 100%;
+        /* max-width: 800px;
+        // text-align: left;
+        // width: 100%; */
         color: black;
         font-family: monospace;
         -webkit-font-smoothing: antialiased;
@@ -700,24 +798,23 @@ function copyToClipboard(text) {
 
 
     .paragraph {
-        position: relative; /* Allows for absolute positioning of the dots */
-        background-color: dimgrey;
+        position: relative; 
     }
 
         .paragraph::after {
-            content: '...'; /* The three dots */
-            position: absolute; /* Positioning the dots */
-            right: 0; /* Aligns the dots to the right */
-            top: 50%; /* Vertically centers the dots */
-            transform: translateY(-50%); /* Adjusts the dots for perfect vertical alignment */
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+            content: ''; 
+            position: absolute; 
+            right: 0; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            //background-color:"";
         }
 
-        /* Show dots on hover or when highlighted */
         .paragraph:hover::after,
         .paragraph.highlighted::after {
-            opacity: 1; /* Show the dots */
+            opacity: 1; 
         }
 
 </style>
@@ -725,79 +822,59 @@ function copyToClipboard(text) {
 
 
 @code {
-    private int popupIndex = -1; // Default value for no popup
+    private int popupIndex = -1;
 
     private void TogglePopup(int index)
     {
-        popupIndex = popupIndex == index ? -1 : index; // Toggle the popup
+        popupIndex = popupIndex == index ? -1 : index; 
     }
 
     private void DoSomething(int index)
     {
-        // Implement the action you want to take when clicking the action button in the popup
-        // For example: GetConversation(index);
     }
 }
 
  @code {
     private int? activeIndex = null;
-    private int? currentIndex = null; // Add currentIndex variable
+    private int? currentIndex = null; 
 
     private void SetActiveParagraph(int index)
     {
         activeIndex = index;
-        currentIndex = index; // Set currentIndex when an item is clicked
+        currentIndex = index; 
     }
 }
 
 
 <style>
+
+    // Tabs
+
     .hover-light p:hover,
     .paragraph.highlighted {
-        background-color: #d0e0ff; /* Same color for hover, active, and current */
         transition: background-color 0.3s ease;
     }
 
 </style>
 
 @code {
-
-    // protected override async Task OnInitializedAsync()
-    // {
-    //     var response = await CoPilotService.SendRequestAsync();
-    //     if (response.IsSuccessStatusCode)
-    //     {
-    //         Process response data
-    //     }
-    //     else
-    //     {
-    //         Handle error
-        //     }
-    // }
-}
-
-
-
-
-@code {
     private bool isEditingMessage = false;
 
-    // Method to toggle the edit state
+
     private void ToggleEditMoo()
     {
         isEditingMessage = true;
     }
 
-    // Method to cancel the edit
+
     private void CancelEditMoo()
     {
         isEditingMessage = false;
     }
 
-    // Method to submit the edit
+
     private void SubmitEditMoo()
     {
-        // Your logic to submit the edited message
         isEditingMessage = false;
     }
 }
