@@ -31,27 +31,33 @@
                     {
 
 
-                    <div style="display: flex; align-items: center; justify-content:center; margin-bottom: 15px; margin-left:15px;margin-right: 7px;"
-                         @onmouseenter="() => ToggleVisibilityTab(true)" 
-                         @onmouseleave="() => ToggleVisibilityTab(false)">
+                    <div  
+                        style="margin-bottom: 15px; margin-left:15px;margin-right: 7px;  position:relative;" >
 
 
-                        <p style="margin: 0; text-align:center;"
-                            @onclick="() => GetConversation(dict.listIndex)">
+                        <span class="ChatTab"
+                              style=""
+                              @onclick="() => GetConversation(dict.listIndex)">
 
-                            @(string.Join(" ", dict.conversation).Length > 20
-                                ? string.Join(" ", dict.conversation).Substring(0, 20)
+                            @(string.Join(" ", dict.conversation).Length > 27
+                                ? string.Join(" ", dict.conversation).Substring(0, 27)
                                 : string.Join(" ", dict.conversation))
-                        </p>
 
 
 
-                        @if (isHoveredTab)
-                        {
-                            <span class="dots" @onclick="() => TogglePopup(dict.listIndex)" style="cursor: pointer;">
+                            <span class="dots" @onclick="() => TogglePopup(dict.listIndex)"
+                                  style="cursor: pointer; background-color:green; position: absolute; right:0; z-index:100;">
                                 ...
                             </span>
-                        }
+
+                        </span>
+
+
+
+                      
+                        
+                           
+                        
                    
                     
                     </div>
@@ -118,7 +124,7 @@
                 }
 
                 <div style="position: absolute; bottom: 0; width: 100%; background-color: yellow; height: 70px;">
-                    <button style="width: calc(100% - 15px); height: calc(100% - 15px); margin: 8px;" @onclick="ShowSettingsPopup"
+                    <button style="width: calc(100% - 15px); height: calc(100% - 15px); margin: 8px;" @onclick="() => ShowSettingsPopup(true)"
                             onmouseover="this.style.backgroundColor='darkgrey'"
                             onmouseout="this.style.backgroundColor='grey'">
                         Settings
@@ -129,7 +135,22 @@
 
             </div>
 
-            <Settings IsVisible="isSettingsPopupVisible" IsVisibleChanged="OnPopupVisibilityChanged" />
+
+
+            @if (isSettingsPopupVisible)
+            {
+                <!-- Overlay to capture clicks outside the dialog -->
+                <div class="overlay" @onclick="() => ShowSettingsPopup(false)"></div>
+
+                <!-- Popup dialog -->
+                <dialog class="MyPopup" open>
+                    <div class="content">
+                        <Settings/>
+                        <button @onclick="() => ShowSettingsPopup(false)">Close</button>
+                    </div>
+                </dialog>
+            }
+
 
         }
     </div>
@@ -169,28 +190,38 @@
                             <div style="background-color:red"></div>
 
 
-                            <div style="background-color:blue; display:flex; align-items:center;">
+                            <div style="background-color:blue; display:flex; align-items:center; position: relative">
 
-                                @if (!isEditingMessage)
+                                @if (editingIndex != item.index)
                                 {
-                                    <div class="editMessage"
-                                         style="cursor: pointer; border-radius: 15px; opacity: 100; margin-right: 5px; margin-left:auto;"
-                                         onmouseover="this.style.backgroundColor='grey'"
-                                         onmouseout="this.style.backgroundColor='transparent'"
-                                         @onclick="ToggleEditMoo">
-                                        <img src="WebIcons/edit.png" style="width: 10px; height: 10px;" />
-                                    </div>
+                                    <div style="background-color:orange; position:relative ; flex-grow: 1; ">
 
-                                    <div style=" margin-left:auto">
-                                        <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: lightslategrey;
-                                                    padding: 9px 15px; border-radius: 19px;">
-                                            @item.message
-                                        </p>
-                                    </div>
-                                }
+                                        <div class="editMessage"
+                                             style="cursor: pointer; border-radius: 15px; opacity: 100; margin-right: 5px; 
+                                                    position:absolute; right:0;"
+                                             
+                                             onmouseover="this.style.backgroundColor='grey'"
+                                             onmouseout="this.style.backgroundColor='transparent'"
+                                             @onclick="()=> ToggleEditMoo(item.index)">
+                                            <img src="WebIcons/edit.png" style="width: 10px; height: 10px;" />
+                                        </div>
+
+                                     </div>
+
+                                    <div style="background-color:pink; max-width:70%">
+
+                                        <div style=" margin-left:auto">
+                                                <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: lightslategrey;
+                                                            padding: 9px 15px; border-radius: 19px;">
+                                                    @item.message
+                                                </p>
+                                            </div>
+
+                                     </div>
+                                            }
 
 
-                                else if (isEditingMessage)
+                                else
                                 {
                                     <div style="display: flex; flex-direction: column; align-items: flex-end; max-width: 750px; background-color: lightslategrey; padding: 9px 15px; border-radius: 19px; margin: 0; word-break: break-word; overflow-wrap: break-word;">
 
@@ -306,7 +337,7 @@
 
 
             <div data-name="InputArea" style="background-color: blue; width: 100%; 
-                                                display:flex; justify-content:center; z-index:100 ">
+                                                display:flex; justify-content:center; z-index:100;flex-grow:1; ">
 
                 <div class="wrapperTextArea"
                      style="display: flex; align-items: center; background-color: yellow; overflow: hidden;
@@ -326,7 +357,9 @@
                 </div>
             </div>
 
-             
+            <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 10px;">
+                <p>@Localizer["For more details"]</p>
+            </div>
 
         }
         else
@@ -393,6 +426,142 @@
 
 
 
+<script>
+@* 
+
+    const dialog = document.querySelector('.MyPopup');
+    const content = document.querySelector('.content');
+
+     showSettingsPopUp = (show) => show ? dialog.showModal() : dialog.close();
+    dialog.addEventListener('click', (e) => !content.contains(e.target) && dialog.close());
+
+ *@
+</script>
+
+
+
+<style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .MyPopup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        background: white;
+        z-index: 999;
+    }
+
+    .content {
+        text-align: center;
+    }
+</style>
+
+
+@code {
+    private bool isSettingsPopupVisible = false;
+
+    private void ShowSettingsPopup(bool show)
+    {
+        isSettingsPopupVisible = show;
+    }
+
+
+
+
+
+    private void ClosePopup()
+    {
+        isSettingsPopupVisible = false;
+    }
+}
+
+
+
+
+
+
+<style>
+    /* Style for list items */
+    .ChatTab {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: lightgray;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+        /* Change background color on hover */
+        .ChatTab:hover {
+            background-color: palevioletred;
+        }
+
+        /* Change background color for active item */
+        .ChatTab.active {
+            background-color: yellow;
+        }
+
+    /* Style for the symbol */
+    .dots {
+        color: red;
+        font-size: 16px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        visibility: hidden;
+    }
+
+    /* Show symbol when hovered or active */
+    .ChatTab:hover .dots,
+    .ChatTab.active .dots {
+        visibility: visible;
+        background-color:yellow;
+    }
+</style>
+
+
+
+
+<script>
+    // Select all items
+    const items = document.querySelectorAll('.ChatTab');
+
+    // Add click event listener to each item
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove 'active' class from all items
+            items.forEach(i => i.classList.remove('active'));
+
+            // Add 'active' class to the clicked item
+            item.classList.add('active');
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
     /* Show the child .edit-icon when hovering over .parent-1 */
     .UserMessages:hover .editMessage {
@@ -415,7 +584,7 @@
 
 
 
-
+@* 
 @code {
 
     private bool isHoveredTab = false;
@@ -429,7 +598,7 @@
     
 
 }
-
+ *@
 
 
 
@@ -654,17 +823,17 @@ function copyToClipboard(text) {
 
 
 
-    private bool isSettingsPopupVisible = false;
+    // private bool isSettingsPopupVisible = false;
 
-    private void ShowSettingsPopup()
-    {
-        isSettingsPopupVisible = true;
-    }
+    // private void ShowSettingsPopup()
+    // {
+    //     isSettingsPopupVisible = true;
+    // }
 
-    private void OnPopupVisibilityChanged(bool value)
-    {
-        isSettingsPopupVisible = value;
-    }
+    // private void OnPopupVisibilityChanged(bool value)
+    // {
+    //     isSettingsPopupVisible = value;
+    // }
 
 
 
@@ -778,11 +947,11 @@ function copyToClipboard(text) {
 
 
 <style>
-    .dots {
+    /* .dots {
         display: inline-block; /* Allows the dots to be inline with the paragraph */
         cursor: pointer; /* Change cursor to indicate clickable */
-        margin-left: 5px; /* Space between paragraph and dots */
-    }
+        margin-left: 5px; /* Space between paragraph and dots 
+    } */
 
     .popup {
         position: absolute; /* Positioning the popup */
@@ -858,38 +1027,60 @@ function copyToClipboard(text) {
 </style>
 
 @code {
-    private bool isEditingMessage = false;
+    private int? editingIndex = null;
 
-
-    private void ToggleEditMoo()
+    private void ToggleEditMoo(int index)
     {
-        isEditingMessage = true;
+        editingIndex = index;
     }
-
 
     private void CancelEditMoo()
     {
-        isEditingMessage = false;
+        editingIndex = null;
     }
-
 
     private void SubmitEditMoo()
     {
-        isEditingMessage = false;
+        editingIndex = null;
     }
 }
 
 <script>
-document.addEventListener("click", function(event) {
-    const popup = document.getElementById("popup233");
-    const togglePopupButton = document.querySelector('.dots');  // Adjust the selector if needed
+        let popupIndex = null; // Initial value to track which popup is open, if any
 
-    if (popup && !popup.contains(event.target) && !togglePopupButton.contains(event.target)) {
-        // Close the popup if the click is outside the popup and the toggle button
-        // You can call your TogglePopup function here or update the `popupIndex` accordingly
-        popupIndex = null;  // Or your function to hide the popup
+    // Function to toggle popup visibility
+    function TogglePopup(index) {
+        // Set popupIndex to the clicked item's index, or null if it should be closed
+        popupIndex = popupIndex === index ? null : index;
+
+        // Get the popup element
+        const popup = document.getElementById("popup233");
+
+        // Show or hide the popup based on the updated popupIndex
+        if (popupIndex !== null) {
+            popup.style.display = "block";
+        } else {
+            popup.style.display = "none";
+        }
     }
-});
+
+    // Event listener to close the popup if clicking outside
+    document.addEventListener("click", function (event) {
+        const popup = document.getElementById("popup233");
+        const togglePopupButton = document.querySelector('.dots');
+
+        // Close the popup if the click is outside both the popup and toggle button
+        if (popup && !popup.contains(event.target) && !togglePopupButton.contains(event.target)) {
+            popupIndex = null; // Set popupIndex to null
+            popup.style.display = "none"; // Hide the popup
+        }
+    });
+
+    // Sample toggle button to open/close the popup (for demonstration purposes)
+    document.querySelector('.dots').addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent the click from triggering document's listener
+        TogglePopup(1); // Toggle popup visibility for demonstration
+    });
 
 
 </script>
