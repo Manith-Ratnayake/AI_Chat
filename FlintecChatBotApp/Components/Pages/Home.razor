@@ -12,8 +12,8 @@
      style="background-color:darkgray; display: flex; height:100vh; ">
 
     <div data-name="b"
-         style="background-color:gray; width:@(isBVisible ? "20%" : "0%"); height:100%;  transition: width 0.3s ease;
-                position:relative; overflow:hidden; z-index:0;
+         style="background-color:gray; width:@(isBVisible ? "17%" : "0%"); height:100%;  transition: width 0.3s ease;
+                position:relative; overflow:hidden;
                 display:flex; flex-direction: column; ">
 
 
@@ -21,8 +21,22 @@
         {
 
             <div style="">
-                <Icons OnCreateNewConversation="CreateNewConversation" OnbOff="bOff" IconMargin="margin-right: 100px;" />
+                <div class="icon-container">
+
+                    <div class="icon-wrapper">
+                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
+                        <span class="tooltip-text">Open Sidebar</span>
+                    </div>
+
+                    <div class="icon-wrapper">
+                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
+                        <span class="tooltip-text" style="left: 65px;">New chat</span>
+                    </div>
+
+                </div>
             </div>
+
+
 
             <div data-name="Tabs"
                 style="background-color:midnightblue; overflow-y: visible; ">
@@ -114,12 +128,11 @@
                         
             }
 
-          
-
-
 
             </div>
 
+       
+       
             <div style = "position:absolute; bottom: 0; width: 100%; background-color: yellow; height: 70px;" >
 
                
@@ -136,35 +149,53 @@
             {
                 <!-- Overlay to capture clicks outside the dialog -->
                 <div class="overlay" 
-                    style="z-index:99999;"
+                    "
                     @onclick="() => ShowSettingsPopup(false)"></div>
 
                 <!-- Popup dialog -->
                 <dialog class="MyPopup" open>
                     <div class="content"
-                         style="z-index:99999;">
+                         >
 
 
-                         <Settings/>
-
+                        
 
                         <button @onclick="() => ShowSettingsPopup(false)">Close</button>
                     </div>
                 </dialog>
             }
 
+
+
+          
+
+
+
+
         }
     </div>
 
-    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "80%" : "100%"); 
-                            height:100%; transition: width 0.3s ease;overflow:hidden;">
+    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "83%" : "100%"); 
+                            height:100vh; transition: width 0.3s ease;overflow:hidden;">
                             
 
         <div data-name="Header"
              style="display: inline-flex; align-items: center; height:10px;">
             @if (!isBVisible)
             {
-                <Icons OnCreateNewConversation="CreateNewConversation" OnbOff="bOff" IconMargin="margin-right: 10px;" />
+                <div class="icon-container">
+
+                    <div class="icon-wrapper">
+                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
+                        <span class="tooltip-text">Open Sidebar</span>
+                    </div>
+
+                    <div class="icon-wrapper">
+                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
+                        <span class="tooltip-text" style="left: 65px;">New chat</span>
+                    </div>
+
+                </div>
 
             }
 
@@ -176,11 +207,11 @@
         @if (messages.Count > 0)
         {
 
-            
-            <div style="display:flex; flex-direction:column; position:relative; background-color:mediumvioletred; height:100%">
 
-                <div style="background-color:wheat; height:85%; overflow: auto; flex-shrink:1;">
+            <div style="display: flex; flex-direction: column; position: relative; background-color: black; height: 100vh;">
 
+                <div style="background-color: wheat; height: 85%; overflow: auto; flex-grow: 1; flex-shrink: 1;">
+                
                     @foreach (var item in messages.Select((message, index) => new { message, index }))
                     {
 
@@ -202,11 +233,20 @@
                                         <div class="editIconContainer" style="background-color:orange; position:relative; flex-grow: 1; height:100%;">
 
                                             <div class="editMessage"
-                                                 style="cursor: pointer; border-radius: 15px; margin-right: 5px;
-                                                        position:absolute; right:0;"
-                                                 onmouseover="this.style.backgroundColor='grey'"
-                                                 onmouseout="this.style.backgroundColor='transparent'"
-                                                 @onclick="()=> ToggleEditMoo(item.index)">
+                                                 style="cursor: pointer;
+                                                        border-radius: 50%;
+                                                        width: 25px; 
+                                                        height: 25px; 
+                                                        margin-right: 5px;
+                                                        padding: 10px; 
+                                                        position: absolute;
+                                                        right: 0;
+                                                        display:flex;
+                                                        justify-content:center;
+                                                        align-items:center;"
+                                                onmouseover="this.style.backgroundColor='grey'"
+                                                onmouseout="this.style.backgroundColor='transparent'"
+                                                @onclick="()=> ToggleEditMoo(item.index)">
                                                 <img src="WebIcons/edit.png" style="width: 10px; height: 10px;" />
                                             </div>
                                         </div>
@@ -291,41 +331,55 @@
                                     </div>
                                     }
 
-                                    <div data-name="Flintec Message Options"
-                                         style="display: inline-flex; background-color:mediumvioletred; ">
-
-                                            <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
-                                                 onmouseover="this.style.backgroundColor='lightgray'"
-                                                 onmouseout="this.style.backgroundColor='transparent'">
-                                                <img src="WebIcons/speaker.png" style="width:20px; height:20px; color:black;" />
-                                            </div>
-
-                                            <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
-                                                 onmouseover="this.style.backgroundColor='lightgray'"
-                                                 onmouseout="this.style.backgroundColor='transparent'">
-                                                <img src="WebIcons/copy.png"     @onclick="CopyTextToClipboard"
-                                                     style="width:20px; height:20px; color:black;" />
-                                            </div>
-
-                                            <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
-                                                 onmouseover="this.style.backgroundColor='lightgray'"
-                                                 onmouseout="this.style.backgroundColor='transparent'">
-                                                <img src="WebIcons/thumbsup.png" style="width:20px; height:20px; color:black;" />
-                                            </div>
-
-                                            <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
-                                                 onmouseover="this.style.backgroundColor='lightgray'"
-                                                 onmouseout="this.style.backgroundColor='transparent'">
-                                                <img src="WebIcons/thumbsdown.png" style="width:20px; height:20px; color:black;" />
-                                            </div>
-
-                                            <div style="width: 30px; height: 30px; border-radius: 5px; transition: background-color 0.3s;"
-                                                 onmouseover="this.style.backgroundColor='lightgray'"
-                                                 onmouseout="this.style.backgroundColor='transparent'">
-                                                <img src="WebIcons/reload.png" style="width:20px; height:20px; color:black;" />
-                                            </div>
-
+                                    <div data-name="Flintec Message Options" style="display: inline-flex; background-color: mediumvioletred;">
+                                       
+                                        <!-- Speaker Icon with Tooltip -->
+                                        <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
+                                                    display: flex; justify-content: center; align-items: center; cursor: pointer;"
+                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" title="Read aloud">
+                                            <img src="WebIcons/speaker.png" style="width: 15px; height: 15px; color: black;" />
                                         </div>
+
+
+                                       
+
+                                        <!-- Copy Icon -->
+                                        <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
+                                                    display: flex; justify-content: center; align-items: center; cursor: pointer;"
+                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" title="Copy" data-bs-placement="left">
+                                             <img src="WebIcons/copy.png" style="width: 15px; height: 15px; color: black;" @onclick="CopyTextToClipboard" />
+                                        </div>
+
+                              
+
+
+                                        <!-- Thumbs Up Icon -->
+                                        <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
+                                                   display: flex; justify-content: center; align-items: center; cursor: pointer;"
+                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" title="Good Response">
+                                            <img src="WebIcons/thumbsup.png" style="width: 15px; height: 15px; color: black;" />
+                                        </div>
+
+                                        <!-- Thumbs Down Icon -->
+                                        <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
+                                                      display: flex; justify-content: center; align-items: center; cursor: pointer;"
+                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" title="Bad Response">
+                                            <img src="WebIcons/thumbsdown.png" style="width: 15px; height: 15px; color: black;" />
+                                        </div>
+
+                                        <!-- Reload Icon -->
+                                        <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
+                                                     display: flex; justify-content: center; align-items: center; cursor: pointer;"
+                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" title="Reload">
+                                            <img src="WebIcons/reload.png" style="width: 15px; height: 15px; color: black;" />
+                                        </div>
+                                    </div>
+
 
                                 </div>
 
@@ -337,35 +391,43 @@
 
                             </div>
                         }
-                    }
+                         }
                </div>
 
-                <div data-name="InputArea" style="background-color: blue; width: 100%;
-                                                  display:flex; justify-content:center; flex-grow:1; flex-shrink:0 ">
 
-                    <div class="wrapperTextArea"
-                         style="display: flex; align-items: center; background-color: yellow; overflow: hidden;
-                                flex: 1; position: relative; border-radius: 25px;
-                                max-width:780px;">
+                <div data-comment="To positon the input holder" 
+                     style="background-color:green; display:flex; justify-content:center;">
 
-                        <textarea @bind="userQuestion"
-                                  placeholder="@Localizer["Message Flintec AI"]"
-                                  style="resize: none; background-color: yellowgreen; margin-left: 5%; width: 87%; margin-right: 5%; overflow: hidden; line-height: 1.5;"
-                                  rows="1">
+                    <div data-comment="Input holder"
+                         style=" position: relative; padding: 0 15px; width:780px; border-radius: 50px; color:white;background-color: blue;">
+
+                        <textarea class="textarAreaPlaceHolder"
+                                  @bind="userQuestion"
+                                  placeholder="Message Flintec AI"
+                                  rows="1"
+                                  style="width: 94%; max-height: 150px; padding: 10px;
+                                         resize: none; overflow-y: hidden;
+                                         background-color: grey; color: white;"
+                                  oninput="adjustHeight(this)">
                         </textarea>
 
-                        <div style="position: absolute; right: 10px; width: 36px; height: 36px; border-radius: 50%; background-color: @sendButtonColor;"
-                             @onclick="UserSubmitQuestion">
-                            <img src="WebIcons/up_arrow.png" style="width: 20px; height: 20px;" alt="Submit" />
-                        </div>
+                        <button style="position: absolute; bottom: 12px; right: 18px; width: 36px; height: 36px;
+                                       border-radius: 50%; border: none; background-color: grey;
+                                       outline: none; box-shadow: none; transition: none;"
+                                @onclick="UserSubmitQuestion">
+                            <img src="WebIcons/up_arrow.png" style="width: 20px; height: 20px;" alt="Submit">
+                        </button>
+
                     </div>
                 </div>
 
-                <div style="background-color: purple; text-align: center; color: white; width: 100%; margin-bottom:auto;">
-                    <p>@Localizer["For more details"]</p>
-                </div>
 
+                <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 6px;">
+                    <p>@Localizer["Sign In For More Details"]</p>
                 </div>
+            </div>
+
+      
          
 
         }
@@ -373,28 +435,40 @@
         {
 
             <div style="background-color: tomato; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                
+                
                 <div style="display: flex; flex-direction: column; align-items: center; width: 60%; flex: 1; justify-content: center;">
+                        <p style="font-size: 30px;">How Can I Help You?</p>
 
-                    <p style="font-size: 30px;">How Can I Help You?</p>
 
-                    <div data-name="InputArea" style="background-color: yellow; width: 100%; border-radius: 25px;">
-                        <div class="wrapperTextArea"
-                             style="display: flex; align-items: center; background-color: yellow; overflow: hidden; flex: 1; position: relative; border-radius: 25px;">
 
-                            <textarea @bind="userQuestion"
-                                      placeholder="@Localizer["Message Flintec AI"]"
-                                      style="resize: none; background-color: yellowgreen; margin-left: 5%; width: 87%; margin-right: 5%; overflow: hidden; line-height: 1.5;"
-                                      rows="1">
-                             </textarea>
+                    <div data-comment="To positon the input holder"
+                         style="background-color:green; display:flex; justify-content:center;">
 
-                            <div class="SendButton"
-                                 style="position: absolute; right: 10px; width: 36px; height: 36px; border-radius: 50%; background-color: @sendButtonColor;"
-                                 @onclick="UserSubmitQuestion">
-                                <img src="WebIcons/up_arrow.png" style="width: 20px; height: 20px;" alt="Submit" />
-                            </div>
+                        <div data-comment="Input holder"
+                             style=" position: relative; padding: 0 15px; width:780px; border-radius: 50px; color:white;background-color: blue;">
+
+                            <textarea class="textarAreaPlaceHolder"
+                                      @bind="userQuestion"
+                                      placeholder="Message Flintec AI"
+                                      rows="1"
+                                      style="width: 94%; max-height: 150px; padding: 10px;
+                                         resize: none; overflow-y: hidden;
+                                         background-color: grey; color: white;"
+                                      oninput="adjustHeight(this)">
+                            </textarea>
+
+                            <button style="position: absolute; bottom: 12px; right: 18px; width: 36px; height: 36px;
+                                       border-radius: 50%; border: none; background-color: grey;
+                                       outline: none; box-shadow: none; transition: none;"
+                                    @onclick="UserSubmitQuestion">
+                                <img src="WebIcons/up_arrow.png" style="width: 20px; height: 20px;" alt="Submit">
+                            </button>
+
                         </div>
                     </div>
-
+                   
+                   
 
                     <div style="display: flex; justify-content: space-between; flex-wrap: wrap;
                                      background-color: thistle; width: 100%; margin-top: 20px;">
@@ -402,7 +476,7 @@
                         @foreach (var suggestion in suggestions)
                         {
                             <div style="background-color: yellow; border: 2px solid purple; border-radius: 10px; padding: 10px;
-                            margin: 5px; flex: 1; min-width: 150px; text-align: center;"
+                                        margin: 5px; flex: 1; min-width: 150px; text-align: center;"
                                  @onclick="() => UpdateTheSearchBar(suggestion)">
                                 @suggestion
                             </div>
@@ -413,13 +487,12 @@
          
 
 
-
-                <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 10px;">
-                    <p>@Localizer["For more details"]</p>
+                <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 6px;">
+                    <p>@Localizer["Sign In For More Details"]</p>
                 </div>
 
 
-            </div>
+           </div>
 
         }
 
@@ -430,6 +503,108 @@
 
 
 </div>
+
+
+<style>
+    :root {
+        --background1-color: black;
+        --background2-color: #33322e;
+        --background3-color: #47463f;
+        --background4-color: #636258;
+        --font-color: white;
+    }
+</style>
+
+
+
+
+<style>
+    .textarAreaPlaceHolder::placeholder{
+        color: lightgray;
+    }
+
+
+    .textarAreaPlaceHolder {
+        outline: none; /* Removes the default focus outline */
+        border: none; /* Removes border to prevent color change */
+    }
+
+        /* Optional: If you want a specific border color when focused */
+        .textarAreaPlaceHolder:focus {
+            outline: none; /* Ensures no outline on focus */
+            border: none; /* Keeps border color consistent */
+        }
+</style>
+
+
+
+
+
+
+
+<style>
+    .icon-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        position: relative;
+        margin-right: 10px; /* Space between the icons */
+        padding: 5px; /* Add some padding around the icon */
+        border-radius: 5px; /* Optional: rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .icon-wrapper:hover {
+            background-color: rgba(0, 0, 0, 0.2); /* Change this to your desired color */
+        }
+
+    .newIcon {
+        cursor: pointer;
+    }
+
+    .tooltip-text {
+        position: absolute;
+        font-size: 14px;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        visibility: hidden; /* Hide by default */
+        white-space: nowrap;
+        z-index: 9999; /* High z-index to ensure visibility */
+        top: 0px;
+        left: 40px; /* Adjust as needed */
+    }
+
+        .tooltip-text::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+    /* Show tooltip on hover */
+    .icon-wrapper:hover .tooltip-text {
+        visibility: visible; /* Show on hover */
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -454,17 +629,6 @@
 </style>
 
 
-<script>
-@* 
-
-    const dialog = document.querySelector('.MyPopup');
-    const content = document.querySelector('.content');
-
-     showSettingsPopUp = (show) => show ? dialog.showModal() : dialog.close();
-    dialog.addEventListener('click', (e) => !content.contains(e.target) && dialog.close());
-
- *@
-</script>
 
 
 
@@ -579,7 +743,18 @@
 
 
 
+<script>
+    function adjustHeight(textarea) {
+        textarea.style.height = 'auto'; // Reset the height to auto for resizing
+        const maxHeight = 150; // Set your max height here
+        const newHeight = Math.min(textarea.scrollHeight, maxHeight);
 
+        textarea.style.height = newHeight + 'px';
+
+        // Enable or disable scrollbar based on current height
+        textarea.style.overflowY = (newHeight >= maxHeight) ? 'auto' : 'hidden';
+    }
+</script>
 
 
 
@@ -593,25 +768,6 @@
         pointer-events: auto;
     }
 </style>
-
-
-
-
-@* 
-@code {
-
-    private bool isHoveredTab = false;
-
-    protected  async Task ToggleVisibilityTab(bool hover)
-    {
-        isHoveredTab = hover;
-        await JSRuntime.InvokeVoidAsync("console.log", "${isHoveredTab}");
-
-    }
-    
-
-}
- *@
 
 
 
@@ -651,66 +807,12 @@
 
 
 
-<script>
-    const textareas = document.querySelectorAll(".wrapperTextArea"); // Select all by class name
-    const maxHeight = 200;
-
-    textareas.forEach(textarea => {
-        textarea.addEventListener("input", e => {
-            textarea.style.height = "59px"; // Reset height
-            let scHeight = e.target.scrollHeight;
-
-            textarea.style.height = `${Math.min(scHeight, maxHeight)}px`;
-
-            if (scHeight > maxHeight) {
-                textarea.style.overflow = "auto";
-            } else {
-                textarea.style.overflow = "hidden";
-            }
-        });
-    });
-</script>
 
 
 
 
 
 
-
-<script>
-    const maxHeight = 59;
-
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {
-                if (node.tagName === "TEXTAREA") {
-                    addAutoResize(node);
-                }
-            });
-        });
-    });
-
-    // Start observing the body for added nodes
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    function addAutoResize(textarea) {
-        textarea.style.height = "59px"; // Set initial height
-        textarea.addEventListener("input", (e) => {
-            textarea.style.height = "59px"; // Reset height
-            const scHeight = e.target.scrollHeight; // Get new scroll height
-
-            textarea.style.height = `${Math.min(scHeight, maxHeight)}px`;
-
-            if (scHeight > maxHeight) {
-                textarea.style.overflow = "auto";
-            } else {
-                textarea.style.overflow = "hidden";
-            }
-        });
-    }
-
-
-</script>
 
 
 <script>
@@ -725,60 +827,67 @@
 </script>
 
 
-
-
-@code {
-   private List<string> suggestions = new List<string>
-{
-    "What is the password policy?",
-    "What are the policies for backup?",
-    "What are the policies for Microsoft 0365?",
-    "What is the acceptable use policy?"
-};
-
-}
-
-@code {
-
-    private async Task ResizeTextArea(ChangeEventArgs e)
-    {
-        //await JSRuntime.InvokeVoidAsync("autoResizeTextArea", e.Value);
-    }
-
-
-
-    private async Task CopyTextToClipboard()
-    {
-        string textToCopy = "This is the text to be copied to the clipboard.";
-        await JSRuntime.InvokeVoidAsync("copyToClipboard", userAnswer);
-    }
-}
-
-
 <script>
+    const textareas = document.querySelectorAll("textarea");
+    const maxHeight = 200;
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(function () {
-        console.log('Text copied to clipboard: ' + text);
-    }).catch(function (error) {
-        console.error('Error copying text: ', error);
+    textareas.forEach(textarea => {
+        textarea.addEventListener("input", () => {
+            textarea.style.height = "59px"; // Reset height to minimum
+            textarea.style.height = `${Math.min(textarea.scrollHeight, maxHeight)}px`;
+            textarea.style.overflow = textarea.scrollHeight > maxHeight ? "auto" : "hidden";
+        });
     });
-}
-
-
 </script>
 
 
 
 
 
+@code {
+   private List<string> suggestions = new List<string>
+{
+    "Password Policy",
+    "Backup Policy",
+    "Microsoft 0365 Policy",
+    "Acceptable Use Policy"
+};
 
+}
+
+@code {
+
+    private async Task ResizeTextArea(ChangeEventArgs e) {}
+    private async Task CopyTextToClipboard() {}
+}
+
+
+
+
+<style>
+    #userTextarea {
+        width: 100%;
+        height: 59px;
+        padding: 15px;
+        border-radius: 5px;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        transition: border-color 0.3s, padding 0.3s; 
+        max-height: 200px;
+    }
+
+    #userTextarea:focus {
+        border-width: 2px;
+        border-color: red;
+    }
+</style>
 
 
 
 @code {
 
-    private string sendButtonColor { get; set; } = "gray"; // Default color
+    private string sendButtonColor { get; set; } = "gray"; 
     private int clickedTimes = 0;
 
     private void UpdateButtonColor()
@@ -834,23 +943,6 @@ function copyToClipboard(text) {
         else
             isSliderVisible = true;
     }
-
-
-
-
-    // private bool isSettingsPopupVisible = false;
-
-    // private void ShowSettingsPopup()
-    // {
-    //     isSettingsPopupVisible = true;
-    // }
-
-    // private void OnPopupVisibilityChanged(bool value)
-    // {
-    //     isSettingsPopupVisible = value;
-    // }
-
-
 
 }
 
@@ -945,19 +1037,6 @@ function copyToClipboard(text) {
         }
     }
 }
-
-
-<script>
-    // Function to scroll to the bottom
-     @* function scrollToBottom() {
-         const messagesDiv = document.getElementById("messages");
-         messagesDiv.scrollTop = messagesDiv.scrollHeight;
-     } *@
-
-    // Call scrollToBottom whenever new content is added
-    // For example, after appending new messages
-    //scrollToBottom();
-</script>
 
 
 
