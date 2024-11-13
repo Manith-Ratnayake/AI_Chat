@@ -9,10 +9,10 @@
 
 
 <div data-name="a" 
-     style="background-color:darkgray; display: flex; height:100vh; ">
+     style="background-color: azure; display: flex; height:100vh; ">
 
     <div data-name="b"
-         style="background-color:gray; width:@(isBVisible ? "17%" : "0%"); height:100%;  transition: width 0.3s ease;
+         style="background-color:#1a1c1b; width:@(isBVisible ? "17%" : "0%"); height:100%;  transition: width 0.3s ease;
                 position:relative; overflow:hidden;
                 display:flex; flex-direction: column; ">
 
@@ -24,13 +24,15 @@
                 <div class="icon-container">
 
                     <div class="icon-wrapper">
-                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
+                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" style="height:20px; width:20px; filter: var(--background3-color);" alt="SideBar"
+                        > @*  data-bs-toggle="tooltip" data-bs-placement="top" title="Close sidebar " *@
                         <span class="tooltip-text">Open Sidebar</span>
                     </div>
 
                     <div class="icon-wrapper">
-                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
-                        <span class="tooltip-text" style="left: 65px;">New chat</span>
+                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat"
+                             data-bs-toggle="tooltip" data-bs-placement="top" title="Newchat" />
+                        @* <span class="tooltip-text" style="left: 65px;">New chat</span> *@
                     </div>
 
                 </div>
@@ -39,7 +41,7 @@
 
 
             <div data-name="Tabs"
-                style="background-color:midnightblue; overflow-y: visible; ">
+                 style="overflow-y: visible; ">
 
 
                 @foreach (var dict in userConversation.conversations.Select((conversation, listIndex) => new { conversation, listIndex }))
@@ -48,11 +50,12 @@
 
                     <div class="chatTabHover"
                          data-comment="Show this only when hovering"
-                         style="display: inline-flex; position: relative; margin-top: 8px; margin-left: 20px; padding:7px;">
+                         style="display: inline-flex; position: relative; margin-top: 8px; margin-left: 20px; padding:7px;
+                                background-color: var(--background2-color); border-radius:10px;">
 
                         <span class="ChatTab"
-                              style="background-color: lightgray; transition: background-color 0.3s ease;
-                                     cursor: pointer; position: relative; left: 0;"
+                              style="background-color: none; transition: background-color 0.3s ease;
+                                     cursor: pointer; position: relative; left: 0; color:var(--font-color)"
                               @onclick="() => GetConversation(dict.listIndex)">
 
                             @(string.Join(" ", dict.conversation).Length > 27
@@ -60,7 +63,8 @@
                                 : string.Join(" ", dict.conversation))
 
                             <span class="dots" @onclick="() => TogglePopup(dict.listIndex)"
-                                  style="cursor: pointer; background-color: green; position: absolute; right: 0; z-index: 100;">
+                                  style="cursor: pointer; color: var(--font-color); position: absolute; right: 0; z-index: 100;"
+                                  data-bs-toggle="tooltip" data-bs-placement="top" title="Options">
                                 ...
                             </span>
 
@@ -87,7 +91,7 @@
                                     transition: background-color 0.1s; color:white;"
                                     onmouseover="this.style.backgroundColor='#e0e0e0'"
                                     onmouseout="this.style.backgroundColor='transparent'">
-                            <img src="WebIcons/share.png" style="width: 10px; height: 10px; filter: brightness(0) invert(1);" />
+                            <img src="WebIcons/share.png" style="width: 10px; height: 10px; filter: var(--image-filter);" />
                             <button style="border: none; background: none; cursor: pointer; color:white;"
                                     @onclick="() => {}">
                                 Share
@@ -131,42 +135,48 @@
 
             </div>
 
-       
-       
-            <div style = "position:absolute; bottom: 0; width: 100%; background-color: yellow; height: 70px;" >
+            <div style = "position:absolute; bottom: 0; width: 100%; background-color: var(--background1-color); height: 70px;" >
 
-               
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        style="all:unset; width:100%; height:100%; display:flex; justify-content:center; align-items:center; 
+                               background-color:var(--background2-color); color:var(--font-color)"
+                        @onclick="() => ShowSettingsPopup(true)"
+                        onmouseover="this.style.backgroundColor='darkgrey'"
+                        onmouseout="this.style.backgroundColor='grey'">
+                   Settings
+                </button>
 
-                        <button style="width:100%; height:100%;"
-                            @onclick = "() => ShowSettingsPopup(true)"
-                            onmouseover = "this.style.backgroundColor='darkgrey'"
-                            onmouseout = "this.style.backgroundColor='grey'" >
-                            Settings
-                        </button>
+                      
             </div >
                 
-            @if (isSettingsPopupVisible)
-            {
-                <!-- Overlay to capture clicks outside the dialog -->
-                <div class="overlay" 
-                    "
-                    @onclick="() => ShowSettingsPopup(false)"></div>
-
-                <!-- Popup dialog -->
-                <dialog class="MyPopup" open>
-                    <div class="content"
-                         >
+        
 
 
-                        
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background-color: var(--background1-color);">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <h1 style="color: var(--font-color);">Settings</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
 
-                        <button @onclick="() => ShowSettingsPopup(false)">Close</button>
+                        <div class="modal-body">
+                            <Settings/>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; padding-right: 0;">
+                            <div style="display: flex; gap: 10px;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
-                </dialog>
-            }
-
-
-
+                </div>
+            </div>
           
 
 
@@ -175,7 +185,7 @@
         }
     </div>
 
-    <div class="c" style="background-color:darkgray; width:@(isBVisible ? "83%" : "100%"); 
+    <div class="c" style="background-color:var(--background1-color); width:@(isBVisible ? "83%" : "100%"); 
                             height:100vh; transition: width 0.3s ease;overflow:hidden;">
                             
 
@@ -186,20 +196,22 @@
                 <div class="icon-container">
 
                     <div class="icon-wrapper">
-                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" />
-                        <span class="tooltip-text">Open Sidebar</span>
+                        <img class="newIcon" @onclick="bOff" src="WebIcons/sidebar.png" 
+                             style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="SideBar" 
+                             data-bs-toggle="tooltip" data-bs-placement="top" title="Open sidebar" />
                     </div>
 
                     <div class="icon-wrapper">
-                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png" style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" />
-                        <span class="tooltip-text" style="left: 65px;">New chat</span>
+                        <img class="newIcon" @onclick="CreateNewConversation" src="WebIcons/new.png"
+                             style="height:20px; width:20px; filter: grayscale(100%) brightness(60%) contrast(90%);" alt="New Chat" 
+                             data-bs-toggle="tooltip" data-bs-placement="top" title="Newchat" />
                     </div>
 
                 </div>
 
             }
 
-            <h4 data-name="ChatMessageWindowHeader" style="margin: 0; font-size:18px;">Flintec</h4>
+            <h4 data-name="ChatMessageWindowHeader" style="margin: 0; color:white; font-size:18px;"><b>Flintec</b></h4>
         </div>
 
 
@@ -210,7 +222,7 @@
 
             <div style="display: flex; flex-direction: column; position: relative; background-color: black; height: 100vh;">
 
-                <div style="background-color: wheat; height: 85%; overflow: auto; flex-grow: 1; flex-shrink: 1;">
+                <div style="background-color: var(--background1-color); height: 85%; overflow: auto; flex-grow: 1; flex-shrink: 1;">
                 
                     @foreach (var item in messages.Select((message, index) => new { message, index }))
                     {
@@ -223,14 +235,14 @@
 
 
 
-                                <div style="background-color:red"></div>
+                                <div style="background-color:var(--background1-color)"></div>
 
 
-                                <div style="background-color:blue; display:flex; align-items:center; position: relative">
+                                <div style="background-color:var(--background1-color); display:flex; align-items:center; position: relative">
 
                                     @if (editingIndex != item.index)
                                     {
-                                        <div class="editIconContainer" style="background-color:orange; position:relative; flex-grow: 1; height:100%;">
+                                        <div class="editIconContainer" style="background-color:var(--background1-color); position:relative; flex-grow: 1; height:100%;">
 
                                             <div class="editMessage"
                                                  style="cursor: pointer;
@@ -247,15 +259,15 @@
                                                 onmouseover="this.style.backgroundColor='grey'"
                                                 onmouseout="this.style.backgroundColor='transparent'"
                                                 @onclick="()=> ToggleEditMoo(item.index)">
-                                                <img src="WebIcons/edit.png" style="width: 10px; height: 10px;" />
+                                                <img src="WebIcons/edit.png" style="width: 10px; height: 10px;filter: brightness(0) invert(1);" />
                                             </div>
                                         </div>
 
 
-                                        <div style="background-color:pink; max-width:70%">
+                                        <div style="background-color:var(--background1-color); max-width:70%">
 
                                             <div style=" margin-left:auto">
-                                                    <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: lightslategrey;
+                                                    <p style="word-wrap: break-word; overflow-wrap: break-word; background-color: var(--background3-color); color:var(--font-color);
                                                                 padding: 9px 15px; border-radius: 19px;">
                                                         @item.message
                                                     </p>
@@ -268,7 +280,7 @@
                                     else
                                     {
                                         <div style="display: flex; flex-direction: column; align-items: flex-end; width:100%; 
-                                                    background-color: lightslategrey; padding: 9px 15px; border-radius: 19px; margin: 0; word-break: break-word; overflow-wrap: break-word;">
+                                                    background-color: var(--background2-color); padding: 9px 15px; border-radius: 19px; margin: 0; word-break: break-word; overflow-wrap: break-word;">
 
                                             <textarea 
                                                 style="margin: 0; word-wrap: break-word; overflow-wrap: break-word; width: 100%; resize:none">
@@ -276,13 +288,13 @@
                                             </textarea>
 
                                             <div data-name="WhenEditCliked" style="display: flex; gap: 10px; margin-top: 10px;">
-                                                <button @onclick="CancelEditMoo" style="padding: 5px 10px;">Cancel</button>
-                                                <button @onclick="SubmitEditMoo" style="padding: 5px 10px;">Submit</button>
+                                                <button @onclick="CancelEditMoo" style=" all: unset; padding: 5px 10px; background-color:black; color:white; border-radius:50px;">Cancel</button>
+                                                <button @onclick="SubmitEditMoo" style="all: unset; padding: 5px 10px; border-radius:50px; background-color:var(--font-color)">Submit</button>
                                             </div>
                                         </div>
                                     }
                                 </div>
-                                <div style="background-color:red"></div>
+                                <div style="background-color:var(--background1-color)"></div>
 
                           
                              </div> 
@@ -293,32 +305,31 @@
                         {
 
                             <div data-name="Flintec Messages" 
-                                 style="background-color:yellow; position:relative;
+                                 style="background-color:var(--background1-color); position:relative;
                                         display:grid; grid-template-columns: 1fr 700px 1fr">
 
-                                <div style="background-color:olive;
+                                <div style="background-color:var(--background1-color);
                                             position:relative">
                                                             
                                     <div data-name="flintec_logo_div"
                                          style="border: 1px solid black; height: 35px; width: 35px; border-radius: 50%; 
-                                                display: flex; justify-content: center; align-items: center;
-                                                background-color: aqua;position:absolute; right:0; margin-right:5px;">
+                                                display: flex; justify-content: center; align-items: center; border-color:var(--background2-color);                                                background-color: var(--background1-color);position:absolute; right:0; margin-right:5px;">
                                         <img src="WebIcons/flintec_logo.png" style="height: 22px; width: 22px;" />
                                     </div>
 
                                 </div>
 
                                 <div data-name="Respone Message div"
-                                      style="margin-left: auto;  word-wrap: break-word;
+                                      style="margin-right: auto;  word-wrap: break-word;
                                             overflow-wrap: break-word; flex-grow:0;">
                                
                             
                                 @if (item.index == messages.Count - 1)
                                     {
 
-                                    <div style="background-color:cadetblue;">
-                                          
-                                        <p style="">@item.message</p>
+                                    <div style="background-color:var(--background1-color);">
+
+                                            <p class="AnimationText" style="color:var(--font-color); text-align:start">@item.message  </p>
                                     
                                     </div>
                                     }
@@ -326,18 +337,18 @@
 
                                     else
                                     {
-                                    <div style="background-color:cadetblue;">
-                                        <p class="">@item.message</p>
+                                        <div style="background-color:var(--background1-color);">
+                                            <p style="color:var(--font-color);">@item.message</p>
                                     </div>
                                     }
 
-                                    <div data-name="Flintec Message Options" style="display: inline-flex; background-color: mediumvioletred;">
+                                    <div data-name="Flintec Message Options" style="display: inline-flex; background-color:var(--background1-color);;">
                                        
                                         <!-- Speaker Icon with Tooltip -->
                                         <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
                                                     display: flex; justify-content: center; align-items: center; cursor: pointer;"
                                              onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
-                                             data-bs-toggle="tooltip" title="Read aloud">
+                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="Read aloud">
                                             <img src="WebIcons/speaker.png" style="width: 15px; height: 15px; color: black;" />
                                         </div>
 
@@ -347,8 +358,9 @@
                                         <!-- Copy Icon -->
                                         <div style="width: 25px; height: 25px; border-radius: 5px; transition: background-color 0.3s;
                                                     display: flex; justify-content: center; align-items: center; cursor: pointer;"
-                                             onmouseover="this.style.backgroundColor='lightgray'" onmouseout="this.style.backgroundColor='transparent'"
-                                             data-bs-toggle="tooltip" title="Copy" data-bs-placement="left">
+                                             onmouseover="this.style.backgroundColor='lightgray'" 
+                                             onmouseout="this.style.backgroundColor='transparent'"
+                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy">
                                              <img src="WebIcons/copy.png" style="width: 15px; height: 15px; color: black;" @onclick="CopyTextToClipboard" />
                                         </div>
 
@@ -384,7 +396,7 @@
                                 </div>
 
                                 <div data-name="remaining space in right"
-                                     style="background-color:grey">
+                                     style="background-color:var(--background1-color)">
                                 </div>
 
 
@@ -393,23 +405,23 @@
                         }
                          }
                </div>
-
-
+                
                 <div data-comment="To positon the input holder" 
-                     style="background-color:green; display:flex; justify-content:center;">
+                     style="background-color:var(--background1-color); display:flex; justify-content:center;">
 
                     <div data-comment="Input holder"
-                         style=" position: relative; padding: 0 15px; width:780px; border-radius: 50px; color:white;background-color: blue;">
+                         style="position: relative; padding: 8px 21px 8px 21px; width:780px; border-radius: 50px;
+                                    color:white;background-color: var(--background2-color); ">
 
                         <textarea class="textarAreaPlaceHolder"
                                   @bind="userQuestion"
                                   placeholder="Message Flintec AI"
                                   rows="1"
-                                  style="width: 94%; max-height: 150px; padding: 10px;
-                                         resize: none; overflow-y: hidden;
-                                         background-color: grey; color: white;"
+                                  style="width: 94%; max-height: 150px; padding: 5px;
+                                             resize: none; overflow-y: hidden;
+                                             background-color: var(--background2-color); color: white;"
                                   oninput="adjustHeight(this)">
-                        </textarea>
+                                </textarea>
 
                         <button style="position: absolute; bottom: 12px; right: 18px; width: 36px; height: 36px;
                                        border-radius: 50%; border: none; background-color: grey;
@@ -422,7 +434,7 @@
                 </div>
 
 
-                <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 6px;">
+                <div style="background-color: var(--background1-color); text-align: center; color: white; width: 100%; padding: 6px;">
                     <p>@Localizer["Sign In For More Details"]</p>
                 </div>
             </div>
@@ -434,29 +446,29 @@
         else
         {
 
-            <div style="background-color: tomato; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="background-color: var(--background1-color); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 
                 
                 <div style="display: flex; flex-direction: column; align-items: center; width: 60%; flex: 1; justify-content: center;">
-                        <p style="font-size: 30px;">How Can I Help You?</p>
-
+                    <p class="AnimationText"  onload="AnimateTextTyping" style="font-size: 30px; color:var(--font-color)">How Can I Help You?</p>
 
 
                     <div data-comment="To positon the input holder"
-                         style="background-color:green; display:flex; justify-content:center;">
+                         style="background-color:var(--background1-color); display:flex; justify-content:center;">
 
                         <div data-comment="Input holder"
-                             style=" position: relative; padding: 0 15px; width:780px; border-radius: 50px; color:white;background-color: blue;">
+                             style="position: relative; padding: 8px 21px 8px 21px; width:780px; border-radius: 50px;
+                                    color:white;background-color: var(--background2-color); ">
 
                             <textarea class="textarAreaPlaceHolder"
                                       @bind="userQuestion"
                                       placeholder="Message Flintec AI"
                                       rows="1"
-                                      style="width: 94%; max-height: 150px; padding: 10px;
-                                         resize: none; overflow-y: hidden;
-                                         background-color: grey; color: white;"
+                                      style="width: 94%; max-height: 150px; padding: 5px;
+                                             resize: none; overflow-y: hidden;
+                                             background-color: var(--background2-color); color: white;"
                                       oninput="adjustHeight(this)">
-                            </textarea>
+                                    </textarea>
 
                             <button style="position: absolute; bottom: 12px; right: 18px; width: 36px; height: 36px;
                                        border-radius: 50%; border: none; background-color: grey;
@@ -467,27 +479,29 @@
 
                         </div>
                     </div>
-                   
-                   
 
-                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;
-                                     background-color: thistle; width: 100%; margin-top: 20px;">
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                                   gap: 10px; width: 100%; margin-top: 20px; background-color: none;">
 
                         @foreach (var suggestion in suggestions)
                         {
-                            <div style="background-color: yellow; border: 2px solid purple; border-radius: 10px; padding: 10px;
-                                        margin: 5px; flex: 1; min-width: 150px; text-align: center;"
+                            <div class="SuggestionBlock"
+                                 style="border: none; border-radius: 25px; padding: 10px;
+                                        display: flex; justify-content: center; align-items: center;
+                                        background-color: ; color: white;"
                                  @onclick="() => UpdateTheSearchBar(suggestion)">
-                                @suggestion
+                                <p style="margin: 0;">@suggestion</p>
                             </div>
                         }
                     </div>
+
 
                 </div>
          
 
 
-                <div style="background-color: purple; text-align: center; color: white; width: 100%; padding: 6px;">
+                <div style="background-color: var(--background1-color); text-align: center; color: white; width: 100%; padding: 6px;">
                     <p>@Localizer["Sign In For More Details"]</p>
                 </div>
 
@@ -507,158 +521,61 @@
 
 <style>
     :root {
-        --background1-color: black;
-        --background2-color: #33322e;
-        --background3-color: #47463f;
-        --background4-color: #636258;
+        --background1-color: #33322e;
+        --background2-color: #47463f;
+        --background3-color: #636258;
+        --background4-color: #838a85;
         --font-color: white;
+        --image-filter: brightness(0) invert(1);
     }
 </style>
 
-
-
-
-<style>
-    .textarAreaPlaceHolder::placeholder{
-        color: lightgray;
-    }
-
-
-    .textarAreaPlaceHolder {
-        outline: none; /* Removes the default focus outline */
-        border: none; /* Removes border to prevent color change */
-    }
-
-        /* Optional: If you want a specific border color when focused */
-        .textarAreaPlaceHolder:focus {
-            outline: none; /* Ensures no outline on focus */
-            border: none; /* Keeps border color consistent */
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("AnimateTextTyping", "AnimationText");
         }
-</style>
-
-
-
-
-
-
-
-<style>
-    .icon-container {
-        display: flex;
-        align-items: center;
     }
+}
+<script>
+    // Function to make all elements with a specified class visible
+    window.showTextElements = function (className) {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach((element) => {
+            element.style.display = "block"; // Show each element
+        });
+    };
 
-    .icon-wrapper {
-        position: relative;
-        margin-right: 10px; /* Space between the icons */
-        padding: 5px; /* Add some padding around the icon */
-        border-radius: 5px; /* Optional: rounded corners */
-        transition: background-color 0.3s ease; /* Smooth transition */
-    }
+    // Function to start the typing animation on all elements with a specified class
+    window.AnimateTextTyping = function (className) {
+        const elements = document.querySelectorAll(`.${className}`);
 
-        .icon-wrapper:hover {
-            background-color: rgba(0, 0, 0, 0.2); /* Change this to your desired color */
-        }
+        elements.forEach((node) => {
+            const text = node.textContent;
+            const chars = text.split("");
+            node.innerHTML = "";
+            node.classList.add("typing");
+            let i = 0;
 
-    .newIcon {
-        cursor: pointer;
-    }
+            const addNextChar = (i) => {
+                let nextChar = chars[i] === "\n" ? "<br>" : chars[i];
+                node.innerHTML += "<span>" + nextChar + "</span>";
+                if (i < chars.length - 1) {
+                    setTimeout(() => addNextChar(i + 1), 20 + Math.random() * 20);
+                } else {
+                    setTimeout(() => node.classList.remove("typing"), 20 + Math.random() * 20);
+                }
+            };
 
-    .tooltip-text {
-        position: absolute;
-        font-size: 14px;
-        color: white;
-        background-color: black;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        visibility: hidden; /* Hide by default */
-        white-space: nowrap;
-        z-index: 9999; /* High z-index to ensure visibility */
-        top: 0px;
-        left: 40px; /* Adjust as needed */
-    }
-
-        .tooltip-text::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 100%;
-            transform: translateY(-50%);
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent black transparent transparent;
-        }
-
-    /* Show tooltip on hover */
-    .icon-wrapper:hover .tooltip-text {
-        visibility: visible; /* Show on hover */
-    }
-</style>
+            addNextChar(i);
+        });
+    };
+</script>
 
 
 
-
-
-
-
-
-
-
-
-
-
-<style>
-    .chatTabHover:hover {
-        background-color:pink;
-        border-radius:8px;
-    }
-</style>
-
-
-
-<style>
-    .editIconContainer .editMessage {
-        opacity: 0; /* Initial hidden state */
-        transition: opacity 0.1s ease; /* Smooth transition */
-    }
-
-    .editIconContainer:hover .editMessage {
-        opacity: 1; /* Make the edit icon visible on hover */
-    }
-</style>
-
-
-
-
-
-<style>
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-    }
-
-    .MyPopup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 400px;
-        background: white;
-        z-index: 999;
-    }
-
-    .content {
-        text-align: center;
-    }
-</style>
 
 
 @code {
@@ -678,47 +595,6 @@
         isSettingsPopupVisible = false;
     }
 }
-
-
-
-
-
-
-<style>
-  
-
-    .ChatTab {
-      
-    }
-
-
-        .ChatTab:hover {
-            background-color: palevioletred;
-        }
-
-        /* Change background color for active item */
-        .ChatTab.active {
-            background-color: yellow;
-        }
-
-    /* Style for the symbol */
-    .dots {
-        color: red;
-        font-size: 16px;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        visibility: hidden;
-    }
-
-    /* Show symbol when hovered or active */
-    .ChatTab:hover .dots,
-    .ChatTab.active .dots {
-        visibility: visible;
-        background-color:yellow;
-    }
-</style>
 
 
 
@@ -782,32 +658,8 @@
 
 
 <style>
-    .wrapperTextArea textarea {
-        width: 100%;
-        height: 59px;
-        padding: 15px;
-        border-radius: 5px;
-        outline: none;
-        resize: none;
-        overflow: hidden;
-        transition: border-color 0.3s, padding 0.3s; 
-        max-height: 200px; 
-    }
 
-        .wrapperTextArea textarea:focus,
-        .wrapperTextArea textarea:valid {
-            border-width: 2px;
-            padding: 14px;
-            border-color: red;
-        }
 </style>
-
-
-
-
-
-
-
 
 
 
@@ -865,22 +717,7 @@
 
 
 <style>
-    #userTextarea {
-        width: 100%;
-        height: 59px;
-        padding: 15px;
-        border-radius: 5px;
-        outline: none;
-        resize: none;
-        overflow: hidden;
-        transition: border-color 0.3s, padding 0.3s; 
-        max-height: 200px;
-    }
-
-    #userTextarea:focus {
-        border-width: 2px;
-        border-color: red;
-    }
+   
 </style>
 
 
@@ -951,134 +788,13 @@
 
 <style>
 
-
-    // Animation
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    .wrapper {
-        /*   height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            margin: 0 5rem; */
-    }
-
-    #text {
-        /* max-width: 800px;
-        // text-align: left;
-        // width: 100%; */
-        color: black;
-        font-family: monospace;
-        -webkit-font-smoothing: antialiased;
-        margin-bottom: 8rem;
-    }
-
-        #text.typing span:last-child {
-            background-color: black;
-        }
 </style>
 
-<script>
-    window.animateTextTyping = (elementId) => {
-        const node = document.getElementById(elementId);
-        const text = node.textContent;
-        const chars = text.split("");
-
-        node.innerHTML = "";
-        node.classList.add("typing");
-        let i = 0;
-
-        const addNextChar = (i) => {
-            let nextChar = chars[i] === "\n" ? "<br>" : chars[i];
-            node.innerHTML += "<span>" + nextChar + "</span>";
-            if (i < chars.length - 1) {
-                setTimeout(function () {
-                    addNextChar(i + 1);
-                }, 10 + Math.random() * 100);
-            } else {
-                setTimeout(function () {
-                    node.classList.remove("typing");
-                }, 10 + Math.random() * 150);
-            }
-        }
-
-        addNextChar(i);
-    }
-
-    window.showText = (elementId) => {
-        const node = document.getElementById(elementId);
-        node.style.display = "block"; // Show the text element
-    }
-</script>
-
-@code {
-
-    public string lang = "nl";
-
-    private async Task AnimateText()
-    {
-        try
-        {
-            // Show the text element first
-            await JSRuntime.InvokeVoidAsync("showText", "text");
-
-            // Then start the text animation
-            await JSRuntime.InvokeVoidAsync("animateTextTyping", "text");
-        }
-        catch (Exception ex)
-        {
-            JSRuntime.InvokeVoidAsync("console.log", $"{ex.Message}"); // Log the error message to the console
-            await JSRuntime.InvokeVoidAsync("alert", "An error occurred: " + ex.Message);
-        }
-    }
-}
 
 
 
 <style>
-    /* .dots {
-        display: inline-block; /* Allows the dots to be inline with the paragraph */
-        cursor: pointer; /* Change cursor to indicate clickable */
-        margin-left: 5px; /* Space between paragraph and dots 
-    } */
-
-    .popup {
-        position: absolute; /* Positioning the popup */
-        background-color: white; /* Background color for popup */
-        border: 1px solid #ccc; /* Optional border */
-        padding: 10px; /* Padding inside the popup */
-        z-index: 100; /* Ensure it appears above other elements */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for effect */
-        margin-left:20px;
-    }
-
-
-
-
-    .paragraph {
-        position: relative; 
-    }
-
-        .paragraph::after {
-            content: ''; 
-            position: absolute; 
-            right: 0; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            //background-color:"";
-        }
-
-        .paragraph:hover::after,
-        .paragraph.highlighted::after {
-            opacity: 1; 
-        }
+ 
 
 </style>
 
@@ -1111,12 +827,7 @@
 
 <style>
 
-    //Tabs
 
-    .hover-light p:hover,
-    .paragraph.highlighted {
-        transition: background-color 0.3s ease;
-    }
 
 </style>
 
@@ -1178,3 +889,15 @@
 
 
 </script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+

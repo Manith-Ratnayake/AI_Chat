@@ -31,7 +31,7 @@ namespace FlintecChatBotApp.Components.Pages
 
         public List<string> PossibleReplies = new List<string>
         {
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's\r\n."
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's."
         };
 
 
@@ -49,61 +49,6 @@ namespace FlintecChatBotApp.Components.Pages
         {
 
         }
-
-
-
-
-
-
-        public void SetCulture(string culture)
-
-
-        {
-
-            // Print the current culture and UI culture
-            JSRuntime.InvokeVoidAsync("console.log", "Current Culture: " + CultureInfo.CurrentCulture.Name);
-            JSRuntime.InvokeVoidAsync("console.log", "Current UI Culture: " + CultureInfo.CurrentUICulture.Name);
-
-
-
-            JSRuntime.InvokeVoidAsync("console.log", "culture : " + culture);
-
-            //var cultureInfo = new CultureInfo(culture);
-            //CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-            //CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
-
-
-
-
-            CultureInfo.CurrentUICulture = new CultureInfo("nl");
-
-            //CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-            //CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
-
-
-
-
-        
-        }
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

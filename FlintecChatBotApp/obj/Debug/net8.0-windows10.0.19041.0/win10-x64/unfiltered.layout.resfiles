@@ -1,4 +1,5 @@
 Components\Layout\MainLayout.razor.css
+Components\Pages\Home.razor.css
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png

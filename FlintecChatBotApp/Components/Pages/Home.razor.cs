@@ -47,13 +47,13 @@ namespace FlintecChatBotApp.Components.Pages
                     UpdateConversation();
                 }
 
-
+                AnimateText();
 
                 userQuestion = string.Empty;
                 userAnswer    = string.Empty;
 
-/*                AnimateText();
-*/            }
+                
+            }
         }
 
 
@@ -84,8 +84,22 @@ namespace FlintecChatBotApp.Components.Pages
 
 
 
+        private async Task AnimateText()
+        {
+            try
+            {
+                // Show all elements with the class "AnimationText"
+                await JSRuntime.InvokeVoidAsync("showTextElements", "AnimationText");
 
-
+                // Then start the text animation on all elements with the class "AnimationText"
+                await JSRuntime.InvokeVoidAsync("AnimateTextTyping", "AnimationText");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}"); // Log the error message to the console
+                await JSRuntime.InvokeVoidAsync("alert", "An error occurred: " + ex.Message);
+            }
+        }
 
 
 

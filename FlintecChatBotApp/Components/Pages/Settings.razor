@@ -5,40 +5,30 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
           <div >
 
 
-                <h4>Settings</h4>
+              
 
 
-                <h5>Language</h5>
+            <h5 style="color:white">Language</h5>
 
-                <select class="form-control" @bind="Culture">
-                    @foreach (var culture in cultures)
-                    {
-                        <option value="@culture">@culture</option>
-                    }
-                </select>
+            <select class="form-control" @bind="Culture">
+                @foreach (var culture in cultures)
+                {
+                    <option value="@culture">@culture</option>
+                }
+            </select>
 
 
-                <h5>Country</h5>
-
-                <select class="form-control" >
-                    @foreach (var country in countries)
-                    {
-                        <option value="@country">@country</option>
-                    }
-                </select>
+            <h5 style="color:white">Country</h5>
+            
+            <select class="form-control" >
+                @foreach (var country in countries)
+                {
+                    <option value="@country">@country</option>
+                }
+            </select>
 
         </div>
  
