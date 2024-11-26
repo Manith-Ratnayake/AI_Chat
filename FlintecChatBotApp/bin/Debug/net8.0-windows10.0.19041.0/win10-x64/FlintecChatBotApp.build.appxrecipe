@@ -136,6 +136,9 @@
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\reload.png">
       <PackagePath>wwwroot\WebIcons\reload.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\RGU_logo.jpg">
+      <PackagePath>wwwroot\WebIcons\RGU_logo.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Manith\Desktop\sh11\ChatBot_Website\FlintecChatBotApp\wwwroot\WebIcons\share.png">
       <PackagePath>wwwroot\WebIcons\share.png</PackagePath>
     </AppxPackagedFile>

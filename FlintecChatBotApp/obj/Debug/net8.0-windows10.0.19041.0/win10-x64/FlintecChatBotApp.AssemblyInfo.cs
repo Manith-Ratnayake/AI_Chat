@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlintecChatBotApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+419cb0a9206e495049db32592fe96413fdadc1fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+74084c4b223aadab1d08bf71313170d95d8017d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlintecChatBotApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlintecChatBotApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

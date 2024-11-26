@@ -69,7 +69,7 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAOMBAAAAAAAAAAAlwPEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-03T08:56:06.059Z",
               "IsPinned": true,
@@ -78,6 +78,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -89,8 +93,7 @@
               "RelativeToolTip": "Components\\Pages\\Home.razor..cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:49:03.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T07:49:03.443Z"
             },
             {
               "$type": "Document",
@@ -102,8 +105,7 @@
               "RelativeToolTip": "wwwroot\\index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-12T06:49:12.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T06:49:12.2Z"
             },
             {
               "$type": "Document",
@@ -115,8 +117,7 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAUwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T05:29:50.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T05:29:50.933Z"
             },
             {
               "$type": "Document",
@@ -126,10 +127,9 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor.cs",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor.cs",
               "RelativeToolTip": "Components\\Pages\\Home.razor.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAMBSwGgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAuwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:45:00.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T14:45:00.397Z"
             },
             {
               "$type": "Document",
@@ -141,8 +141,7 @@
               "RelativeToolTip": "Components\\Pages\\Slidebar.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T13:38:12.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T13:38:12.031Z"
             },
             {
               "$type": "Document",
@@ -152,10 +151,9 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Settings.razor",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Settings.razor",
               "RelativeToolTip": "Components\\Pages\\Settings.razor",
-              "ViewState": "AgIAADAAAAAAAAAAAABOwB0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAIBmwB0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T09:30:44.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T09:30:44.014Z"
             },
             {
               "$type": "Document",
@@ -165,10 +163,9 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor.css",
               "ToolTip": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\Components\\Pages\\Home.razor.css",
               "RelativeToolTip": "Components\\Pages\\Home.razor.css",
-              "ViewState": "AgIAAHUAAAAAAAAAAABOwIMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAIBmwIMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-03T09:29:37.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T09:29:37.023Z"
             }
           ]
         }

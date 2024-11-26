@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\Countries\\vietnam.png"
     },
     {
+      "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\RGU_logo.jpg",
+      "PackagePath": "staticwebassets\\WebIcons\\RGU_logo.jpg"
+    },
+    {
       "Id": "C:\\Users\\Manith\\Desktop\\sh11\\ChatBot_Website\\FlintecChatBotApp\\wwwroot\\WebIcons\\archive.png",
       "PackagePath": "staticwebassets\\WebIcons\\archive.png"
     },
