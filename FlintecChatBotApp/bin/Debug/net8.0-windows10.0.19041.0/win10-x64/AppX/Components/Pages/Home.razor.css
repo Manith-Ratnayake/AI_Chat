@@ -301,3 +301,25 @@ margin-left: 5px; /* Space between paragraph and dots
 .SuggestionBlock:hover {
     background-color: var(--background4-color);
 }
+
+
+
+
+
+.SomeTexTo{
+    color:red;
+}
+
+
+
+
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+        background-color: lightblue;
+    }
+
+    .SomeTexTo {
+        color: green
+    }
+}
